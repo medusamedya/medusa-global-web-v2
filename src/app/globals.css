@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  /* Varsayılan Light Mode (Medusa Cream ve Koyu Mor kontrastı kullanılabilir) */
-  --background: #ffffff;
-  --foreground: #08020F; /* Metinler için en koyu Base Zemin rengimiz */
-
-  /* Medusa Global Marka Renkleri (Buton, Border & Özel Elementler) */
+  /* 1. Önce Medusa Global Marka Renkleri ve Zemin Paletimizi Tanımlıyoruz */
   --medusa-purple: #5C068C;
   --medusa-gold: #C9A97E;
   --medusa-cream: #E8D4B8;
   --medusa-spark: #FFC600;
 
-  /* Medusa Global Ana Zemin ve Glow Renkleri */
   --medusa-base-dark: #08020F;
   --medusa-base-light: #0F0420;
   --medusa-glow-primary: #3D0A6B;
   --medusa-glow-secondary: #1F0838;
+
+  /* 2. KREM (Light) TEMA KARAKTERİSTİĞİ: 
+     Arka plan saf beyaz yerine Medusa Cream oluyor.
+     Okunabilirlik (Erişilebilirlik/SEO) için metinler en koyu Base Zemin rengini alıyor. */
+  --background: var(--medusa-cream);
+  --foreground: var(--medusa-base-dark); 
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter); /* Fontu buraya entegre edeceğiz */
   --font-mono: var(--font-geist-mono);
 
-  /* Renkleri Tailwind Sınıflarına Çevirme */
   --color-medusa-purple: var(--medusa-purple);
   --color-medusa-gold: var(--medusa-gold);
   --color-medusa-cream: var(--medusa-cream);
@@ -36,16 +36,14 @@
   --color-medusa-glow-secondary: var(--medusa-glow-secondary);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark Mode Karakteristiği: Zemin en koyu Medusa rengi, metinler krem */
-    --background: var(--medusa-base-dark);
-    --foreground: var(--medusa-cream); 
-  }
+/* ÇÖZÜM BURADA: Medya sorgusu yerine doğrudan .dark sınıfını kullanıyoruz */
+.dark {
+  --background: var(--medusa-base-dark);
+  --foreground: var(--medusa-cream); 
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Tailwind font sınıfının devreye girmesi için font-family'yi buradan silebilir veya var(--font-sans) yapabilirsin */
 }
