@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
 :root {
+  /* Varsayılan Light Mode (Medusa Cream ve Koyu Mor kontrastı kullanılabilir) */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #08020F; /* Metinler için en koyu Base Zemin rengimiz */
+
+  /* Medusa Global Marka Renkleri (Buton, Border & Özel Elementler) */
+  --medusa-purple: #5C068C;
+  --medusa-gold: #C9A97E;
+  --medusa-cream: #E8D4B8;
+  --medusa-spark: #FFC600;
+
+  /* Medusa Global Ana Zemin ve Glow Renkleri */
+  --medusa-base-dark: #08020F;
+  --medusa-base-light: #0F0420;
+  --medusa-glow-primary: #3D0A6B;
+  --medusa-glow-secondary: #1F0838;
 }
 
 @theme inline {
@@ -10,12 +23,24 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Renkleri Tailwind Sınıflarına Çevirme */
+  --color-medusa-purple: var(--medusa-purple);
+  --color-medusa-gold: var(--medusa-gold);
+  --color-medusa-cream: var(--medusa-cream);
+  --color-medusa-spark: var(--medusa-spark);
+  
+  --color-medusa-base-dark: var(--medusa-base-dark);
+  --color-medusa-base-light: var(--medusa-base-light);
+  --color-medusa-glow-primary: var(--medusa-glow-primary);
+  --color-medusa-glow-secondary: var(--medusa-glow-secondary);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Dark Mode Karakteristiği: Zemin en koyu Medusa rengi, metinler krem */
+    --background: var(--medusa-base-dark);
+    --foreground: var(--medusa-cream); 
   }
 }
 
