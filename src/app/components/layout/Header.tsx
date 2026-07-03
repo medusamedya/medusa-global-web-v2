@@ -88,12 +88,23 @@ export default function Header() {
             </button>
           )}
 
-          <button className="group flex items-center bg-[#08020F] dark:bg-white text-white dark:text-[#08020F] text-[13px] font-bold rounded-full pl-5 pr-1.5 py-1.5 gap-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow-md">
-            <span>İletişime Geçin</span>
-            <div className="bg-white dark:bg-[#08020F] rounded-full p-1 transition-transform duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:-rotate-45">
-              <ArrowRight className="w-4 h-4 text-[#08020F] dark:text-white" />
-            </div>
-          </button>
+          {/* Header Aksiyon Butonu (Manyetik ve İmza Çerçeveli) */}
+<div className="relative inline-flex overflow-hidden rounded-full p-[1.5px] group flex-shrink-0 cursor-pointer">
+  {/* Dönen Kurumsal Işık Bandı (Border Animasyonu) */}
+  <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+  
+  {/* Buton Zemin ve İçerik */}
+  <button className="relative z-10 flex items-center justify-center gap-3 bg-[#08020F]  text-white  px-5 py-2.5 rounded-full font-bold text-[13px] tracking-wide transition-all duration-300 hover:bg-transparent hover:text-white dark:hover:text-white group/btn">
+    
+    <span>İletişime Geçin</span>
+    
+    
+    <div className="w-6 h-6 rounded-full bg-medusa-purple/10 dark:bg-medusa-spark/20 flex items-center justify-center group-hover:bg-medusa-spark group-hover:rotate-45 transition-all duration-300">
+      <ArrowRight className="w-4 h-4 text-[#08020F] dark:text-white group-hover/btn:text-[#08020F] transition-colors" />
+              </div>
+    
+  </button>
+</div>
 
           <button className="md:hidden w-10 h-10 bg-black/5 dark:bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-black/5 dark:border-white/10 active:scale-95 transition-transform">
             <Menu className="w-4 h-4 text-[#08020F] dark:text-white" />
