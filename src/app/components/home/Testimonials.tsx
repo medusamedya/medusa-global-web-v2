@@ -69,24 +69,21 @@ export default function Testimonials() {
 
   return (
     <section className="relative w-full py-24 bg-background transition-colors duration-500 overflow-hidden">
-      {/* Derinlik Izgarası */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-
       <div className="container mx-auto px-6 relative z-10">
         
         {/* --- ÜST BAŞLIK VE İMZA BADGE --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-6">
           
           <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm">
-            {/* Animasyonlu Dönen Border Katmanı */}
-            <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80" />
-            
-            <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-5 py-1.5 backdrop-blur-md">
-              <span className="text-xs sm:text-sm font-semibold tracking-[0.15em] text-white uppercase drop-shadow-md">
-                Testimonial
-              </span>
-            </div>
-          </div>
+  {/* Animasyonlu Dönen Border Katmanı (Genişletilmiş Mor, İnce Spark Işığı) */}
+  <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
+  
+  <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-5 py-1.5 backdrop-blur-md">
+    <span className="text-xs sm:text-sm font-semibold tracking-[0.15em] text-white uppercase drop-shadow-md">
+      Testimonial
+    </span>
+  </div>
+</div>
           
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight transition-colors duration-300">
             25+ Markanın Güvendiği İş Ortağı

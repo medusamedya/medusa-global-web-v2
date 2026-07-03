@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight leading-tight transition-colors duration-300">
               Ticaretinizi büyütmek için <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-medusa-purple to-medusa-gold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-medusa-purple to-medusa-spark">
                 doğru iş ortağını
               </span> buldunuz.
             </h2>
@@ -48,12 +48,27 @@ export default function Footer() {
           
           {/* Marka ve Vizyon (Col Span 4) */}
           <div className="lg:col-span-4 flex flex-col space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-medusa-purple to-medusa-spark flex items-center justify-center">
-                <span className="text-white font-black text-sm">M</span>
-              </div>
-              <span className="text-2xl font-black tracking-widest text-foreground dark:text-white uppercase transition-colors duration-300">Medusa</span>
-            </div>
+            {/* Logo Alanı (Dikey Hiyerarşi ile) */}
+  <div className="flex items-start gap-4 group">
+    {/* Logo Görseli */}
+    <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-105">
+      <img 
+        src="/Logo.png" 
+        alt="Medusa Global Logo" 
+        className="w-full h-full object-contain"
+      />
+    </div>
+    
+    {/* Marka Adı ve Vizyon (Dikey Hiyerarşi) */}
+    <div className="flex flex-col justify-center">
+      <span className="text-2xl font-black tracking-widest text-foreground dark:text-white uppercase transition-colors duration-300 leading-tight">
+        MEDUSAGLOBAL
+      </span>
+      <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-medusa-purple dark:text-medusa-spark mt-0.5">
+        ACCELERATION & CONSULTANCY
+      </span>
+    </div>
+  </div>
             <p className="text-foreground/70 dark:text-white/60 text-sm leading-relaxed max-w-sm transition-colors duration-300">
               Dünyaya yenilik katarak ticaretini büyütmek isteyen işverenlerin destekçisiyiz. Stratejiyi kurar, sahaya indirir ve verilerle yönetiriz.
             </p>

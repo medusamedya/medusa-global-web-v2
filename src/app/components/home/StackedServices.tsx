@@ -122,34 +122,34 @@ export default function StackedServices() {
     >
       <div className="max-w-[1200px] w-full mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         
-        {/* --- YENİ ANİMASYONLU BADGE --- */}
-        <div className="relative inline-flex overflow-hidden rounded-full p-[1px] mb-8 shadow-sm">
-          {/* Sürekli dönen border katmanı */}
-          <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80" />
+        {/* --- ÜST KISIM (MERKEZE HİZALI HİYERARŞİ) --- */}
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 space-y-6">
           
-          <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-5 py-1.5 backdrop-blur-md">
-            <span className="text-xs sm:text-sm font-semibold tracking-[0.15em] text-white uppercase drop-shadow-md">
-              Hızlandırma
-            </span>
+          {/* YENİ STANDART: Mor Ağırlıklı Animasyonlu Badge */}
+          <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm">
+            <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
+            
+            <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-5 py-1.5 backdrop-blur-md">
+              <span className="text-xs sm:text-sm font-semibold tracking-[0.15em] text-white uppercase drop-shadow-md">
+                Hızlandırma
+              </span>
+            </div>
           </div>
-        </div>
 
-        {/* Üst Kısım: Başlık ve Açıklama */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-12 items-start">
-          <h2 className="flex-1 text-[clamp(2.2rem,4vw,4rem)] font-medium leading-[1.05] tracking-tight text-foreground dark:text-white transition-colors duration-300">
-            <span className="text-medusa-purple font-extrabold drop-shadow-sm">Hızlandırma,</span> <br />
-            üç hatta <br />
-            birden çalışır.
+          {/* Başlık */}
+          <h2 className="text-[clamp(2.2rem,4vw,4rem)] font-medium leading-[1.1] tracking-tight text-foreground dark:text-white transition-colors duration-300">
+            <span className="text-medusa-purple font-extrabold drop-shadow-sm">Hızlandırma,</span> üç hatta birden çalışır.
           </h2>
-          <div className="flex-1 lg:pt-4 text-foreground/80 dark:text-white/80 text-[16px] sm:text-[18px] leading-relaxed font-light transition-colors duration-300">
-            <p>
-              Bir markayı büyütmek için üç şeyin doğru olması gerekir:{" "}
-              <strong className="font-semibold text-medusa-purple dark:text-medusa-spark">
-                kim olduğunuzu doğru söylemek, doğru kişiye söylemek, doğru içerikle söylemek.
-              </strong>{" "}
-              Üçü ayrı ekiplerde değil, aynı çatı altında beraber çalışan ekiplerimizle sağlanıyor.
-            </p>
-          </div>
+
+          {/* Açıklama Metni */}
+          <p className="text-foreground/80 dark:text-white/80 text-[16px] sm:text-[18px] leading-relaxed font-light transition-colors duration-300 max-w-2xl">
+            Bir markayı büyütmek için üç şeyin doğru olması gerekir:{" "}
+            <strong className="font-semibold text-medusa-purple dark:text-medusa-spark">
+              kim olduğunuzu doğru söylemek, doğru kişiye söylemek, doğru içerikle söylemek.
+            </strong>{" "}
+            Üçü ayrı ekiplerde değil, aynı çatı altında beraber çalışan ekiplerimizle sağlanıyor.
+          </p>
+          
         </div>
 
         {/* GSAP STACKING CARDS KAPSAYICISI */}
@@ -163,10 +163,10 @@ export default function StackedServices() {
               className="stacked-card absolute top-0 left-0 w-full h-full transform-origin-top will-change-transform group"
               style={{ zIndex: index + 10 }}
             >
-              {/* --- YENİ: Kartlar İçin Animasyonlu Kurumsal Border --- */}
+              {/* Kartlar İçin Animasyonlu Kurumsal Border */}
               <div className="relative w-full h-full rounded-[2rem] p-[2px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(92,6,140,0.15)] transition-shadow duration-500">
                 
-                {/* Dönen Border Katmanı (Kart Dikdörtgen olduğu için inset değeri yüksek tutuldu) */}
+                {/* Dönen Border Katmanı */}
                 <span className="absolute inset-[-200%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-purple)_100%)] opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Kart İçeriği (Maske Görevi Görür) */}

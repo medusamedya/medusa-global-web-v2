@@ -77,14 +77,16 @@ export default function FinalCta() {
   return (
     <section className="relative w-full min-h-screen py-32 md:py-48 bg-background transition-colors duration-500 overflow-hidden flex flex-col justify-center">
       
-      {/* Arka Plan Ortam Işığı (Medusa Glow) */}
+      {/* Arka Plan Ortam Işığı (Medusa Glow - Bu mantık diğer sectionlara da taşınacak) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-medusa-purple/5 dark:bg-medusa-glow-primary/20 blur-[100px] rounded-full pointer-events-none transition-colors duration-700" />
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-12 w-full flex flex-col items-center sm:items-start text-center sm:text-left">
+      {/* TÜM İÇERİK MERKEZE HİZALANDI (flex-col, items-center, text-center) */}
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-12 w-full flex flex-col items-center text-center">
         
-        {/* --- İMZA ANİMASYONLU BADGE --- */}
-        <div className="relative inline-flex overflow-hidden rounded-full p-[1px] mb-8 shadow-sm">
-          <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80" />
+        {/* --- İMZA ANİMASYONLU BADGE (Premium Standart) --- */}
+        <div className="relative inline-flex overflow-hidden rounded-full p-[1px] mb-12 shadow-sm">
+          {/* Genişletilmiş Mor, İnce Spark Işığı */}
+          <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
           <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-5 py-1.5 backdrop-blur-md">
             <span className="text-xs sm:text-sm font-semibold tracking-[0.15em] text-white uppercase drop-shadow-md">
               Manifesto
@@ -93,7 +95,7 @@ export default function FinalCta() {
         </div>
 
         {/* === KİNETİK MANİFESTO === */}
-        <div className="flex flex-col gap-10 md:gap-14 text-[clamp(2rem,5vw,4.5rem)] font-medium tracking-tight leading-[1.1] mb-24 w-full text-foreground dark:text-white">
+        <div className="flex flex-col items-center gap-10 md:gap-14 text-[clamp(2rem,5vw,4.5rem)] font-medium tracking-tight leading-[1.1] mb-24 w-full text-foreground dark:text-white">
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -101,8 +103,8 @@ export default function FinalCta() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <HighlightText text="Başarı hikayesi" delay={0.4} /> anlatmıyoruz. <br className="hidden sm:block" />
-            <span className="text-2xl md:text-4xl mt-4 block">
+            <HighlightText text="Başarı hikayesi" delay={0.4} /> anlatmıyoruz.
+            <span className="text-2xl md:text-4xl mt-6 block">
               <StrikeText text="Çoğu yalandır." delay={1.2} />
             </span>
           </motion.div>
@@ -136,8 +138,8 @@ export default function FinalCta() {
 
         </div>
 
-        {/* === ALT AÇIKLAMA VE BUTON (Final Vuruş) === */}
-        <div className="w-full flex flex-col xl:flex-row items-center xl:items-end justify-between gap-12 border-t border-foreground/10 dark:border-white/10 pt-12 transition-colors duration-500">
+        {/* === ALT AÇIKLAMA VE BUTON (Final Vuruş - Merkeze Hizalı) === */}
+        <div className="w-full max-w-4xl flex flex-col items-center justify-center gap-10 border-t border-foreground/10 dark:border-white/10 pt-12 transition-colors duration-500">
           
           {/* Manifesto Alt Metni */}
           <motion.div 
@@ -145,7 +147,7 @@ export default function FinalCta() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 2.0 }}
-            className="max-w-2xl text-foreground/70 dark:text-white/70 text-[16px] md:text-[20px] font-light leading-relaxed italic transition-colors duration-300"
+            className="text-foreground/70 dark:text-white/70 text-[16px] md:text-[20px] font-light leading-relaxed italic transition-colors duration-300"
           >
             Kendi dört dijital ürünümüzü kurarken öğrendiklerimiz var. <br className="hidden sm:block" />
             <strong className="text-foreground dark:text-white font-medium transition-colors duration-300">O dersleri sizin markanıza taşıyoruz.</strong>

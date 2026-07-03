@@ -29,15 +29,27 @@ export default function Header() {
     >
       <div className="max-w-[1440px] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
         
-        {/* LEFT: Logo */}
-        <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#08020F] dark:bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <span className="text-white dark:text-[#08020F] text-[10px] sm:text-[11px] font-bold tracking-tight">MG</span>
-          </div>
-          <span className="text-[#08020F] dark:text-white font-medium tracking-wide hidden sm:block transition-colors duration-500">
-            Medusa
-          </span>
-        </div>
+      {/* LEFT: Logo (Kurumsal Hiyerarşi) */}
+<div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+  {/* Logo Görseli */}
+  <div className="relative w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-105">
+    <img 
+      src="/Logo.png" 
+      alt="Medusa Global Logo" 
+      className="w-full h-full object-contain"
+    />
+  </div>
+  
+  {/* Marka Adı ve Alt Başlık (Dikey Hiyerarşi) */}
+  <div className="flex flex-col">
+    <span className="text-[#08020F] dark:text-white font-bold tracking-wide transition-colors duration-500 leading-none">
+      MEDUSAGLOBAL
+    </span>
+    <span className="text-[9px] sm:text-[10px] text-medusa-purple dark:text-medusa-spark font-medium tracking-[0.15em] uppercase transition-colors duration-500 mt-0.5">
+      ACCELERATION & CONSULTANCY
+    </span>
+  </div>
+</div>
 
         {/* MIDDLE: Pill Menu */}
         <nav
@@ -48,11 +60,10 @@ export default function Header() {
               : "bg-black/30 dark:bg-white/10 backdrop-blur-md px-6 py-2 border border-black/10 dark:border-white/10 gap-2 shadow-lg"
           }`}
         >
-          {["Hizmetler", "Projeler", "Stüdyo", "Blog"].map((item) => (
+          {["Anasayfa", "Hakkımızda", "Hizmetler", "Fiyatlandırma","Blog"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              // Krem temada text-white, hoverda arka plan bg-black/50 ile çok belirgin
               className="text-[13px] px-4 py-1.5 text-white dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors duration-300 rounded-full hover:bg-black/50 dark:hover:bg-white/10"
             >
               {item}
@@ -78,7 +89,7 @@ export default function Header() {
           )}
 
           <button className="group flex items-center bg-[#08020F] dark:bg-white text-white dark:text-[#08020F] text-[13px] font-bold rounded-full pl-5 pr-1.5 py-1.5 gap-3 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow-md">
-            <span>İletişim</span>
+            <span>İletişime Geçin</span>
             <div className="bg-white dark:bg-[#08020F] rounded-full p-1 transition-transform duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:-rotate-45">
               <ArrowRight className="w-4 h-4 text-[#08020F] dark:text-white" />
             </div>

@@ -1,42 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  /* 1. Önce Medusa Global Marka Renkleri ve Zemin Paletimizi Tanımlıyoruz */
+  /* Renk Paleti */
   --medusa-purple: #5C068C;
   --medusa-gold: #C9A97E;
   --medusa-cream: #E8D4B8;
-  --medusa-spark: #FFC600;
-
+  --medusa-spark: #dfd2a6;
   --medusa-base-dark: #08020F;
   --medusa-base-light: #0F0420;
   --medusa-glow-primary: #3D0A6B;
   --medusa-glow-secondary: #1F0838;
 
-  /* 2. KREM (Light) TEMA KARAKTERİSTİĞİ: 
-     Arka plan saf beyaz yerine Medusa Cream oluyor.
-     Okunabilirlik (Erişilebilirlik/SEO) için metinler en koyu Base Zemin rengini alıyor. */
   --background: var(--medusa-cream);
-  --foreground: var(--medusa-base-dark); 
+  --foreground: var(--medusa-base-dark);
+  
+  /* Font Değişkenleri */
+  --font-ana: "Cook Resans", sans-serif;
+  --font-ikincil: "Juturu", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter); /* Fontu buraya entegre edeceğiz */
-  --font-mono: var(--font-geist-mono);
+  
+  /* Yeni Font Tanımlamaları */
+  --font-sans: var(--font-ikincil); 
+  --font-heading: var(--font-ana);
+
+  /* Eski Fontları Yorum Satırına Aldım */
+  /* --font-sans: var(--font-inter); */
+  /* --font-mono: var(--font-geist-mono); */
 
   --color-medusa-purple: var(--medusa-purple);
   --color-medusa-gold: var(--medusa-gold);
   --color-medusa-cream: var(--medusa-cream);
   --color-medusa-spark: var(--medusa-spark);
-  
   --color-medusa-base-dark: var(--medusa-base-dark);
   --color-medusa-base-light: var(--medusa-base-light);
   --color-medusa-glow-primary: var(--medusa-glow-primary);
   --color-medusa-glow-secondary: var(--medusa-glow-secondary);
 }
 
-/* ÇÖZÜM BURADA: Medya sorgusu yerine doğrudan .dark sınıfını kullanıyoruz */
 .dark {
   --background: var(--medusa-base-dark);
   --foreground: var(--medusa-cream); 
@@ -45,5 +49,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  /* Tailwind font sınıfının devreye girmesi için font-family'yi buradan silebilir veya var(--font-sans) yapabilirsin */
+  /* Gövde metinleri için ikincil font (Juturu) varsayılan oldu */
+  font-family: var(--font-ikincil);
+}
+
+/* Başlıklar için ana font (Cook Resans) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-ana);
 }

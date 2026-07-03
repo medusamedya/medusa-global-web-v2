@@ -49,23 +49,25 @@ export default function CaseStudies() {
 
   return (
     <section className="relative w-full py-24 bg-background transition-colors duration-500 overflow-hidden">
-      {/* Derinlik Izgarası */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-
+     {/* --- YUKARIDAN VURAN SPOT IŞIĞI (MEDUSA GLOW) --- */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[60vw] max-w-[1000px] max-h-[600px] bg-medusa-purple/10 dark:bg-medusa-glow-primary/20 blur-[120px] rounded-full pointer-events-none transition-colors duration-700 z-0" />
       <div className="container mx-auto px-6 relative z-10">
         
         {/* --- BAŞLIK VE BADGE BÖLÜMÜ --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-6">
           
-          {/* Animasyonlu Gradient Border Badge (İstediğin Standart) */}
-          <div className="relative inline-flex overflow-hidden rounded-full p-[1px]">
-            <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80" />
-            <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
-              <span className="text-sm font-semibold tracking-wide text-white drop-shadow-md">
-                Case Studies
-              </span>
-            </div>
-          </div>
+          {/* Animasyonlu Gradient Border Badge (Mor Ağırlıklı Premium Standart) */}
+<div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
+  {/* Sürekli dönen arka plan (Genişletilmiş Mor, İnce Spark Işığı) */}
+  <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
+  
+  {/* İç Zemin ve Metin */}
+  <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
+    <span className="text-sm font-semibold tracking-wide text-white drop-shadow-md">
+      Case Studies
+    </span>
+  </div>
+</div>
           
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight">
             Sahada Kanıtlanmış Büyüme Hikayeleri
