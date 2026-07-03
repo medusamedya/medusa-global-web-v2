@@ -85,13 +85,20 @@ export default function HighImpactSolutions() {
                 <p className="text-white/70 text-sm font-light mb-8">
                   Sektörel analizler ve dijital sağlık kontrolleriyle ekibinizin her zaman doğru kararı almasını sağlıyoruz.
                 </p>
-                {/* Aksiyon Butonu */}
-                <button className="flex items-center justify-center gap-2 bg-white text-[#08020F] px-6 py-4 rounded-full font-bold hover:bg-medusa-spark hover:text-black transition-all duration-300 w-full sm:w-max group/btn shadow-xl">
-                  <span className="bg-medusa-purple text-white p-1 rounded-full group-hover/btn:bg-black transition-colors">
-                    <ArrowUpRight className="w-5 h-5" />
-                  </span>
-                  Tüm Çözümleri İncele
-                </button>
+               {/* Animasyonlu İmza Çerçeveli Çözüm Butonu */}
+<div className="relative inline-flex overflow-hidden rounded-full p-[2px] group flex-shrink-0 w-full sm:w-max">
+  {/* Dönen Kurumsal Işık Bandı (Border Animasyonu) */}
+  <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+  
+  {/* Buton Zemin ve İçerik */}
+  <button className="relative z-10 flex items-center justify-center gap-3 bg-background text-white px-8 py-4 rounded-full font-bold hover:bg-transparent hover:text-white transition-all duration-300 w-full sm:w-max group/btn">
+    
+   <div className="w-8 h-8 rounded-full bg-medusa-purple/10 dark:bg-medusa-spark/20 flex items-center justify-center group-hover:bg-medusa-spark group-hover:rotate-45 transition-all duration-300">
+                   <ArrowUpRight className="w-4 h-4 text-medusa-purple dark:text-medusa-spark group-hover:text-medusa-base-dark transition-colors" />
+                 </div>
+    Tüm Çözümleri İncele
+  </button>
+</div>
               </div>
             </div>
           </div>

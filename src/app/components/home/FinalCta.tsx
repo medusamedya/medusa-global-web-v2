@@ -153,26 +153,33 @@ export default function FinalCta() {
             <strong className="text-foreground dark:text-white font-medium transition-colors duration-300">O dersleri sizin markanıza taşıyoruz.</strong>
           </motion.div>
 
-          {/* Magnetic CTA Butonu */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 2.2, type: "spring" }}
-          >
-            <MagneticButton>
-              <button className="group relative flex items-center justify-center gap-4 bg-foreground dark:bg-white text-background dark:text-medusa-base-dark px-10 py-5 rounded-full font-bold text-lg overflow-hidden transition-transform hover:scale-105 shadow-xl">
-                {/* Buton İçi Parlama Efekti */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-background/20 dark:via-medusa-base-dark/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                
-                <span className="relative z-10 tracking-wide">Projeye Başla</span>
-                
-                <div className="relative z-10 w-10 h-10 rounded-full bg-background/20 dark:bg-medusa-base-dark/10 flex items-center justify-center group-hover:bg-medusa-spark group-hover:text-black transition-colors duration-300">
-                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-              </button>
-            </MagneticButton>
-          </motion.div>
+<motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, delay: 2.2, type: "spring" }}
+>
+  <MagneticButton>
+    {/* Dış Çerçeve (Dönen Işık Bandı) */}
+    <div className="relative inline-flex overflow-hidden rounded-full p-[2px] shadow-lg group cursor-pointer">
+      
+      {/* Animasyonlu Dönen Kenarlık (İmza Efektimiz) */}
+      <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+      
+      {/* Buton Zemin ve İçerik */}
+      <button className="relative z-10 flex items-center justify-center gap-4 bg-background dark:bg-medusa-base-dark text-foreground dark:text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 group-hover:bg-transparent group-hover:text-white">
+        
+        <span className="relative z-10 tracking-wide">Birlikte Değerlendirelim</span>
+        
+        {/* İkon Kutusu (Hover ile rotate-45) */}
+        <div className="w-10 h-10 rounded-full bg-medusa-purple/10 dark:bg-medusa-spark/20 flex items-center justify-center group-hover:bg-medusa-spark group-hover:rotate-45 transition-all duration-300">
+          <ArrowRight className="w-5 h-5 text-medusa-purple dark:text-medusa-spark group-hover:text-medusa-base-dark transition-colors" />
+        </div>
+        
+      </button>
+    </div>
+  </MagneticButton>
+</motion.div>
           
         </div>
       </div>

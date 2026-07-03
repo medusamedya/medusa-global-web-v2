@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -147,10 +148,25 @@ export default function Hero() {
             {/* Animasyonlu Dönen Kenarlık (Medusa Purple & Spark) */}
             <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
             
-            {/* Butonun Kendisi (İç Zemin Maskesi) */}
-            <button className="relative z-10 bg-white text-[#08020F] px-8 py-3.5 rounded-full font-semibold text-[15px] tracking-wide w-full h-full transition-colors duration-300">
-              Birlikte Değerlendirelim
-            </button>
+            {/* Animasyonlu İmza Çerçeveli CTA Butonu */}
+<div className="relative inline-flex overflow-hidden rounded-full p-[2px] shadow-lg group">
+  {/* Dönen Kurumsal Işık Bandı (Border Animasyonu) */}
+  <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+  
+  {/* Buton Zemin ve İçerik */}
+  <button className="relative z-10 inline-flex items-center gap-3 bg-background text-white px-10 py-4 rounded-full font-bold text-[15px] tracking-wide transition-all duration-300 group-hover:bg-transparent group-hover:text-white">
+    
+    {/* Buton Metni */}
+    <span className="transition-colors duration-300">
+      Birlikte Değerlendirelim
+    </span>
+    
+    <div className="w-8 h-8 rounded-full bg-medusa-purple/10 dark:bg-medusa-spark/20 flex items-center justify-center group-hover:bg-medusa-spark group-hover:rotate-45 transition-all duration-300">
+                    <ArrowUpRight className="w-4 h-4 text-medusa-purple dark:text-medusa-spark group-hover:text-medusa-base-dark transition-colors" />
+                  </div>
+    
+  </button>
+</div>
             
           </div>
         </motion.div>
