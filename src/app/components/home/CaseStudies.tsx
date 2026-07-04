@@ -111,16 +111,29 @@ export default function CaseStudies() {
                            </span>
                         </div>
 
-                        {/* Alt Kısım: İstatistik Kutuları */}
-                        <div className="mt-auto relative z-20 grid grid-cols-3 gap-px bg-white/10 backdrop-blur-md border-t border-white/10">
-                          {study.stats.map((stat, index) => (
-                            <div key={index} className="bg-[#08020F]/60 p-4 md:p-6 flex flex-col items-center justify-center text-center hover:bg-medusa-purple/20 transition-colors">
-                              <span className="text-xl md:text-2xl font-bold text-medusa-spark mb-1">{stat.value}</span>
-                              <span className="text-xs md:text-sm text-white/70 font-medium leading-snug">{stat.label}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+{/* Alt Kısım: İstatistik Kutuları */}
+<div className="mt-auto relative z-20 grid grid-cols-3 gap-px bg-white/10 backdrop-blur-md border-t border-white/10">
+  {study.stats.map((stat, index) => (
+    <div 
+      key={index} 
+      className="relative flex flex-col items-center justify-center text-center p-[1px] overflow-hidden group/stat cursor-default"
+    >
+      {/* DIŞ KATMAN: Badge'deki Dönen Kurumsal Işık Bandı (Conic Gradient) */}
+      <span className="absolute inset-[-500%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-20 group-hover/stat:opacity-100 transition-opacity duration-500" />
+      
+      {/* İÇ KATMAN: Kurumsal İç Gradyant ve Cam Dokusu */}
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#08020F]/95 via-[#08020F]/80 to-medusa-purple/10 group-hover/stat:from-[#08020F]/90 group-hover/stat:to-medusa-purple/30 backdrop-blur-xl p-4 md:p-6 transition-colors duration-500">
+        <span className="text-xl md:text-2xl font-bold text-medusa-spark mb-1 drop-shadow-md group-hover/stat:scale-105 transition-transform duration-500">
+          {stat.value}
+        </span>
+        <span className="text-xs md:text-sm text-white/70 font-medium leading-snug group-hover/stat:text-white transition-colors duration-500">
+          {stat.label}
+        </span>
+      </div>
+      
+    </div>
+  ))}
+</div>              </div>
 
                       {/* SAĞ: Metin ve Detaylar Bölümü */}
                       <div className="w-full lg:w-[55%] p-8 md:p-12 lg:p-16 flex flex-col justify-center space-y-8">

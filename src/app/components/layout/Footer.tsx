@@ -15,14 +15,27 @@ export default function Footer() {
         
         {/* --- ÜST BÖLÜM: BÜYÜK VİZYON MESAJI --- */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 mb-20">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight leading-tight transition-colors duration-300">
-              Ticaretinizi büyütmek için <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-medusa-purple to-medusa-spark">
-                doğru iş ortağını
-              </span> buldunuz.
-            </h2>
-          </div>
+          <div className="max-w-2xl relative">
+  
+  {/* YENİ: Metin parlaması için CSS Keyframes (Seamless Loop) */}
+  <style>{`
+    @keyframes text-shine {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+    .animate-text-shine {
+      background-size: 200% auto;
+      animation: text-shine 4s linear infinite;
+    }
+  `}</style>
+
+  <h2 className="text-4xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight leading-tight transition-colors duration-300">
+    Ticaretinizi büyütmek için <br className="hidden sm:block" />
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-medusa-purple via-medusa-spark to-medusa-purple animate-text-shine">
+      doğru iş ortağını
+    </span> buldunuz.
+  </h2>
+</div>
           
           {/* Animasyonlu İletişim Butonu (İmza Border Efekti) */}
           <div className="relative inline-flex overflow-hidden rounded-full p-[2px] shadow-lg group flex-shrink-0">
