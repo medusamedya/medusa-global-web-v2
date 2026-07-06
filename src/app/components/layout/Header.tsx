@@ -12,13 +12,21 @@ export default function Header() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // Eski useEffect'i sil, yerine bunu ekle:
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -42,10 +50,10 @@ export default function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-[#08020F] dark:text-white font-bold tracking-wide transition-colors duration-500 leading-none">
+              <span className="font-heading text-[#08020F] dark:text-white font-bold tracking-wide transition-colors duration-500 leading-none">
                 MEDUSAGLOBAL
               </span>
-              <span className="text-[9px] sm:text-[10px] text-medusa-purple dark:text-medusa-spark font-medium tracking-[0.15em] uppercase transition-colors duration-500 mt-0.5">
+              <span className="font-sans text-[9px] sm:text-[10px] text-medusa-purple dark:text-medusa-spark font-medium tracking-[0.15em] uppercase transition-colors duration-500 mt-0.5">
                 ACCELERATION & CONSULTANCY
               </span>
             </div>
@@ -63,7 +71,7 @@ export default function Header() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-[13px] px-4 py-1.5 text-white dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors duration-300 rounded-full hover:bg-black/50 dark:hover:bg-white/10"
+                className="font-sans text-[13px] px-4 py-1.5 text-white dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors duration-300 rounded-full hover:bg-black/50 dark:hover:bg-white/10"
               >
                 {item}
               </a>
@@ -90,7 +98,7 @@ export default function Header() {
             {/* Header Aksiyon Butonu (Masaüstünde görünür, mobilde gizlenebilir veya kalabilir - şu an görünür) */}
             <div className="hidden sm:inline-flex relative overflow-hidden rounded-full p-[1.5px] group flex-shrink-0 cursor-pointer">
               <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-              <button className="relative z-10 flex items-center justify-center gap-3 bg-[#08020F] text-white px-5 py-2.5 rounded-full font-bold text-[13px] tracking-wide transition-all duration-300 hover:bg-transparent hover:text-white group/btn">
+              <button className="font-sans relative z-10 flex items-center justify-center gap-3 bg-[#08020F] text-white px-5 py-2.5 rounded-full font-bold text-[13px] tracking-wide transition-all duration-300 hover:bg-transparent hover:text-white group/btn">
                 <span>İletişime Geçin</span>
                 <div className="w-6 h-6 rounded-full bg-medusa-purple/10 dark:bg-medusa-spark/20 flex items-center justify-center group-hover:bg-medusa-spark group-hover:rotate-45 transition-all duration-300">
                   <ArrowRight className="w-4 h-4 text-white group-hover/btn:text-[#08020F] transition-colors" />

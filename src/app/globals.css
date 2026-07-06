@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+/* --- FONT TANIMLAMALARI (LOCAL FONTS) --- */
+@font-face {
+  font-family: "Cook Resans";
+  src: url('/fonts/CookResans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Juturu";
+  src: url('/fonts/Juturu-Blaarr-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Juturu";
+  src: url('/fonts/Juturu-Blaarr-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- TEMA VE DEĞİŞKENLER --- */
 :root {
   /* Renk Paleti */
   --medusa-purple: #5C068C;
@@ -46,6 +72,7 @@
   --foreground: var(--medusa-cream); 
 }
 
+/* --- GLOBAL STYLES --- */
 body {
   background: var(--background);
   color: var(--foreground);

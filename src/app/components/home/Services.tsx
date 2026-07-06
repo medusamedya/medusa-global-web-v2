@@ -1,7 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
-import { BrainCircuit, Lightbulb, Rocket, Activity, LucideIcon, Mouse } from "lucide-react";
+import React from "react";
+import {
+  BrainCircuit,
+  Lightbulb,
+  Rocket,
+  Activity,
+  LucideIcon,
+  Mouse,
+} from "lucide-react";
 
 interface ServiceCard {
   id: number;
@@ -14,142 +21,138 @@ const servicesData: ServiceCard[] = [
   {
     id: 1,
     title: "Danışmanlık",
-    description: "İş süreçlerinizdeki yaygın sorunları çevik çözümlerle çözeriz.",
+    description:
+      "İş süreçlerinizdeki yaygın sorunları çevik çözümlerle çözeriz.",
     Icon: BrainCircuit,
   },
   {
     id: 2,
     title: "Yatırım",
-    description: "İnandığımız ticaretlere yatırım yapar, aktif olarak yönetiriz.",
+    description:
+      "İnandığımız ticaretlere yatırım yapar, aktif olarak yönetiriz.",
     Icon: Lightbulb,
   },
   {
     id: 3,
     title: "Hızlandırma",
-    description: "Dijital varlıklarınızı analiz eder, eksiklerinizi tamamlar, hızla büyütürüz.",
+    description:
+      "Dijital varlıklarınızı analiz eder, eksiklerinizi tamamlar, hızla büyütürüz.",
     Icon: Rocket,
   },
   {
     id: 4,
     title: "Sağlık Kontrolü",
-    description: "Web, sosyal medya ve reklamlarınızın kapsamlı, bağımsız analizini yaparız.",
+    description:
+      "Web, sosyal medya ve reklamlarınızın kapsamlı, bağımsız analizini yaparız.",
     Icon: Activity,
   },
 ];
 
 export default function Services() {
-  const [hoveredId, setHoveredId] = useState<number | null>(null);
-
   return (
-    // 1. STRATEJİK DEĞİŞİKLİK: bg-background ve overflow-hidden kaldırıldı.
-    // Negatif margin (-mt-24 md:-mt-40) ile Hero'nun altına değil, "içine" çekildi.
     <section className="relative w-full pb-24 z-20 -mt-24 md:-mt-32 transition-colors duration-500 pointer-events-none">
-      
-      {/* 
-        pointer-events-none ile negatif margin yüzünden üstte kalan görünmez alanın 
-        Hero'daki tıklamaları engellemesini önledik.
-        İçeriklere pointer-events-auto vererek sadece onların tıklanabilir olmasını sağlayacağız.
-      */}
-
-      {/* Veri Akışı (Data Flow) Animasyonu */}
-      <style>{`
-        @keyframes flow-data {
-          from { stroke-dashoffset: 100; }
-          to { stroke-dashoffset: 0; }
-        }
-        .animate-data-flow {
-          animation: flow-data 1.2s linear infinite;
-        }
-      `}</style>
-
       <div className="container mx-auto px-6 relative z-10 pointer-events-auto">
-        
         {/* --- BAŞLANGIÇ MERKEZİ (MOUSE ICON) --- */}
-        {/* İkonu Hero'daki sayacın tam altına hizalamak için tasarlandı */}
         <div className="flex flex-col items-center justify-center w-full relative z-20">
-          <div className="bg-background p-2 rounded-full border border-white/20 shadow-sm relative overflow-hidden group">
-             <span className="absolute inset-[-500%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-20 group-hover:opacity-60 transition-opacity"></span>
-             <div className="relative z-10 bg-background rounded-full p-1">
-                <Mouse className="w-5 h-5 text-foreground/60 dark:text-medusa-cream/80 animate-bounce" />
-             </div>
+          <div className="flex flex-col items-center gap-2">
+            <Mouse
+              className="w-5 h-5 text-foreground/40 dark:text-white/40"
+              strokeWidth={1.5}
+            />
+            {/* Bağlantı noktası (Çizgi buradan tam temasla başlar) */}
+            <div className="w-1 h-1 rounded-full bg-foreground/30 dark:bg-white/30" />
           </div>
         </div>
 
-        {/* --- İNTERAKTİF VERİ KOLLARI (KUSURSUZ SVG MİMARİSİ) --- */}
-        <div className="hidden lg:block relative w-full h-32 mb-6 opacity-80 -mt-2 z-0 pointer-events-none">
-          <svg className="w-full h-full drop-shadow-md overflow-visible" viewBox="0 0 1000 100" preserveAspectRatio="none" fill="none">
-            {/* Ortadan aşağı inen ana omurga */}
-            <path 
-              d="M 500 0 L 500 40" 
-              stroke="var(--color-medusa-gold)" 
-              strokeWidth="2" 
-              strokeDasharray="4 4" 
-              opacity="0.4" 
-              vectorEffect="non-scaling-stroke" 
-            />
+        {/* --- İNTERAKTİF VERİ KOLLARI (MERKEZ KAVİSLİ & KÜÇÜK KESİK ÇİZGİLER) --- */}
+        <div className="hidden lg:block relative w-full max-w-[1200px] mx-auto h-[120px] z-0 pointer-events-none text-foreground/30 dark:text-white/30">
+          <svg
+            className="w-full h-full overflow-visible"
+            viewBox="0 0 1000 150"
+            preserveAspectRatio="none"
+            fill="none"
+          >
+            <defs>
+              {/* İkonlara yaklaştıkça solgunlaşan fade maskesi */}
+              <linearGradient id="lineFade" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="currentColor" stopOpacity="1" />
+                <stop offset="60%" stopColor="currentColor" stopOpacity="0.5" />
+                <stop
+                  offset="100%"
+                  stopColor="currentColor"
+                  stopOpacity="0.05"
+                />
+              </linearGradient>
+            </defs>
 
-            {/* Dinamik Kart Bağlantıları */}
-            {servicesData.map((service, index) => {
+            {/* 4 Maddeye Dağılan Kusursuz Kavisli Kollar (Y-Junction) */}
+            {servicesData.map((_, index) => {
               const targetX = [125, 375, 625, 875][index];
-              const isHovered = hoveredId === service.id;
+              const isLeft = targetX < 500;
+
+              // Merkez kavis başlangıcı ve yön hesaplaması
+              const centerCurveControl = isLeft ? 480 : 520;
+              const dir = isLeft ? 1 : -1;
+              const dropCurveStart = targetX + dir * 20;
 
               return (
-                <g key={`path-${service.id}`}>
-                  <path 
-                    d={`M 500 40 C 500 80, ${targetX} 40, ${targetX} 100`} 
-                    stroke="var(--color-medusa-gold)" 
-                    strokeWidth="1.5" 
-                    strokeDasharray="6 6" 
-                    opacity={isHovered ? "0.6" : "0.3"} 
-                    className="transition-opacity duration-300"
-                    vectorEffect="non-scaling-stroke"
-                  />
-                  
-                  {isHovered && (
-                    <path 
-                      d={`M 500 0 L 500 40 C 500 80, ${targetX} 40, ${targetX} 100`} 
-                      stroke="var(--color-medusa-spark)" 
-                      strokeWidth="2.5" 
-                      strokeDasharray="15 15" 
-                      pathLength="100"
-                      className="animate-data-flow drop-shadow-[0_0_8px_var(--color-medusa-spark)]"
-                      vectorEffect="non-scaling-stroke"
-                    />
-                  )}
-                </g>
+                <path
+                  key={`line-${index}`}
+                  // M 500 0: Tam noktadan başlar
+                  // L 500 20: Düz iner
+                  // Q 500 40 [centerCurve] 40: Merkezden sağa/sola kavisli ayrılır
+                  // L [dropCurve] 40: Yatay düz ilerler
+                  // Q targetX 40 targetX 60: İkona doğru kavisli döner
+                  // L targetX 140: Aşağı solgunlaşarak iner
+                  d={`M 500 0 L 500 20 Q 500 40 ${centerCurveControl} 40 L ${dropCurveStart} 40 Q ${targetX} 40 ${targetX} 60 L ${targetX} 140`}
+                  stroke="url(#lineFade)"
+                  strokeWidth="1.2"
+                  strokeDasharray="3 5"
+                  strokeLinecap="round"
+                  vectorEffect="non-scaling-stroke"
+                />
               );
             })}
           </svg>
         </div>
 
         {/* --- HİZMET KARTLARI (GRID) --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10 lg:-mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 relative w-full max-w-[1200px] mx-auto z-10 lg:-mt-2">
           {servicesData.map((service) => (
             <div
               key={service.id}
-              className="group flex flex-col items-center text-center space-y-6 cursor-default"
-              onMouseEnter={() => setHoveredId(service.id)}
-              onMouseLeave={() => setHoveredId(null)}
+              className="group flex flex-col items-center text-center px-2 cursor-default"
             >
-              <div className="relative inline-flex overflow-hidden rounded-2xl p-[2px] transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-105 shadow-[0_4px_20px_rgba(92,6,140,0.15)] group-hover:shadow-[0_8px_30px_rgba(201,169,126,0.4)]">
-                <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <div className="relative z-10 flex items-center justify-center w-20 h-20 rounded-[14px] bg-gradient-to-br from-[#1F0838] via-[#5C068C] to-[#C9A97E] backdrop-blur-md">
+              {/* DIŞ KATMAN: 3 Renkli Gradient Border (Üst ince ışık, Alt Sol Spark, Alt Sağ Mor) */}
+              <div className="relative rounded-[1.3rem] p-[1px] mb-6 transition-transform duration-500 group-hover:-translate-y-1 shadow-[0_8px_30px_rgba(92,6,140,0.25)] bg-gradient-to-br from-white/5 via-medusa-spark/60 to-medusa-purple">
+                {/* İÇ KATMAN: Üstü kurumsal siyah, altı çift renkli Mesh Gradient zemin */}
+                <div className="relative flex items-center justify-center w-14 h-14 md:w-18 md:h-18 rounded-[calc(1.3rem-1px)] bg-[#08020F] overflow-hidden">
+                  {/* Alt sol köşeden yayılan sıcak Medusa Spark (Gold/Krem Işık) */}
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 md:w-18 md:h-18 bg-medusa-spark/90 blur-[12px] rounded-full pointer-events-none" />
+
+                  {/* Alt sağ köşeden yayılan derin Medusa Moru */}
+                  <div className="absolute -bottom-4 -right-4 w-14 h-14 md:w-16 md:h-16 bg-medusa-purple/90 blur-[18px] rounded-full pointer-events-none" />
+
+                  {/* Üst Kısım Cam Yansıması (Glossy Effect - 3D Hissiyatı için üstte keskinleşir) */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-transparent opacity-80 pointer-events-none" />
+
+                  {/* İkon */}
                   <service.Icon
-                    className="w-9 h-9 text-white transition-transform duration-500 group-hover:scale-110 drop-shadow-md"
-                    strokeWidth={1.75}
+                    className="w-6 h-6 md:w-7 md:h-7 text-white drop-shadow-md z-10 transition-transform duration-500 group-hover:scale-110"
+                    strokeWidth={1.5}
                   />
                 </div>
               </div>
 
-              <div className="space-y-3 px-2">
-                <h3 className="text-xl font-bold font-heading text-foreground dark:text-white tracking-wide transition-colors duration-300 group-hover:text-medusa-gold">
-                  {service.title}
-                </h3>
-                <p className="text-foreground/80 dark:text-white/80 text-sm font-sans leading-relaxed max-w-[250px] mx-auto transition-colors duration-300">
-                  {service.description}
-                </p>
-              </div>
+              {/* Başlık */}
+              <h3 className="text-lg md:text-xl font-bold font-heading text-foreground dark:text-white tracking-wide mb-3 transition-colors duration-300 group-hover:text-medusa-purple dark:group-hover:text-medusa-spark">
+                {service.title}
+              </h3>
+
+              {/* Açıklama */}
+              <p className="text-foreground/70 dark:text-white/60 text-sm md:text-[15px] font-sans leading-relaxed max-w-[260px] mx-auto">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>

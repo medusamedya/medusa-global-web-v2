@@ -6,28 +6,31 @@ import { ArrowUpRight, TrendingUp, Activity, Users } from "lucide-react";
 export default function HighImpactSolutions() {
   return (
     <section className="relative w-full py-24 bg-background transition-colors duration-500 overflow-hidden">
-      {/* Derinlik Izgarası */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      
 
       <div className="container mx-auto px-6 relative z-10">
         
         {/* --- ÜST BAŞLIK BÖLÜMÜ --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-6">
-         <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm">
-  {/* Animasyonlu Dönen Border Katmanı (Genişletilmiş Mor, İnce Spark Işığı Standardı) */}
-  <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
-  
-  <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-5 py-1.5 backdrop-blur-md">
-    <span className="text-xs sm:text-sm font-semibold tracking-[0.15em] text-white uppercase drop-shadow-md">
-      Performans & Ölçeklenme
-    </span>
-  </div>
-</div>
+
+
+<div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
+          {/* Sürekli dönen arka plan (Mor ve Spark Işığı) */}
+          <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
           
-          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight transition-colors duration-300">
+          {/* İç Zemin ve Metin */}
+          <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
+            <span className="font-sans text-sm font-semibold tracking-wide text-white drop-shadow-md">
+            Performans & Ölçeklenme
+            </span>
+          </div>
+        </div>
+
+          
+          <h2 className="font-headingtext-3xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight transition-colors duration-300">
             İşletmenizi Büyütecek Yüksek Etkili Çözümler
           </h2>
-          <p className="text-lg text-foreground/80 dark:text-white/70 leading-relaxed transition-colors duration-300">
+          <p className="font-sans text-lg text-foreground/80 dark:text-white/70 leading-relaxed transition-colors duration-300">
             Ekibinizi operasyonel iş akışlarını hızlandıran, satışları ölçekleyen ve müşteri bağını güçlendiren veriye dayalı stratejilerle donatın.
           </p>
         </div>
@@ -40,7 +43,7 @@ export default function HighImpactSolutions() {
             <span className="absolute inset-[-200%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-purple)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10 w-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 flex flex-col justify-between border border-foreground/5 dark:border-white/5 transition-colors duration-500">
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-2xl font-bold text-foreground dark:text-white leading-tight">Lider Markaların<br/>Tercihi</h3>
+                <h3 className="font-headingtext-2xl font-bold text-foreground dark:text-white leading-tight">Lider Markaların<br/>Tercihi</h3>
                 {/* Avatarlar Yertutucu */}
                 <div className="flex -space-x-3">
                   <div className="w-10 h-10 rounded-full border-2 border-[#08020F] bg-medusa-purple flex items-center justify-center"><Users className="w-5 h-5 text-white" /></div>
@@ -48,7 +51,7 @@ export default function HighImpactSolutions() {
                   <div className="w-10 h-10 rounded-full border-2 border-[#08020F] bg-medusa-spark flex items-center justify-center"><Activity className="w-5 h-5 text-black" /></div>
                 </div>
               </div>
-              <p className="text-foreground/70 dark:text-white/60 text-sm font-light mt-auto">
+              <p className="font-sans text-foreground/70 dark:text-white/60 text-sm font-light mt-auto">
                 Latanwood, Naser Group ve onlarca vizyoner marka dijital dönüşüm operasyonlarında bize güveniyor.
               </p>
             </div>
@@ -59,10 +62,10 @@ export default function HighImpactSolutions() {
             <span className="absolute inset-[-200%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-gold)_0%,var(--color-medusa-purple)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-gold)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10 w-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 flex flex-col border border-foreground/5 dark:border-white/5 transition-colors duration-500">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-5xl font-black text-foreground dark:text-white tracking-tighter">3x</span>
-                <span className="text-sm font-medium text-foreground/80 dark:text-white/80 leading-tight">Ortalama<br/>ROAS Artışı</span>
+                <span className="font-heading text-5xl font-black text-foreground dark:text-white tracking-tighter">3x</span>
+                <span className="font-sans text-sm font-medium text-foreground/80 dark:text-white/80 leading-tight">Ortalama<br/>ROAS Artışı</span>
               </div>
-              <p className="text-foreground/70 dark:text-white/60 text-sm font-light mt-auto">
+              <p className="font-sans text-foreground/70 dark:text-white/60 text-sm font-light mt-auto">
                 Omnichannel pazarlama stratejilerimiz ve huni (funnel) optimizasyonlarımızla yatırım getirinizi maksimize ediyoruz.
               </p>
             </div>
@@ -81,8 +84,8 @@ export default function HighImpactSolutions() {
               
               {/* İçerik ve Gradient Katmanı */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#08020F] via-[#08020F]/60 to-transparent flex flex-col justify-end p-8">
-                <h3 className="text-3xl font-bold text-white mb-3 leading-tight">Veriyi Eyleme<br/>Dönüştürün</h3>
-                <p className="text-white/70 text-sm font-light mb-8">
+                <h3 className="font-heading text-3xl font-bold text-white mb-3 leading-tight">Veriyi Eyleme<br/>Dönüştürün</h3>
+                <p className="font-sanstext-white/70 text-sm font-light mb-8">
                   Sektörel analizler ve dijital sağlık kontrolleriyle ekibinizin her zaman doğru kararı almasını sağlıyoruz.
                 </p>
                {/* Animasyonlu İmza Çerçeveli Çözüm Butonu */}
@@ -91,7 +94,7 @@ export default function HighImpactSolutions() {
   <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
   
   {/* Buton Zemin ve İçerik */}
-  <button className="relative z-10 flex items-center justify-center gap-3 bg-background text-white px-8 py-4 rounded-full font-bold hover:bg-transparent hover:text-white transition-all duration-300 w-full sm:w-max group/btn">
+  <button className="font-sans relative z-10 flex items-center justify-center gap-3 bg-background text-white px-8 py-4 rounded-full font-bold hover:bg-transparent hover:text-white transition-all duration-300 w-full sm:w-max group/btn">
     
    <div className="w-8 h-8 rounded-full bg-medusa-purple/10 dark:bg-medusa-spark/20 flex items-center justify-center group-hover:bg-medusa-spark group-hover:rotate-45 transition-all duration-300">
                    <ArrowUpRight className="w-4 h-4 text-medusa-purple dark:text-medusa-spark group-hover:text-medusa-base-dark transition-colors" />
@@ -108,10 +111,10 @@ export default function HighImpactSolutions() {
             <span className="absolute inset-[-200%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-purple)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10 w-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 flex flex-col justify-between border border-foreground/5 dark:border-white/5 transition-colors duration-500">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-4xl md:text-5xl font-black text-foreground dark:text-white tracking-tighter">360°</span>
-                <span className="text-sm font-medium text-foreground/80 dark:text-white/80 leading-tight">Omnichannel<br/>Ekosistem</span>
+                <span className="font-heading text-4xl md:text-5xl font-black text-foreground dark:text-white tracking-tighter">360°</span>
+                <span className="font-sans text-sm font-medium text-foreground/80 dark:text-white/80 leading-tight">Omnichannel<br/>Ekosistem</span>
               </div>
-              <p className="text-foreground/70 dark:text-white/60 text-sm font-light mt-auto max-w-[90%]">
+              <p className="font-sans text-foreground/70 dark:text-white/60 text-sm font-light mt-auto max-w-[90%]">
                 Fiziksel ve dijital kanallarınızı (Web, Mobil, Sosyal Medya, CRM) tek bir çatı altında birleştirerek kesintisiz ve tutarlı bir müşteri deneyimi (CX) yaratıyoruz.
               </p>
             </div>
@@ -122,12 +125,12 @@ export default function HighImpactSolutions() {
             <span className="absolute inset-[-300%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-gold)_0%,var(--color-medusa-purple)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-gold)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10 w-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 flex flex-col justify-between border border-foreground/5 dark:border-white/5 transition-colors duration-500">
               <div className="mb-4">
-                <h3 className="text-lg font-semibold text-foreground dark:text-white mb-1">Kapsamlı Analiz</h3>
-                <p className="text-sm text-medusa-purple dark:text-medusa-gold font-medium">Dijital Sağlık Kontrolü</p>
+                <h3 className="font-heading text-lg font-semibold text-foreground dark:text-white mb-1">Kapsamlı Analiz</h3>
+                <p className="font-sans text-sm text-medusa-purple dark:text-medusa-gold font-medium">Dijital Sağlık Kontrolü</p>
               </div>
               <div className="mt-auto flex items-end justify-between">
-                <span className="text-4xl md:text-5xl font-black text-foreground dark:text-white tracking-tighter">14</span>
-                <span className="text-foreground/70 dark:text-white/60 text-sm font-light mb-1">Günde Raporlama</span>
+                <span className="font-heading text-4xl md:text-5xl font-black text-foreground dark:text-white tracking-tighter">14</span>
+                <span className="font-sans text-foreground/70 dark:text-white/60 text-sm font-light mb-1">Günde Raporlama</span>
               </div>
             </div>
           </div>
