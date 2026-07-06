@@ -39,7 +39,7 @@ export default function Hero() {
   }, [count]); // Animasyon için gereken count bağımlılığı burada kaldı.
   return (
     // min-h-screen yerine min-h-[100dvh] ile mobil tarayıcı zıplamaları engellendi
-    <section className="relative w-full min-h-[100dvh] bg-[#05010A] flex flex-col items-center justify-center overflow-hidden z-0">
+    <section className="relative w-full min-h-[100dvh] bg-[#05010A] pt-32 sm:pt-40 flex flex-col items-center justify-center overflow-hidden z-0">
       {/* =========================================
           1. SİNEMATİK VİDEO ARKA PLANI
           ========================================= */}
