@@ -5,6 +5,7 @@ import { ArrowRight, Menu, Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import MobileMenu from "./MobileMenu"; // Yeni bileşenimizi içe aktardık
+import Link from "next/link";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,7 +60,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* MIDDLE: Pill Menu (Sadece Masaüstü) */}
+         {/* MIDDLE: Pill Menu (Sadece Masaüstü) */}
           <nav
             className={`hidden md:flex items-center rounded-full transition-all duration-500 ease-in-out ${
               isScrolled
@@ -67,14 +68,20 @@ export default function Header() {
                 : "bg-black/30 dark:bg-white/10 backdrop-blur-md px-6 py-2 border border-black/10 dark:border-white/10 gap-2 shadow-lg"
             }`}
           >
-            {["Anasayfa", "Hakkımızda", "Hizmetler", "Fiyatlandırma","Blog"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+            {[
+              { name: "Anasayfa", path: "/" },
+              { name: "Hakkımızda", path: "/about" },
+              { name: "Hizmetler", path: "/services" },
+              { name: "Fiyatlandırma", path: "/pricing" },
+              { name: "Blog", path: "/blog" },
+            ].map((item) => (
+              <Link
+                key={item.name}
+                href={item.path}
                 className="font-sans text-[13px] px-4 py-1.5 text-white dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors duration-300 rounded-full hover:bg-black/50 dark:hover:bg-white/10"
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </nav>
 
