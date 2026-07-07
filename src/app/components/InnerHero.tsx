@@ -12,45 +12,43 @@ interface InnerHeroProps {
 
 export default function InnerHero({ title, accentTitle, description }: InnerHeroProps) {
   return (
-    // min-h-[100dvh] ile tam ekran yüksekliği sağlandı. Üstten boşluk (pt-32) ile header ezilmedi.
-    <section className="relative w-full min-h-[100dvh] pt-32 pb-24 flex flex-col items-center justify-center overflow-hidden bg-[#05010A]">
+    // Hero.tsx ile aynı sarmalayıcı yapı (pt-32 kaldırıldı, flex-center ile ortalandı)
+    <section className="relative w-full min-h-[100dvh] bg-[#05010A] flex flex-col items-center justify-center overflow-hidden z-0">
       
       {/* =========================================
-          1. HAREKETLİ ARKA PLAN (Noktalı Yeni Video)
-          ========================================= */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-40 mix-blend-screen">
+         1. SİNEMATİK ARKA PLAN (Hero.tsx ile %100 Aynı Katmanlar)
+         ========================================= */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover object-center"
+          // Opacity 60'tan 80'e çıkarıldı (Hero ile aynı)
+          className="absolute top-0 left-0 w-full h-full object-cover object-center opacity-80 mix-blend-screen"
         >
           <source src="https://framerusercontent.com/assets/shkethPArotkZlMS0MbrQ6WEC78.mp4" type="video/mp4" />
         </video>
         
-        {/* Videonun kenarlarını karartarak derinlik katar */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#05010A_80%)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#05010A] via-transparent to-[#05010A] opacity-90" />
+        {/* Siyah boğucu gradientler KALDIRILDI. Sadece Hero'daki 3'lü mor filtre bırakıldı. */}
+        <div className="absolute inset-0 bg-medusa-purple/50 mix-blend-color" />
+        <div className="absolute inset-0 bg-medusa-glow-primary/30 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-background/50" />
       </div>
 
-      {/* =========================================
-          2. KUSURSUZ TABANA ORTALANMIŞ BULUT (YUKARI/AŞAĞI ANİMASYONLU)
-          ========================================= */}
-      {/* div -> motion.div olarak değiştirildi ve y ekseninde animasyon eklendi */}
+    {/* =========================================
+         2. TABANA GÖMÜLÜ BULUT (SVG)
+         ========================================= */}
       <motion.div 
-        animate={{ y: [0, -20, 0] }} // 0'dan başla, -20px yukarı çık, 0'a dön
+        animate={{ y: [0, -15, 0] }} 
         transition={{ 
-          duration: 6, // Animasyonun toplam süresi (daha yavaş ve pürüzsüz olması için 6 saniye idealdir)
-          repeat: Infinity, // Sonsuz döngü
-          ease: "easeInOut" // Yumuşak geçiş
+          duration: 6, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
         }}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[160vw] sm:w-[90vw] max-w-[1400px] aspect-video z-10 pointer-events-none mix-blend-screen opacity-90"
+        className="absolute -bottom-[15%] sm:bottom-[5%] left-1/2 -translate-x-1/2 w-[160vw] sm:w-[90vw] max-w-[1400px] aspect-video z-10 pointer-events-none mix-blend-screen opacity-90"
       >
-        
-        {/* MASKING: Görselin sınırlarını yumuşak bir degrade ile videoya yedirir */}
-        <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_65%)] -webkit-[mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_65%)]">
-          
+        <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)] -webkit-[mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]">
           <Image 
             src="/static-cloud.svg" 
             alt="Medusa Global Aura" 
@@ -58,31 +56,23 @@ export default function InnerHero({ title, accentTitle, description }: InnerHero
             className="object-contain object-bottom scale-110" 
             priority
           /> 
-
-          {/* RENK EŞİTLEYİCİ */}
-          <div className="absolute inset-0 bg-medusa-purple/50 mix-blend-color" />
-          <div className="absolute inset-0 bg-medusa-glow-primary/30 mix-blend-overlay" />
+          {/* GÖRSELE YAPIŞIK HAREKET EDEN EKSTRA MORLUK BURADAN SİLİNDİ */}
         </div>
-
-        {/* DOKUNULMAYAN KURUMSAL IŞIMA KATMANI */}
-        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-medusa-purple/20 blur-[120px] rounded-full" />
       </motion.div>
-
       {/* =========================================
-          3. DİNAMİK İÇERİK (Metin Alanı)
-          ========================================= */}
-      {/* z-20 verilerek metinlerin hem videonun hem de SVG bulutunun üstünde kalması garantilendi */}
-      <div className="relative z-20 flex flex-col items-center text-center px-4 sm:px-6 w-full max-w-4xl -mt-10">
+         3. DİNAMİK İÇERİK (Metin Alanı - Tipografi %100 Eşitlendi)
+         ========================================= */}
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 flex flex-col items-center text-center max-w-4xl mt-0 sm:mt-[-5vh]">
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          className="flex flex-col items-center justify-center text-[clamp(3.5rem,10vw,8rem)] leading-[0.95] tracking-tight text-white mb-6"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          // Hero'daki font-heading, tracking ve leading değerleri birebir uygulandı
+          className="font-heading text-[clamp(2.5rem,8vw,6rem)] font-medium leading-[0.9] tracking-tighter text-white mb-6"
         >
-          <span className="font-sans font-bold">{title}</span>
-          <span className="font-serif italic font-light text-white/90 mt-2 sm:mt-4">
-            {accentTitle}
-          </span>
+          {title}
+          <br />
+          {accentTitle}
         </motion.h1>
 
         {description && (
@@ -90,13 +80,19 @@ export default function InnerHero({ title, accentTitle, description }: InnerHero
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="font-sans text-base sm:text-lg text-white/70 font-light leading-relaxed max-w-2xl"
+            // Hero'daki metin stili birebir uygulandı
+            className="font-sans text-base sm:text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-2xl px-2"
           >
             {description}
           </motion.p>
         )}
       </div>
 
+      {/* =========================================
+         4. YUMUŞAK ALT GEÇİŞ 
+         ========================================= */}
+      <div className="absolute bottom-0 left-0 w-full h-[15vh] sm:h-[20vh] bg-gradient-to-t from-background to-transparent z-20 pointer-events-none" />
+      
     </section>
   );
 }

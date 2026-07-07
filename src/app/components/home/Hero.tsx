@@ -141,7 +141,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           // Satır aralığını (leading) daraltarak metinlerin görseldeki gibi birbirine kenetlenmesini sağladım
-          className="text-[clamp(2.5rem,8vw,6rem)] font-medium leading-[0.9] tracking-tighter text-white mb-6"
+          className="font-heading text-[clamp(2.5rem,8vw,6rem)] font-medium leading-[0.9] tracking-tighter text-white mb-6"
         >
           We build, run and
           <br />
