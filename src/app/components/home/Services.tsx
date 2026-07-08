@@ -54,18 +54,17 @@ export default function Services() {
       <div className="container mx-auto px-6 relative z-10 pointer-events-auto">
         {/* --- BAŞLANGIÇ MERKEZİ (MOUSE ICON) --- */}
         <div className="flex flex-col items-center justify-center w-full relative z-20">
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-2 mb-4">
             <Mouse
-              className="w-5 h-5 text-foreground/40 dark:text-white/40"
+              className="w-8 h-8 text-medusa-purple-light"
               strokeWidth={1.5}
             />
-            {/* Bağlantı noktası (Çizgi buradan tam temasla başlar) */}
-            <div className="w-1 h-1 rounded-full bg-foreground/30 dark:bg-white/30" />
+            
           </div>
         </div>
 
         {/* --- İNTERAKTİF VERİ KOLLARI (MERKEZ KAVİSLİ & KÜÇÜK KESİK ÇİZGİLER) --- */}
-        <div className="hidden lg:block relative w-full max-w-[1200px] mx-auto h-[120px] z-0 pointer-events-none text-foreground/30 dark:text-white/30">
+        <div className="hidden lg:block relative w-full max-w-[1200px] mx-auto h-[120px] z-0 pointer-events-none text-medusa-purple-light">
           <svg
             className="w-full h-full overflow-visible"
             viewBox="0 0 1000 150"
@@ -128,10 +127,10 @@ export default function Services() {
                 {/* İÇ KATMAN: Üstü kurumsal siyah, altı çift renkli Mesh Gradient zemin */}
                 <div className="relative flex items-center justify-center w-14 h-14 md:w-18 md:h-18 rounded-[calc(1.3rem-1px)] bg-[#08020F] overflow-hidden">
                   {/* Alt sol köşeden yayılan sıcak Medusa Spark (Gold/Krem Işık) */}
-                  <div className="absolute -bottom-4 -left-4 w-16 h-16 md:w-18 md:h-18 bg-medusa-spark/90 blur-[12px] rounded-full pointer-events-none" />
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 md:w-18 md:h-18 bg-medusa-purple-light/10 blur-[12px] rounded-full pointer-events-none" />
 
                   {/* Alt sağ köşeden yayılan derin Medusa Moru */}
-                  <div className="absolute -bottom-4 -right-4 w-14 h-14 md:w-16 md:h-16 bg-medusa-purple/90 blur-[18px] rounded-full pointer-events-none" />
+                  <div className="absolute -bottom-4 -right-4 w-14 h-14 md:w-16 md:h-16 bg-medusa-secondary/40 blur-[18px] rounded-full pointer-events-none" />
 
                   {/* Üst Kısım Cam Yansıması (Glossy Effect - 3D Hissiyatı için üstte keskinleşir) */}
                   <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-transparent opacity-80 pointer-events-none" />

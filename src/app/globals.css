@@ -25,22 +25,24 @@
   font-display: swap;
 }
 
-/* --- TEMA VE DEĞİŞKENLER --- */
+/* --- TEMA VE DEĞİŞKENLER (TEK TEMA) --- */
 :root {
-  /* Renk Paleti */
-  --medusa-purple: #5C068C;
-  --medusa-gold: #C9A97E;
-  --medusa-cream: #E8D4B8;
-  --medusa-spark: #dfd2a6;
-  --medusa-base-dark: #08020F;
-  --medusa-base-light: #0F0420;
-  --medusa-glow-primary: #3D0A6B;
-  --medusa-glow-secondary: #1F0838;
+  /* Yeni Medusa Global Renk Paleti */
+  --medusa-primary: #1F0838;
+  --medusa-secondary: #3D0A6B;
+  --medusa-accent-soft: #3D0A6B;
+  --medusa-surface-1: #0c0811;
+  --medusa-surface-2: #292737;
+  --medusa-text-muted: #D2D2D2;
+  --medusa-text-secondary: #D3D3D3;
+  --medusa-border: #606060;
+  --medusa-purple-light: #ded8ff;
 
-  --background: var(--medusa-cream);
-  --foreground: var(--medusa-base-dark);
+  /* Sabit Arka Plan ve Ön Plan Tanımları */
+  --background: var(--medusa-surface-1);
+  --foreground: #FFFFFF; /* Ana metinleri en yüksek okunabilirlik için beyaz tuttuk */
   
-  /* Font Değişkenleri */
+  /* Font Değişkenleri (Dokunulmadı) */
   --font-ana: "Cook Resans", sans-serif;
   --font-ikincil: "Juturu", sans-serif;
 }
@@ -49,28 +51,23 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  /* Yeni Font Tanımlamaları */
+  /* Font Tanımlamaları */
   --font-sans: var(--font-ikincil); 
   --font-heading: var(--font-ana);
 
-  /* Eski Fontları Yorum Satırına Aldım */
-  /* --font-sans: var(--font-inter); */
-  /* --font-mono: var(--font-geist-mono); */
-
-  --color-medusa-purple: var(--medusa-purple);
-  --color-medusa-gold: var(--medusa-gold);
-  --color-medusa-cream: var(--medusa-cream);
-  --color-medusa-spark: var(--medusa-spark);
-  --color-medusa-base-dark: var(--medusa-base-dark);
-  --color-medusa-base-light: var(--medusa-base-light);
-  --color-medusa-glow-primary: var(--medusa-glow-primary);
-  --color-medusa-glow-secondary: var(--medusa-glow-secondary);
+  /* Yeni Tailwind Renk Sınıfları (bg-medusa-primary, text-medusa-secondary vb.) */
+  --color-medusa-primary: var(--medusa-primary);
+  --color-medusa-secondary: var(--medusa-secondary);
+  --color-medusa-accent-soft: var(--medusa-accent-soft);
+  --color-medusa-surface-1: var(--medusa-surface-1);
+  --color-medusa-surface-2: var(--medusa-surface-2);
+  --color-medusa-text-muted: var(--medusa-text-muted);
+  --color-medusa-text-secondary: var(--medusa-text-secondary);
+  --color-medusa-border: var(--medusa-border);
+  --color-medusa-purple-light: var(--medusa-purple-light);
 }
 
-.dark {
-  --background: var(--medusa-base-dark);
-  --foreground: var(--medusa-cream); 
-}
+/* Dark mode class'ı (.dark) kaldırıldı. Kurumsal vizyonumuz gereği sistem artık sabit ve tek bir premium tema üzerinden çalışıyor. */
 
 /* --- GLOBAL STYLES --- */
 body {

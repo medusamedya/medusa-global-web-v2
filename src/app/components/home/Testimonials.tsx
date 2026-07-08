@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Badge from "../ui/Badge";
 
 // Medusa Global Portföyüne Uygun Stratejik Yorumlar
 const testimonialsData = [
@@ -74,24 +75,15 @@ export default function Testimonials() {
   return (
     <section className="relative w-full py-24 bg-background transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
+        
         {/* --- ÜST BAŞLIK VE İMZA BADGE --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-6">
-          <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
-            {/* Sürekli dönen arka plan (Mor ve Spark Işığı) */}
-            <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
+          <Badge text="Testimonials" className="mb-4" />
 
-            {/* İç Zemin ve Metin */}
-            <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
-              <span className="font-sans text-sm font-semibold tracking-wide text-white drop-shadow-md">
-                Testimonials
-              </span>
-            </div>
-          </div>
-
-          <h2 className="font-headingtext-3xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight transition-colors duration-300">
+          <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-white tracking-tight">
             25+ Markanın Güvendiği İş Ortağı
           </h2>
-          <p className="font-sanstext-lg text-foreground/80 dark:text-white/70 leading-relaxed transition-colors duration-300">
+          <p className="font-sans text-lg text-medusa-text-secondary">
             Danışmanlık, hızlandırma ve yatırım hizmetlerimizle markaların yaşam
             döngüsünün her aşamasında yanındayız.
           </p>
@@ -110,41 +102,53 @@ export default function Testimonials() {
               {testimonialsData.map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4"
+                  className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                 >
-                  {/* --- KART TASARIMI (İMZA ANİMASYONLU BORDER) --- */}
-                  <div className="relative h-full overflow-hidden rounded-[2rem] p-[2px] group shadow-lg hover:shadow-2xl transition-all duration-500">
-                    {/* Dönen Border Katmanı */}
-                    <span className="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-purple)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* --- YENİ KART TASARIMI (Görseldeki Çift Katmanlı Yapı) --- */}
+                  <div className="flex flex-col bg-[#1b1a21] border border-white/5 rounded-[2rem] p-3 shadow-2xl h-full">
+                    
+                    {/* Üst Kısım: İç Kart (Gradient Border + İç Arka Plan) */}
+                    <div className="relative flex-grow overflow-hidden rounded-[1.5rem] p-[1px] bg-[#853ec7]/60">
+                      <div className="relative z-10 h-full rounded-[calc(1.5rem-1px)] bg-gradient-to-br from-[#1a1726] to-[#241c33] p-8 flex flex-col gap-6 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
+                        
+                        {/* Profil Bilgileri */}
+                        <div className="flex items-center space-x-4 mb-16">
+                          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#853ec7] to-[#3D0A6B] flex items-center justify-center border border-white/20 shrink-0 shadow-lg">
+                            <span className="font-heading text-xl text-white font-bold tracking-wider">
+                              {testimonial.initials}
+                            </span>
+                          </div>
+                          <div className="flex flex-col">
+                            <h4 className="font-heading text-lg font-semibold text-white leading-tight">
+                              {testimonial.name}
+                            </h4>
+                            <p className="font-sans text-sm font-light text-white/60 mt-1">
+                              {testimonial.role}
+                            </p>
+                          </div>
+                        </div>
 
-                    {/* Kart İçeriği / Maske */}
-                    <div className="relative z-10 h-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 md:p-10 flex flex-col transition-colors duration-500 border border-foreground/5 dark:border-white/5">
-                      {/* Üst Kısım: Kullanıcı Bilgisi */}
-                      <div className="flex items-center space-x-4 mb-8">
-                        {/* Profil Avatarı Yer Tutucu */}
-                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-medusa-purple to-medusa-glow-primary flex items-center justify-center shadow-inner border border-white/20 flex-shrink-0">
-                          <span className="font-heading text-xl text-white font-bold tracking-wider">
-                            {testimonial.initials}
-                          </span>
-                        </div>
-                        <div>
-                          <h4 className="font-heading text-lg font-bold text-foreground dark:text-white transition-colors duration-300">
-                            {testimonial.name}
-                          </h4>
-                          <p className="font-sanstext-sm font-medium text-medusa-purple dark:text-medusa-gold transition-colors duration-300">
-                            {testimonial.role}
-                          </p>
-                        </div>
+                        {/* Yorum Metni */}
+                        <p className="font-sans text-white/95 text-base md:text-[17px] font-medium leading-relaxed">
+                          "{testimonial.quote}"
+                        </p>
                       </div>
-
-                      {/* Alıntı İşareti */}
-                      <Quote className="w-10 h-10 text-medusa-spark/30 mb-4" />
-
-                      {/* Yorum Metni */}
-                      <p className="font-sans text-foreground/80 dark:text-white/80 text-base md:text-[17px] leading-relaxed font-light flex-grow transition-colors duration-300">
-                        "{testimonial.quote}"
-                      </p>
                     </div>
+
+                    {/* Alt Kısım: Şirket Logosu Yer Tutucu */}
+                    <div className="flex items-center space-x-3 px-5 py-5 shrink-0 opacity-90">
+                      {/* Görseldeki gibi Dalgalı Örnek Logo İkonu */}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="2.5"/>
+                        <path d="M2 12H22" stroke="white" strokeWidth="2.5"/>
+                        <path d="M12 2C14.5 2 17 6.5 17 12C17 17.5 14.5 22 12 22" stroke="white" strokeWidth="2.5"/>
+                        <path d="M12 2C9.5 2 7 6.5 7 12C7 17.5 9.5 22 12 22" stroke="white" strokeWidth="2.5"/>
+                      </svg>
+                      <span className="font-sans font-bold text-white tracking-wide">
+                        {testimonial.name.split(' ')[0]} {/* İsimden sadece ilk kelimeyi logo gibi alır */}
+                      </span>
+                    </div>
+
                   </div>
                 </div>
               ))}
@@ -156,26 +160,26 @@ export default function Testimonials() {
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
-              className={`p-3.5 rounded-2xl border backdrop-blur-sm transition-all duration-300 flex items-center justify-center shadow-sm
+              className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300
                 ${
                   currentIndex === 0
-                    ? "border-foreground/10 text-foreground/30 dark:border-white/10 dark:text-white/30 cursor-not-allowed"
-                    : "border-medusa-purple/30 text-medusa-purple dark:border-medusa-gold/30 dark:text-medusa-gold hover:bg-medusa-purple/10 dark:hover:bg-medusa-gold/10 hover:-translate-x-1"
+                    ? "border-white/10 text-white/30 cursor-not-allowed"
+                    : "border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:-translate-x-1"
                 }`}
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={handleNext}
               disabled={currentIndex >= maxIndex}
-              className={`p-3.5 rounded-2xl border backdrop-blur-sm transition-all duration-300 flex items-center justify-center shadow-sm
+              className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300
                 ${
                   currentIndex >= maxIndex
-                    ? "border-foreground/10 text-foreground/30 dark:border-white/10 dark:text-white/30 cursor-not-allowed"
-                    : "border-medusa-purple/30 text-medusa-purple dark:border-medusa-gold/30 dark:text-medusa-gold hover:bg-medusa-purple/10 dark:hover:bg-medusa-gold/10 hover:translate-x-1"
+                    ? "border-white/10 text-white/30 cursor-not-allowed"
+                    : "border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:translate-x-1"
                 }`}
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>

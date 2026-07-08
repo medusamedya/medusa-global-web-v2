@@ -6,8 +6,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
-      // İleride başka sitelerden (örn: AWS, Framer) görsel çekerseniz, 
-      // o sitelerin alan adlarını da buraya eklemelisiniz.
+      {
+        protocol: 'https',
+        hostname: 'framerusercontent.com', // Yeni eklediğimiz Framer görsel sunucusu
+      },
     ],
   },
 };

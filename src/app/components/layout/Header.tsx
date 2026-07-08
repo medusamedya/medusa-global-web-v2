@@ -50,14 +50,6 @@ export default function Header() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-heading text-[#08020F] dark:text-white font-bold tracking-wide transition-colors duration-500 leading-none">
-                MEDUSAGLOBAL
-              </span>
-              <span className="font-sans text-[9px] sm:text-[10px] text-medusa-purple dark:text-medusa-spark font-medium tracking-[0.15em] uppercase transition-colors duration-500 mt-0.5">
-                ACCELERATION & CONSULTANCY
-              </span>
-            </div>
           </div>
 
          {/* MIDDLE: Pill Menu (Sadece Masaüstü) */}
@@ -74,6 +66,7 @@ export default function Header() {
               { name: "Hizmetler", path: "/services" },
               { name: "Fiyatlandırma", path: "/pricing" },
               { name: "Blog", path: "/blog" },
+              { name: "İletişim", path: "/contact" },
             ].map((item) => (
               <Link
                 key={item.name}
@@ -88,20 +81,6 @@ export default function Header() {
           {/* RIGHT: Theme Toggle, CTA & Mobile Menu Button */}
           <div className="flex items-center gap-3">
             
-            {mounted && (
-              <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="hidden sm:flex w-9 h-9 sm:w-10 sm:h-10 rounded-full items-center justify-center bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-all border border-black/10 dark:border-white/10 active:scale-95"
-                aria-label="Tema Değiştir"
-              >
-                {theme === "dark" ? (
-                  <Sun className="w-4 h-4 text-white animate-fade-in" />
-                ) : (
-                  <Moon className="w-4 h-4 text-[#08020F] animate-fade-in" />
-                )}
-              </button>
-            )}
-
             {/* Header Aksiyon Butonu (Masaüstünde görünür, mobilde gizlenebilir veya kalabilir - şu an görünür) */}
             <div className="hidden sm:inline-flex relative overflow-hidden rounded-full p-[1.5px] group flex-shrink-0 cursor-pointer">
               <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-70 group-hover:opacity-100 transition-opacity duration-300" />

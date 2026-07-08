@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CheckCircle2 } from "lucide-react";
+import Badge from "../ui/Badge";
 
 const stackData = [
   {
@@ -125,37 +126,21 @@ export default function StackedServices() {
         {/* DİKKAT: Glow efektinin bu alana merkezlenmesi için kapsayıcıya 'relative' eklendi */}
         <div className="relative flex flex-col items-center text-center max-w-4xl mx-auto mb-16 space-y-6">
           {/* YENİ: Arka Plan Ortam Işığı (Medusa Glow) */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-medusa-purple/5 dark:bg-medusa-glow-primary/20 blur-[100px] rounded-full pointer-events-none transition-colors duration-700 -z-10" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-medusa-primary/5 dark:bg-medusa-glow-primary/20 blur-[100px] rounded-full pointer-events-none transition-colors duration-700 -z-10" />
 
-          <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
-            {/* Sürekli dönen arka plan (Mor ve Spark Işığı) */}
-            <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
+          <Badge text="Hızlandırma" className="mb-4" />
 
-            {/* İç Zemin ve Metin */}
-            <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
-              <span className="font-sans text-sm font-semibold tracking-wide text-white drop-shadow-md">
-                Hızlandırma
-              </span>
-            </div>
-          </div>
-
-          {/* Başlık */}
-          <h2 className="font-heading text-[clamp(2.2rem,4vw,4rem)] font-medium leading-[1.1] tracking-tight text-foreground dark:text-white transition-colors duration-300">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-medusa-purple via-medusa-spark to-medusa-purple animate-text-shine font-extrabold drop-shadow-sm">
-              Hızlandırma,
-            </span>{" "}
-            üç hatta birden çalışır.
+          <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+            Hızlandırma, üç hatta birden
+            çalışır.
           </h2>
 
           {/* Açıklama Metni */}
-          <p className="font-sans text-foreground/80 dark:text-white/80 text-[16px] sm:text-[18px] leading-relaxed font-light transition-colors duration-300 max-w-2xl">
-            Bir markayı büyütmek için üç şeyin doğru olması gerekir:{" "}
-            <strong className="font-semibold text-medusa-purple dark:text-medusa-spark">
-              kim olduğunuzu doğru söylemek, doğru kişiye söylemek, doğru
-              içerikle söylemek.
-            </strong>{" "}
-            Üçü ayrı ekiplerde değil, aynı çatı altında beraber çalışan
-            ekiplerimizle sağlanıyor.
+          <p className="font-sans text-lg text-medusa-text-secondary">
+            Bir markayı büyütmek için üç şeyin doğru olması gerekir: kim
+            olduğunuzu doğru söylemek, doğru kişiye söylemek, doğru içerikle
+            söylemek. Üçü ayrı ekiplerde değil, aynı çatı altında beraber
+            çalışan ekiplerimizle sağlanıyor.
           </p>
         </div>
 
@@ -173,14 +158,13 @@ export default function StackedServices() {
               className="stacked-card absolute top-0 left-0 w-full h-full transform-origin-top will-change-transform group"
               style={{ zIndex: index + 10 }}
             >
-              {/* Kartlar İçin Animasyonlu Kurumsal Border */}
-              <div className="relative w-full h-full rounded-[2rem] p-[2px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(92,6,140,0.15)] transition-shadow duration-500">
-                {/* Dönen Border Katmanı */}
-                <span className="absolute inset-[-200%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-purple)_100%)] opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-
-                {/* Kart İçeriği (Maske Görevi Görür) */}
-                <div className="relative z-10 w-full h-full bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-3xl rounded-[calc(2rem-2px)] p-8 sm:p-12 transition-colors duration-500 flex flex-col justify-center">
-                  {/* Kart Üst (Header) */}
+              {/* YENİ: Görseldeki gibi Animasyonsuz, Premium Gradient Border (Dış Çerçeve) */}
+              <div className="relative w-full h-full rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl">
+                
+                {/* YENİ: Kart İç Zemini (Mat Koyu Mor/Gri Gradyan) ve İç Border (Glassmorphism hissiyatı) */}
+                <div className="relative z-10 w-full h-full bg-gradient-to-br from-[#1a1726] to-[#2a233c] border border-white/10 rounded-[calc(2rem-1.5px)] p-8 sm:p-12 flex flex-col justify-center shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
+                  
+                  {/* Kart Üst (Header) - İÇERİĞE DOKUNULMADI */}
                   <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-foreground/10 dark:border-white/10 pb-6 mb-6 gap-4">
                     <div>
                       <p className="font-sans text-[13px] font-mono tracking-widest text-medusa-gold font-bold mb-3">
@@ -189,7 +173,7 @@ export default function StackedServices() {
                       <h3 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground dark:text-white mb-2 tracking-tight transition-colors duration-300">
                         {data.title}
                       </h3>
-                      <p className="font-sanstext-foreground/70 dark:text-white/70 italic text-lg font-light transition-colors duration-300">
+                      <p className="font-sans text-foreground/70 dark:text-white/70 italic text-lg font-light transition-colors duration-300">
                         {data.subtitle}
                       </p>
                     </div>
@@ -199,7 +183,7 @@ export default function StackedServices() {
                     </div>
                   </div>
 
-                  {/* Kart Listesi */}
+                  {/* Kart Listesi - İÇERİĞE DOKUNULMADI */}
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                     {data.items.map((item, i) => (
                       <li
@@ -210,7 +194,7 @@ export default function StackedServices() {
                         <div className="w-6 h-6 rounded-full bg-background dark:bg-transparent border border-foreground/20 dark:border-white/20 flex items-center justify-center group-hover/item:border-medusa-spark group-hover/item:bg-medusa-spark transition-all duration-300 shadow-sm">
                           <CheckCircle2 className="w-3.5 h-3.5 text-foreground/50 dark:text-white/50 group-hover/item:text-medusa-base-dark group-hover/item:opacity-100 transition-all" />
                         </div>
-                        <span className="font-sanstext-[15px] font-medium text-foreground/80 dark:text-white/80 group-hover/item:opacity-100 group-hover/item:text-medusa-purple dark:group-hover/item:text-medusa-spark transition-all duration-300">
+                        <span className="font-sans text-[15px] font-medium text-foreground/80 dark:text-white/80 group-hover/item:opacity-100 group-hover/item:text-medusa-purple dark:group-hover/item:text-medusa-spark transition-all duration-300">
                           {item}
                         </span>
                       </li>

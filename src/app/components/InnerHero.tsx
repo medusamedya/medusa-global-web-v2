@@ -30,7 +30,6 @@ export default function InnerHero({ title, accentTitle, description }: InnerHero
           <source src="https://framerusercontent.com/assets/shkethPArotkZlMS0MbrQ6WEC78.mp4" type="video/mp4" />
         </video>
         
-        {/* Siyah boğucu gradientler KALDIRILDI. Sadece Hero'daki 3'lü mor filtre bırakıldı. */}
         <div className="absolute inset-0 bg-medusa-purple/50 mix-blend-color" />
         <div className="absolute inset-0 bg-medusa-glow-primary/30 mix-blend-overlay" />
         <div className="absolute inset-0 bg-background/50" />

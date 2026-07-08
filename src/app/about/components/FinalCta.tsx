@@ -49,15 +49,17 @@ export default function FinalCta() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            {/* Klasik Animasyonlu Rozet */}
-            <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-8">
-              <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
-              <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
-                <span className="font-sans text-xs font-semibold tracking-widest text-white drop-shadow-md uppercase">
-                  Geleceği Birlikte İnşa Edelim
-                </span>
+            <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
+                {/* Sürekli dönen arka plan (Mor ve Spark Işığı) */}
+                <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
+
+                {/* İç Zemin ve Metin */}
+                <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
+                  <span className="font-sans text-sm font-semibold tracking-wide text-white drop-shadow-md">
+                    Geleceği Birlikte İnşa Edelim
+                  </span>
+                </div>
               </div>
-            </div>
 
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight tracking-tight">
               Değişimi Gerçekleştirme Konusunda <span className="text-transparent bg-clip-text bg-gradient-to-r from-medusa-purple via-medusa-spark to-medusa-purple animate-text-shine inline-block">Tutkuluyuz.</span>

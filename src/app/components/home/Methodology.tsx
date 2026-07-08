@@ -2,6 +2,7 @@
 
 import React from "react";
 import { LineChart, Settings, Zap, TrendingUp } from "lucide-react";
+import Badge from "../ui/Badge";
 
 const workflowSteps = [
   {
@@ -44,14 +45,7 @@ export default function Methodology() {
       <div className="container mx-auto px-6 relative z-10">
         {/* --- ÜST BAŞLIK BÖLÜMÜ --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20 space-y-6">
-          <div className="relative inline-flex overflow-hidden rounded-full p-[1px] mb-6 shadow-sm">
-            <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
-            <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
-              <span className="font-sans text-sm font-semibold tracking-wide text-white drop-shadow-md">
-                Dijital Büyüme Metodolojimiz
-              </span>
-            </div>
-          </div>
+          <Badge text=" Dijital Büyüme Metodolojimiz" className="mb-8" />
 
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight">
             Markanızın büyüme yolculuğunu tek çatı altında kuruyoruz
@@ -80,10 +74,10 @@ export default function Methodology() {
                   x2="0%"
                   y2="100%"
                 >
-                  <stop offset="0%" stopColor="#5C068C" stopOpacity="0" />
-                  <stop offset="10%" stopColor="#5C068C" stopOpacity="1" />
-                  <stop offset="90%" stopColor="#5C068C" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#5C068C" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#ded8ff" stopOpacity="0" />
+                  <stop offset="10%" stopColor="#ded8ff" stopOpacity="1" />
+                  <stop offset="90%" stopColor="#ded8ff" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#ded8ff" stopOpacity="0" />
                 </linearGradient>
               </defs>
               <line
@@ -125,7 +119,7 @@ export default function Methodology() {
                         >
                           <stop
                             offset="0%"
-                            stopColor="#5C068C"
+                            stopColor="#ded8ff"
                             stopOpacity="1"
                           />
                           <stop
@@ -164,7 +158,7 @@ export default function Methodology() {
                         >
                           <stop
                             offset="0%"
-                            stopColor="#5C068C"
+                            stopColor="#ded8ff"
                             stopOpacity="1"
                           />
                           <stop
