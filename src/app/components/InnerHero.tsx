@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image"; 
+import Badge from "./ui/Badge"; // Badge bileşeninin yolu
 
 interface InnerHeroProps {
   title: string;
@@ -12,86 +12,70 @@ interface InnerHeroProps {
 
 export default function InnerHero({ title, accentTitle, description }: InnerHeroProps) {
   return (
-    // Hero.tsx ile aynı sarmalayıcı yapı (pt-32 kaldırıldı, flex-center ile ortalandı)
-    <section className="relative w-full min-h-[100dvh] bg-[#05010A] flex flex-col items-center justify-center overflow-hidden z-0">
+    <section className="relative w-full min-h-[60vh] md:min-h-[70vh] bg-background flex flex-col items-center justify-center overflow-hidden z-0 pt-24 pb-12">
       
       {/* =========================================
-         1. SİNEMATİK ARKA PLAN (Hero.tsx ile %100 Aynı Katmanlar)
-         ========================================= */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          // Opacity 60'tan 80'e çıkarıldı (Hero ile aynı)
-          className="absolute top-0 left-0 w-full h-full object-cover object-center opacity-80 mix-blend-screen"
-        >
-          <source src="https://framerusercontent.com/assets/shkethPArotkZlMS0MbrQ6WEC78.mp4" type="video/mp4" />
-        </video>
-        
-        <div className="absolute inset-0 bg-medusa-purple/50 mix-blend-color" />
-        <div className="absolute inset-0 bg-medusa-glow-primary/30 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-background/50" />
-      </div>
-
-    {/* =========================================
-         2. TABANA GÖMÜLÜ BULUT (SVG)
-         ========================================= */}
-      <motion.div 
-        animate={{ y: [0, -15, 0] }} 
-        transition={{ 
-          duration: 6, 
-          repeat: Infinity, 
-          ease: "easeInOut" 
+          1. SİNEMATİK IŞIK EFEKTLERİ (CONIC GLOW)
+          ========================================= */}
+      
+      {/* İstenilen Alt Orta Işık Hüzmesi (Kurumsal Renklerimizle Conic Gradient) */}
+      <div 
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[120vw] sm:w-[80vw] h-[50vh] md:h-[60vh] opacity-50 blur-[100px] pointer-events-none mix-blend-screen"
+        style={{
+          background: `conic-gradient(from 270deg at 50% 50%, 
+            var(--color-medusa-primary) 0%, 
+            var(--color-medusa-secondary) 50%, 
+            var(--color-medusa-primary) 100%)`
         }}
-        className="absolute -bottom-[15%] sm:bottom-[5%] left-1/2 -translate-x-1/2 w-[160vw] sm:w-[90vw] max-w-[1400px] aspect-video z-10 pointer-events-none mix-blend-screen opacity-90"
-      >
-        <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)] -webkit-[mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]">
-          <Image 
-            src="/static-cloud.svg" 
-            alt="Medusa Global Aura" 
-            fill
-            className="object-contain object-bottom scale-110" 
-            priority
-          /> 
-          {/* GÖRSELE YAPIŞIK HAREKET EDEN EKSTRA MORLUK BURADAN SİLİNDİ */}
-        </div>
-      </motion.div>
+      />
+
+      {/* Ekstra Derinlik İçin Hafif Arka Plan Parıltısı */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-medusa-primary blur-[120px] rounded-full pointer-events-none opacity-40 mix-blend-screen" />
+
       {/* =========================================
-         3. DİNAMİK İÇERİK (Metin Alanı - Tipografi %100 Eşitlendi)
-         ========================================= */}
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 flex flex-col items-center text-center max-w-4xl mt-0 sm:mt-[-5vh]">
-        <motion.h1
+          2. İÇERİK BÖLÜMÜ (Ana Hero ile Birebir Hiyerarşi)
+          ========================================= */}
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 flex flex-col items-center text-center max-w-4xl">
+        
+        {/* Badge (Ana sayfadaki gibi mb-12 boşluğu ile) */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          // Hero'daki font-heading, tracking ve leading değerleri birebir uygulandı
-          className="font-heading text-[clamp(2.5rem,8vw,6rem)] font-medium leading-[0.9] tracking-tighter text-white mb-6"
         >
-          {title}
-          <br />
-          {accentTitle}
+          <Badge text={title} className="mb-12" />
+        </motion.div>
+
+        {/* Ana Başlık (Ana sayfadaki gibi mb-8 boşluğu ile) */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          className="font-heading text-[clamp(2.5rem,6vw,5.5rem)] font-normal leading-[1.1] sm:leading-[0.95] tracking-tight text-white mb-8"
+        >
+          <span className="block sm:inline text-transparent bg-clip-text text-white">
+            {accentTitle}
+          </span>
         </motion.h1>
 
+        {/* Alt Açıklama (Ana sayfadaki gibi mb-12 ve px-2 boşluğu ile) */}
         {description && (
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            // Hero'daki metin stili birebir uygulandı
-            className="font-sans text-base sm:text-lg md:text-xl text-white/80 font-light leading-relaxed max-w-2xl px-2"
+            className="font-sans text-base sm:text-lg md:text-xl text-medusa-text-secondary font-light leading-relaxed max-w-2xl px-2 mb-12"
           >
             {description}
           </motion.p>
         )}
+        
       </div>
 
       {/* =========================================
-         4. YUMUŞAK ALT GEÇİŞ 
-         ========================================= */}
-      <div className="absolute bottom-0 left-0 w-full h-[15vh] sm:h-[20vh] bg-gradient-to-t from-background to-transparent z-20 pointer-events-none" />
-      
+          3. YUMUŞAK GEÇİŞ (SMOOTH FADE) KATMANI
+          ========================================= */}
+      <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-t from-background to-transparent z-20 pointer-events-none" />
     </section>
   );
 }

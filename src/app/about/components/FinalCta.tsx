@@ -4,6 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Badge from "@/app/components/ui/Badge";
+import GradientButton from "@/app/components/ui/GradientButton";
 
 export default function FinalCta() {
   return (
@@ -49,41 +51,25 @@ export default function FinalCta() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
-                {/* Sürekli dönen arka plan (Mor ve Spark Işığı) */}
-                <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
+              <Badge text="Geleceği Birlikte İnşa Edelim" className="mb-8" />
 
-                {/* İç Zemin ve Metin */}
-                <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
-                  <span className="font-sans text-sm font-semibold tracking-wide text-white drop-shadow-md">
-                    Geleceği Birlikte İnşa Edelim
-                  </span>
-                </div>
-              </div>
-
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-8">
               Değişimi Gerçekleştirme Konusunda <span className="text-transparent bg-clip-text bg-gradient-to-r from-medusa-purple via-medusa-spark to-medusa-purple animate-text-shine inline-block">Tutkuluyuz.</span>
             </h2>
 
             {/* Vizyon Metni */}
-            <p className="font-sans text-white/70 text-base sm:text-lg leading-relaxed font-light mb-12">
+          <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary mb-12">
               Bugün, tüm paydaşlara fayda sağlamayı, kuruluşların büyümesine, sürdürülebilir rekabet avantajı oluşturmasına ve pozitif toplumsal etki yaratmasına olanak sağlamayı amaçlayan dönüşümsel bir yaklaşımı benimsemek için müşterilerimizle yakın işbirliği içinde çalışırız. 
               <br /><br />
               İleri düzey yönetim danışmanlığı, teknoloji ve tasarım ile kurumsal ve dijital girişimler yoluyla entegre çözümler sunarak potansiyeli açığa çıkarma ve değişimi gerçekleştirme konusunda tutkuluyuz.
             </p>
 
-            {/* Aksiyon Butonu (Gradient Animasyonlu) */}
-            <div className="relative inline-flex overflow-hidden rounded-full p-[2px] shadow-lg group/btn cursor-pointer w-full sm:w-max">
-              <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80 group-hover/btn:opacity-100 transition-opacity duration-300" />
-              
-              {/* Buton arka planı tamamen sitenin background'u ile aynı yapıldı */}
-              <button className="font-sans relative z-10 inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-[#05010A] text-white px-8 py-4 rounded-full font-bold text-[15px] tracking-wide transition-all duration-300 hover:bg-transparent hover:text-white">
-                <span>Hemen İletişime Geçin</span>
-                <div className="w-8 h-8 rounded-full bg-medusa-purple/20 flex items-center justify-center group-hover/btn:bg-medusa-spark group-hover/btn:rotate-45 transition-all duration-300">
-                  <ArrowUpRight className="w-4 h-4 text-medusa-spark group-hover/btn:text-[#05010A] transition-colors" />
-                </div>
-              </button>
-            </div>
+            {/* Aksiyon Butonu */}
+            <GradientButton 
+              text="Hemen İletişime Geçin" 
+              className="w-full sm:w-max" 
+              paddingClass="px-8 py-4 w-full sm:w-auto"
+            />
 
           </motion.div>
 

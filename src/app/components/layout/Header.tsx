@@ -82,7 +82,7 @@ export default function Header() {
           {/* RIGHT: Theme Toggle, CTA & Mobile Menu Button */}
           <div className="flex items-center gap-3">
             
-           <GradientButton text="İletişime Geçin" paddingClass="px-6 py-2" />
+           <GradientButton text="İletişime Geçin" paddingClass="px-6 py-2"showIcon={false} />
 
             {/* Mobil Hamburger Butonu */}
             <button 

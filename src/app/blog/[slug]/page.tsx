@@ -4,10 +4,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, Clock, Share2, } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
 
-// GEÇİCİ DETAY DATASI (Önceki sayfadaki linklerin çalışması için aynı slug'lar kullanıldı)
-// Gerçek projede bu veriler backend'den (CMS, veritabanı vs.) 'params.slug' kullanılarak çekilir.
+// GEÇİCİ DETAY DATASI
 const getBlogPostBySlug = (slug: string) => {
   const posts = [
     {
@@ -25,14 +24,12 @@ const getBlogPostBySlug = (slug: string) => {
         <p>Medusa Global olarak yürüttüğümüz son projelerde, omnichannel stratejisini benimseyen markaların Müşteri Yaşam Boyu Değeri (LTV) metriklerinde %300'e varan artışlar gözlemledik. Veriyi merkezde tutan, tasarımı insan odaklı kurgulayan bu ekosistem, sürdürülebilir büyümenin en temel anahtarıdır.</p>
       `,
     },
-    // Diğer blog yazılarının dataları buraya eklenebilir...
   ];
 
-  return posts.find((p) => p.slug === slug) || posts[0]; // Bulamazsa varsayılan ilkini göster
+  return posts.find((p) => p.slug === slug) || posts[0];
 };
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
-  // URL'deki slug değerine göre içeriği getir
   const post = getBlogPostBySlug(params.slug);
 
   return (
@@ -48,12 +45,12 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             src={post.image} 
             alt={post.title} 
             fill 
-            className="object-cover filter grayscale opacity-50"
+            className="object-cover filter grayscale opacity-40"
             priority
           />
-          {/* Görseli arkaplana eriten gradientler */}
-          <div className="absolute inset-0 bg-medusa-purple/20 mix-blend-color" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#05010A] via-[#05010A]/80 to-transparent" />
+          {/* Görseli arkaplana eriten kurumsal gradientler */}
+          <div className="absolute inset-0 bg-medusa-primary/40 mix-blend-color" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
         </div>
 
         {/* Hero İçeriği (Başlık ve Meta) */}
@@ -67,31 +64,26 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             {/* Geri Dönüş Butonu */}
             <Link 
               href="/blog" 
-              className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors duration-300 mb-8 font-sans text-sm font-medium"
+              className="inline-flex items-center gap-2 text-medusa-text-secondary hover:text-foreground transition-colors duration-300 mb-8 font-sans text-sm font-medium"
             >
               <ArrowLeft className="w-4 h-4" /> Tüm Makalelere Dön
             </Link>
 
-            {/* Kategori Etiketi */}
-            <div className="inline-block bg-white/10 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full mb-6">
-              <span className="font-sans text-xs font-bold text-medusa-spark uppercase tracking-widest">
-                {post.category}
-              </span>
-            </div>
+           
 
             {/* Yazı Başlığı */}
-            <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+            <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl font-bold text-foreground leading-[1.1] tracking-tight mb-6">
               {post.title}
             </h1>
 
             {/* Tarih ve Okuma Süresi */}
-            <div className="flex items-center gap-6 text-white/60 text-sm font-sans">
+            <div className="flex items-center gap-6 text-medusa-text-secondary text-sm font-sans">
               <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-medusa-purple" />
+                <Calendar className="w-4 h-4 text-medusa-purple-light" />
                 <span>{post.date}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-medusa-purple" />
+                <Clock className="w-4 h-4 text-medusa-purple-light" />
                 <span>{post.readTime}</span>
               </div>
             </div>
@@ -110,29 +102,26 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             {/* Sol Taraf: Sosyal Paylaşım (Sticky) */}
             <div className="hidden lg:block w-16 flex-shrink-0">
               <div className="sticky top-32 flex flex-col items-center gap-4">
-                <span className="font-sans text-[10px] uppercase tracking-widest text-white/40 mb-2 rotate-180" style={{ writingMode: 'vertical-rl' }}>
+                <span className="font-sans text-[10px] uppercase tracking-widest text-medusa-text-muted mb-2 rotate-180" style={{ writingMode: 'vertical-rl' }}>
                   Paylaş
                 </span>
-                <div className="w-[1px] h-12 bg-white/10 mb-2" />
-                
+                <div className="w-[1px] h-12 bg-medusa-border/30 mb-2" />
+                <Share2 className="w-4 h-4 text-medusa-text-secondary hover:text-medusa-purple-light cursor-pointer transition-colors duration-300" />
               </div>
             </div>
 
             {/* Sağ Taraf: Metin İçeriği */}
-            {/* Tailwind 'prose' eklentisini andıran özel stiller. 
-              Gelen HTML (post.content) bu div'in içinde formatlanır. 
-            */}
             <motion.article 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full font-sans text-white/80 text-lg leading-relaxed space-y-8 pb-16
-                /* Özel HTML Tag Stilleri */
-                [&>p]:text-white/70 [&>p]:leading-loose
-                [&>h2]:font-heading [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-white [&>h2]:mt-12 [&>h2]:mb-6
-                [&>h3]:font-heading [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:text-white [&>h3]:mt-10 [&>h3]:mb-4
-                [&>strong]:text-white [&>strong]:font-semibold
-                [&>blockquote]:border-l-4 [&>blockquote]:border-medusa-purple [&>blockquote]:pl-6 [&>blockquote]:py-2 [&>blockquote]:my-8 [&>blockquote]:text-xl [&>blockquote]:font-serif [&>blockquote]:italic [&>blockquote]:text-white/90
+              className="w-full font-sans text-medusa-text-secondary text-lg leading-relaxed space-y-8 pb-16
+                /* Özel HTML Tag Stilleri - Yeni Temaya Uygun */
+                [&>p]:text-medusa-text-secondary [&>p]:leading-loose
+                [&>h2]:font-heading [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-foreground [&>h2]:mt-12 [&>h2]:mb-6
+                [&>h3]:font-heading [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:text-foreground [&>h3]:mt-10 [&>h3]:mb-4
+                [&>strong]:text-foreground [&>strong]:font-semibold
+                [&>blockquote]:border-l-4 [&>blockquote]:border-medusa-purple-light [&>blockquote]:pl-6 [&>blockquote]:py-2 [&>blockquote]:my-8 [&>blockquote]:text-xl [&>blockquote]:font-sans [&>blockquote]:italic [&>blockquote]:text-foreground/90
               "
               dangerouslySetInnerHTML={{ __html: post.content }}
             />

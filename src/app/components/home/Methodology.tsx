@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { LineChart, Settings, Zap, TrendingUp } from "lucide-react";
 import Badge from "../ui/Badge";
+import Image from 'next/image';
 
 const workflowSteps = [
   {
@@ -11,7 +11,7 @@ const workflowSteps = [
     title: "Hızlandırma",
     description:
       "Stratejiyi içerik, prodüksiyon ve dijital sistemlerle sahaya indiririz. Süreçlerde kazanılan zaman ve ulaşılan ölçek, her adımda raporlanır.",
-    Icon: Zap,
+    image: "/methodology/hızlandırma_beyaz.png", // Icon yerine görsel yolu
   },
   
   {
@@ -20,7 +20,7 @@ const workflowSteps = [
     title: "Danışmanlık",
     description:
       "İş süreçlerinizdeki yaygın sorunları operasyonel verimlilik, finansal yönetim ve pazarlama stratejisi başlıklarında çevik çözümlerle ele alırız. Tedarikçi değil, akıl veren bir ortak gibi çalışırız.",
-    Icon: Settings,
+    image: "/methodology/danışmanlık_siyah.png", // Icon yerine görsel yolu
   },
   
   {
@@ -29,7 +29,7 @@ const workflowSteps = [
     title: "Yatırım",
     description:
       "Sermaye vermekle yetinmeyiz; inandığımız ticaretlerde ortak yönetim ve strateji desteğiyle uzun vadeli büyümeyi birlikte kurarız.",
-    Icon: TrendingUp,
+    image: "/methodology/yatırım_beyaz.png", // Icon yerine görsel yolu
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const workflowSteps = [
     title: "Dijital Karne",
     description:
       "Web sitenizi, sosyal medyanızı ve reklamlarınızı bağımsız olarak analiz eder, 14 günde raporlarız. Bir sonraki adıma nereden başlayacağınızı birlikte görürüz.",
-    Icon: LineChart,
+    image: "/methodology/dijitalkarne_siyah.png", // Icon yerine görsel yolu
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Methodology() {
       <div className="container mx-auto px-6 relative z-10">
         {/* --- ÜST BAŞLIK BÖLÜMÜ --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16 space-y-6">
-          <Badge text=" Dijital Büyüme Metodolojimiz" className="mb-8" />
+          <Badge text="Dijital Büyüme Metodolojimiz" className="mb-8" />
 
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
             Markanızın büyüme yolculuğunu tek çatı altında kuruyoruz
@@ -192,9 +192,12 @@ export default function Methodology() {
                           <div className="w-3 h-3 rounded-full bg-medusa-purple-light/80"></div>
                         </div>
                         <div className="flex-1 rounded-xl border border-foreground/5  bg-background/40  flex items-center justify-center relative overflow-hidden">
-                          <step.Icon
-                            className="w-16 h-16 text-medusa-primary  drop-shadow-lg transition-transform duration-500 group-hover:scale-110"
-                            strokeWidth={1.5}
+                         <Image 
+                            src={step.image} 
+                            alt={step.title}
+                            fill // Bu, resmi container'a yayar
+                            className="object-cover" // Resmi kırparak sığdırır
+                            sizes="(max-width: 1024px) 100vw, 50vw" // Performans için sizes
                           />
                           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-medusa-purple/10 to-transparent"></div>
                         </div>

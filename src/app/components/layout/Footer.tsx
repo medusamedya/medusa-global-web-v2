@@ -22,7 +22,7 @@ export default function Footer() {
           {/* Gradient Buton Entegrasyonu */}
           <div className="flex-shrink-0">
             <Link href="mailto:hello@medusaglobal.com">
-              <GradientButton text="Bize Ulaşın" />
+              <GradientButton text="Bize Ulaşın" showIcon={false} />
             </Link>
           </div>
         </div>

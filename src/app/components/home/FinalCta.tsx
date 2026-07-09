@@ -99,7 +99,6 @@ export default function FinalCta() {
 
       {/* TÜM İÇERİK MERKEZE HİZALANDI */}
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-12 w-full flex flex-col items-center text-center">
-        
         <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
           {/* Sürekli dönen arka plan (Primary ve Secondary Işığı) */}
           <Badge text="Manifesto" className="mb-4" />
@@ -152,7 +151,6 @@ export default function FinalCta() {
 
         {/* === ALT AÇIKLAMA VE BUTON (Final Vuruş - Merkeze Hizalı) === */}
         <div className="w-full max-w-4xl flex flex-col items-center justify-center gap-10 border-t border-medusa-border/30 pt-12 transition-colors duration-500">
-          
           {/* Manifesto Alt Metni */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -177,7 +175,6 @@ export default function FinalCta() {
             <MagneticButton>
               {/* Dış Çerçeve (Dönen Işık Bandı) */}
               <div className="relative inline-flex overflow-hidden rounded-full p-[2px] shadow-lg group cursor-pointer">
-                
                 {/* Animasyonlu Dönen Kenarlık */}
                 <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple-light)_0%,var(--color-medusa-secondary)_50%,var(--color-medusa-purple-light)_100%)] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -188,7 +185,7 @@ export default function FinalCta() {
                   </span>
 
                   {/* İkon Kutusu */}
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-medusa-secondary/20 flex items-center justify-center group-hover:bg-medusa-purple-light group-hover:rotate-45 transition-all duration-300">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-medusa-secondary/20 flex items-center justify-center group-hover:bg-medusa-purple-light group-hover:-rotate-45 transition-all duration-300">
                     <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-medusa-purple-light group-hover:text-medusa-primary transition-colors" />
                   </div>
                 </button>

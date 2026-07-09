@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue, useSpring } from "framer-motion";
+import Badge from "@/app/components/ui/Badge"; // Badge yolunun doğruluğundan emin olun
 
 const contentText =
   "Medusa Global olarak, işletmenizin dijital dönüşümünü hızlandırmak ve sürdürülebilir büyüme sağlamak için yenilikçi çözümler sunarız. Uluslararası Pazarlama tecrübesi olan ekibimizle birlikte, yatırım ve danışmanlık hizmetlerimizi en üst düzeyde sunarak, işletmenizin küresel pazarlarda rekabet gücünü artırırız. Partnerlik yatırımlarından globallik analizine kadar uzanan büyüme yol haritası ve yenilikçi çözüm modellerimizle; markanızın ürün-pazar uyumu, çevik gelişimi ve stratejik pazarlama süreçleri üzerine profesyonel bir titizlikle çalışırız.";
 
-// Kelime bazlı animasyon için alt bileşen
+// --- KELİME BAZLI ANİMASYON BİLEŞENİ ---
 const Word = ({
   children,
   progress,
@@ -16,13 +17,14 @@ const Word = ({
   progress: MotionValue<number>;
   range: [number, number];
 }) => {
-  // Kaydırma yüzdesine göre opasiteyi (0.15'den 1'e) ayarlar
-  const opacity = useTransform(progress, range, [0.15, 1]);
+  // Geçişi daha doğal kılmak için başlangıç opasitesini 0.2 yaptık
+  const opacity = useTransform(progress, range, [0.2, 1]);
 
   return (
     <motion.span
       style={{ opacity }}
-      className="inline-block mr-[0.3em] mt-[0.2em] transition-opacity duration-100"
+      // Keskinliği kırmak için transition süresini kaldırdık, çünkü useSpring zaten yumuşatıyor
+      className="inline-block mr-[0.3em] mt-[0.2em]"
     >
       {children}
     </motion.span>
@@ -35,7 +37,17 @@ export default function GlobalVisionSection() {
   // Animasyonun başlayacağı ve biteceği görünüm alanı (viewport) ayarları
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 75%", "end 60%"],
+    // Okunabilirliği artırmak için tetiklenme alanını biraz daha genişlettik
+    offset: ["start 80%", "end 50%"], 
+  });
+
+  // --- MÜKEMMEL YUMUŞAKLIK İÇİN SPRING (YAY) FİZİĞİ ---
+  // Scroll değerini doğrudan yansıtmak yerine, esnek bir yaylanma ile iletiyoruz. 
+  // Bu, fare tekerleğinin keskin duruşlarında bile yazının pürüzsüzce akmasını sağlar.
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
   });
 
   const words = contentText.split(" ");
@@ -43,39 +55,35 @@ export default function GlobalVisionSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-[80vh] flex items-center justify-center py-32 overflow-hidden bg-background transition-colors duration-500"
+      className="relative w-full min-h-[80vh] flex items-center justify-center py-32 overflow-hidden bg-background"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-medusa-purple/5 dark:bg-medusa-glow-primary/20 blur-[100px] rounded-full pointer-events-none transition-colors duration-700" />
+      {/* --- SİNEMATİK ARKA PLAN IŞIĞI (Yeni Tema) --- */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-medusa-secondary/20 blur-[120px] rounded-full pointer-events-none" />
+      
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center max-w-5xl">
-        <div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
-          {/* Sürekli dönen arka plan (Mor ve Spark Işığı) */}
-          <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
-
-          {/* İç Zemin ve Metin */}
-          <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
-            <span className="font-sans text-sm font-semibold tracking-wide text-white drop-shadow-md">
-              Misyonumuz
-            </span>
-          </div>
-        </div>
+        
+        {/* Rozet Vurgusu */}
+        <Badge text="Misyonumuz" className="mb-8" />
 
         {/* --- BAŞLIK --- */}
-        <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-foreground dark:text-white tracking-tight transition-colors duration-300 mb-10">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-12">
           Küresel Büyümenin Stratejik Mimarı
         </h2>
 
         {/* --- SCROLL REVEAL METNİ --- */}
-        <p className="text-xl md:text-3xl lg:text-4xl leading-snug md:leading-tight lg:leading-tight font-sans font-medium text-foreground dark:text-white">
+        <p className="text-xl md:text-3xl lg:text-4xl leading-snug md:leading-tight lg:leading-tight font-sans font-medium text-foreground">
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;
             return (
-              <Word key={i} progress={scrollYProgress} range={[start, end]}>
+              // Artık scrollYProgress yerine smoothProgress prop'unu geçiriyoruz
+              <Word key={i} progress={smoothProgress} range={[start, end]}>
                 {word}
               </Word>
             );
           })}
         </p>
+
       </div>
     </section>
   );
