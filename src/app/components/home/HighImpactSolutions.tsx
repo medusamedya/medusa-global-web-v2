@@ -2,135 +2,142 @@
 
 import React from "react";
 import { ArrowUpRight, TrendingUp, Activity, Users } from "lucide-react";
+import Badge from "../ui/Badge";
+import GradientButton from "../ui/GradientButton";
 
 export default function HighImpactSolutions() {
   return (
-    <section className="relative w-full py-24 bg-background transition-colors duration-500 overflow-hidden">
-      
-
+    <section className="relative w-full py-12 md:py-16 bg-background overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         
         {/* --- ÜST BAŞLIK BÖLÜMÜ --- */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-6">
-
-
-<div className="relative inline-flex overflow-hidden rounded-full p-[1px] shadow-sm mb-6">
-          {/* Sürekli dönen arka plan (Mor ve Spark Işığı) */}
-          <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-purple)_40%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_60%,var(--color-medusa-purple)_100%)] opacity-80" />
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16  space-y-6">
+          <Badge text="Performans & Ölçeklenme" className="mb-4" />
           
-          {/* İç Zemin ve Metin */}
-          <div className="relative z-10 inline-flex items-center justify-center w-full h-full rounded-full bg-medusa-base-dark/95 px-4 py-1.5 backdrop-blur-md">
-            <span className="font-sans text-sm font-semibold tracking-wide text-white drop-shadow-md">
-            Performans & Ölçeklenme
-            </span>
-          </div>
-        </div>
-
-          
-          <h2 className="font-headingtext-3xl md:text-5xl font-extrabold text-foreground dark:text-white tracking-tight transition-colors duration-300">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
             İşletmenizi Büyütecek Yüksek Etkili Çözümler
           </h2>
-          <p className="font-sans text-lg text-foreground/80 dark:text-white/70 leading-relaxed transition-colors duration-300">
-            Ekibinizi operasyonel iş akışlarını hızlandıran, satışları ölçekleyen ve müşteri bağını güçlendiren veriye dayalı stratejilerle donatın.
+          <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
+            Ekibinizi operasyonel iş akışlarını hızlandıran, satışları
+            ölçekleyen ve müşteri bağını güçlendiren veriye dayalı stratejilerle
+            donatın.
           </p>
         </div>
 
-        {/* --- BENTO BOX GRID BÖLÜMÜ --- */}
+        {/* --- BENTO BOX GRID BÖLÜMÜ (Global.css Renkleriyle Glassmorphism) --- */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-7xl mx-auto">
           
           {/* 1. KUTU: Sektör Liderlerinin Tercihi (Top Left) */}
-          <div className="md:col-span-6 lg:col-span-4 relative group rounded-[2rem] p-[2px] overflow-hidden shadow-lg min-h-[260px] flex">
-            <span className="absolute inset-[-200%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-purple)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative z-10 w-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 flex flex-col justify-between border border-foreground/5 dark:border-white/5 transition-colors duration-500">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="font-headingtext-2xl font-bold text-foreground dark:text-white leading-tight">Lider Markaların<br/>Tercihi</h3>
+          <div className="md:col-span-6 lg:col-span-4 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)]">
+            <div className="relative z-10 w-full h-full flex flex-col justify-between rounded-[calc(32px-1px)] bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 p-8 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] transition-colors duration-500 group-hover:from-medusa-primary group-hover:to-medusa-surface-1">
+              <div className="flex justify-between items-start mb-6">
+                <h3 className="font-heading text-2xl font-bold text-foreground leading-tight">
+                  Lider Markaların
+                  <br />
+                  Tercihi
+                </h3>
                 {/* Avatarlar Yertutucu */}
                 <div className="flex -space-x-3">
-                  <div className="w-10 h-10 rounded-full border-2 border-[#08020F] bg-medusa-purple flex items-center justify-center"><Users className="w-5 h-5 text-white" /></div>
-                  <div className="w-10 h-10 rounded-full border-2 border-[#08020F] bg-medusa-gold flex items-center justify-center"><TrendingUp className="w-5 h-5 text-white" /></div>
-                  <div className="w-10 h-10 rounded-full border-2 border-[#08020F] bg-medusa-spark flex items-center justify-center"><Activity className="w-5 h-5 text-black" /></div>
+                  <div className="w-10 h-10 rounded-full border-2 border-medusa-surface-1 bg-medusa-secondary flex items-center justify-center shadow-md">
+                    <Users className="w-4 h-4 text-foreground" />
+                  </div>
+                  <div className="w-10 h-10 rounded-full border-2 border-medusa-surface-1 bg-medusa-purple-light flex items-center justify-center shadow-md">
+                    <TrendingUp className="w-4 h-4 text-medusa-primary" />
+                  </div>
+                  <div className="w-10 h-10 rounded-full border-2 border-medusa-surface-1 bg-medusa-border flex items-center justify-center shadow-md">
+                    <Activity className="w-4 h-4 text-foreground" />
+                  </div>
                 </div>
               </div>
-              <p className="font-sans text-foreground/70 dark:text-white/60 text-sm font-light mt-auto">
-                Latanwood, Naser Group ve onlarca vizyoner marka dijital dönüşüm operasyonlarında bize güveniyor.
+              <p className="font-sans text-medusa-text-muted text-sm font-light mt-auto leading-relaxed">
+                Latanwood, Naser Group ve onlarca vizyoner marka dijital dönüşüm
+                operasyonlarında bize güveniyor.
               </p>
             </div>
           </div>
 
           {/* 2. KUTU: Müşteri Memnuniyeti / ROAS (Top Middle) */}
-          <div className="md:col-span-6 lg:col-span-4 relative group rounded-[2rem] p-[2px] overflow-hidden shadow-lg min-h-[260px] flex">
-            <span className="absolute inset-[-200%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-gold)_0%,var(--color-medusa-purple)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-gold)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative z-10 w-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 flex flex-col border border-foreground/5 dark:border-white/5 transition-colors duration-500">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="font-heading text-5xl font-black text-foreground dark:text-white tracking-tighter">3x</span>
-                <span className="font-sans text-sm font-medium text-foreground/80 dark:text-white/80 leading-tight">Ortalama<br/>ROAS Artışı</span>
+          <div className="md:col-span-6 lg:col-span-4 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)]">
+            <div className="relative z-10 w-full h-full flex flex-col justify-between rounded-[calc(32px-1px)] bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 p-8 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] transition-colors duration-500 group-hover:from-medusa-primary group-hover:to-medusa-surface-1">
+              <div className="flex items-center gap-4 mb-6">
+                <span className="font-heading text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-foreground to-medusa-text-secondary tracking-tighter">
+                  3x
+                </span>
+                <span className="font-sans text-sm font-medium text-medusa-text-secondary leading-tight">
+                  Ortalama
+                  <br />
+                  ROAS Artışı
+                </span>
               </div>
-              <p className="font-sans text-foreground/70 dark:text-white/60 text-sm font-light mt-auto">
-                Omnichannel pazarlama stratejilerimiz ve huni (funnel) optimizasyonlarımızla yatırım getirinizi maksimize ediyoruz.
+              <p className="font-sans text-medusa-text-muted text-sm font-light mt-auto leading-relaxed">
+                Omnichannel pazarlama stratejilerimiz ve huni (funnel)
+                optimizasyonlarımızla yatırım getirinizi maksimize ediyoruz.
               </p>
             </div>
           </div>
 
-          {/* 3. KUTU: Sağ Kolon Dikey İmaj Kartı (Spans 2 Rows) */}
-          <div className="md:col-span-12 lg:col-span-4 lg:row-span-2 relative group rounded-[2rem] p-[2px] overflow-hidden shadow-lg min-h-[400px] lg:min-h-[550px] flex">
-            <span className="absolute inset-[-150%] animate-[spin_7s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-spark)_0%,var(--color-medusa-purple)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-spark)_100%)] opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative z-10 w-full h-full rounded-[calc(2rem-2px)] overflow-hidden bg-[#08020F]">
+          {/* 3. KUTU: Sağ Kolon Dikey İmaj Kartı ve Buton (Spans 2 Rows) */}
+          <div className="md:col-span-12 lg:col-span-4 lg:row-span-2 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)] min-h-[400px] lg:min-h-[550px]">
+            <div className="relative z-10 w-full h-full rounded-[calc(32px-1px)] overflow-hidden bg-medusa-surface-1 border border-medusa-border/20 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
               
-              {/* Arka Plan Görseli (Şimdilik Yer Tutucu, İstenirse Değiştirilebilir) */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop')" }}
-              ></div>
-              
+
               {/* İçerik ve Gradient Katmanı */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08020F] via-[#08020F]/60 to-transparent flex flex-col justify-end p-8">
-                <h3 className="font-heading text-3xl font-bold text-white mb-3 leading-tight">Veriyi Eyleme<br/>Dönüştürün</h3>
-                <p className="font-sanstext-white/70 text-sm font-light mb-8">
-                  Sektörel analizler ve dijital sağlık kontrolleriyle ekibinizin her zaman doğru kararı almasını sağlıyoruz.
+              <div className="absolute inset-0 bg-gradient-to-t from-medusa-surface-1 via-medusa-surface-1/80 to-transparent flex flex-col justify-end p-8">
+                <h3 className="font-heading text-3xl font-bold text-foreground mb-3 leading-tight">
+                  Veriyi Eyleme
+                  <br />
+                  Dönüştürün
+                </h3>
+                <p className="font-sans text-medusa-text-secondary text-sm font-light mb-8 leading-relaxed">
+                  Sektörel analizler ve dijital sağlık kontrolleriyle ekibinizin
+                  her zaman doğru kararı almasını sağlıyoruz.
                 </p>
-               {/* Animasyonlu İmza Çerçeveli Çözüm Butonu */}
-<div className="relative inline-flex overflow-hidden rounded-full p-[2px] group flex-shrink-0 w-full sm:w-max">
-  {/* Dönen Kurumsal Işık Bandı (Border Animasyonu) */}
-  <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
-  
-  {/* Buton Zemin ve İçerik */}
-  <button className="font-sans relative z-10 flex items-center justify-center gap-3 bg-background text-white px-8 py-4 rounded-full font-bold hover:bg-transparent hover:text-white transition-all duration-300 w-full sm:w-max group/btn">
-    
-   <div className="w-8 h-8 rounded-full bg-medusa-purple/10 dark:bg-medusa-spark/20 flex items-center justify-center group-hover:bg-medusa-spark group-hover:rotate-45 transition-all duration-300">
-                   <ArrowUpRight className="w-4 h-4 text-medusa-purple dark:text-medusa-spark group-hover:text-medusa-base-dark transition-colors" />
-                 </div>
-    Tüm Çözümleri İncele
-  </button>
-</div>
+                
+                {/* Gradient Butonumuz */}
+                <GradientButton text="Tüm Çözümleri İncele" className="w-full sm:w-max" />
               </div>
             </div>
           </div>
 
           {/* 4. KUTU: 360° Omnichannel (Bottom Left - Geniş Kutu) */}
-          <div className="md:col-span-7 lg:col-span-5 relative group rounded-[2rem] p-[2px] overflow-hidden shadow-lg min-h-[260px] flex">
-            <span className="absolute inset-[-200%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-purple)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative z-10 w-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 flex flex-col justify-between border border-foreground/5 dark:border-white/5 transition-colors duration-500">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="font-heading text-4xl md:text-5xl font-black text-foreground dark:text-white tracking-tighter">360°</span>
-                <span className="font-sans text-sm font-medium text-foreground/80 dark:text-white/80 leading-tight">Omnichannel<br/>Ekosistem</span>
+          <div className="md:col-span-7 lg:col-span-5 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)]">
+            <div className="relative z-10 w-full h-full flex flex-col justify-between rounded-[calc(32px-1px)] bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 p-8 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] transition-colors duration-500 group-hover:from-medusa-primary group-hover:to-medusa-surface-1">
+              <div className="flex items-center gap-4 mb-6">
+                <span className="font-heading text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-foreground to-medusa-text-secondary tracking-tighter">
+                  360°
+                </span>
+                <span className="font-sans text-sm font-medium text-medusa-text-secondary leading-tight">
+                  Omnichannel
+                  <br />
+                  Ekosistem
+                </span>
               </div>
-              <p className="font-sans text-foreground/70 dark:text-white/60 text-sm font-light mt-auto max-w-[90%]">
-                Fiziksel ve dijital kanallarınızı (Web, Mobil, Sosyal Medya, CRM) tek bir çatı altında birleştirerek kesintisiz ve tutarlı bir müşteri deneyimi (CX) yaratıyoruz.
+              <p className="font-sans text-medusa-text-muted text-sm font-light mt-auto max-w-[90%] leading-relaxed">
+                Fiziksel ve dijital kanallarınızı (Web, Mobil, Sosyal Medya,
+                CRM) tek bir çatı altında birleştirerek kesintisiz ve tutarlı
+                bir müşteri deneyimi (CX) yaratıyoruz.
               </p>
             </div>
           </div>
 
           {/* 5. KUTU: Dijital Sağlık Kontrolü (Bottom Middle - Dar Kutu) */}
-          <div className="md:col-span-5 lg:col-span-3 relative group rounded-[2rem] p-[2px] overflow-hidden shadow-lg min-h-[260px] flex">
-            <span className="absolute inset-[-300%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-gold)_0%,var(--color-medusa-purple)_25%,var(--color-medusa-base-dark)_50%,var(--color-medusa-gold)_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative z-10 w-full rounded-[calc(2rem-2px)] bg-background/95 dark:bg-[#08020F]/95 backdrop-blur-xl p-8 flex flex-col justify-between border border-foreground/5 dark:border-white/5 transition-colors duration-500">
-              <div className="mb-4">
-                <h3 className="font-heading text-lg font-semibold text-foreground dark:text-white mb-1">Kapsamlı Analiz</h3>
-                <p className="font-sans text-sm text-medusa-purple dark:text-medusa-gold font-medium">Dijital Sağlık Kontrolü</p>
+          <div className="md:col-span-5 lg:col-span-3 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)]">
+            <div className="relative z-10 w-full h-full flex flex-col justify-between rounded-[calc(32px-1px)] bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 p-8 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] transition-colors duration-500 group-hover:from-medusa-primary group-hover:to-medusa-surface-1">
+              <div className="mb-6">
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-1">
+                  Kapsamlı Analiz
+                </h3>
+                <p className="font-sans text-sm text-medusa-purple-light font-medium">
+                  Dijital Sağlık Kontrolü
+                </p>
               </div>
               <div className="mt-auto flex items-end justify-between">
-                <span className="font-heading text-4xl md:text-5xl font-black text-foreground dark:text-white tracking-tighter">14</span>
-                <span className="font-sans text-foreground/70 dark:text-white/60 text-sm font-light mb-1">Günde Raporlama</span>
+                <span className="font-heading text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-foreground to-medusa-text-secondary tracking-tighter">
+                  14
+                </span>
+                <span className="font-sans text-medusa-text-muted text-sm font-light mb-1.5">
+                  Günde Raporlama
+                </span>
               </div>
             </div>
           </div>

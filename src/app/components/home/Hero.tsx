@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Badge from "../ui/Badge"; // Kendi Badge yolunu kontrol etmeyi unutma
+import GradientButton from "../ui/GradientButton";
 
 export default function Hero() {
   return (
@@ -33,10 +34,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-          className="font-heading text-[clamp(3.5rem,9vw,7rem)] font-normal leading-[0.9] tracking-tight text-white mb-8"
+          className="font-heading text-[clamp(2.5rem,8vw,7rem)] font-normal leading-[1.1] sm:leading-[0.9] tracking-tight text-white mb-8"
         >
-          <span className="whitespace-nowrap">We build, run and</span>
-          <br />
+          <span className="block sm:inline">We build, run and</span>
+          <br className="hidden sm:block" />
           grow digital
           <br />
           businesses.
@@ -60,14 +61,8 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          <button className="font-sans relative inline-flex items-center border border-gray-600 justify-center bg-[#F5F5F7] px-10  py-3.5 sm:py-3 rounded-full font-bold text-[16px] tracking-wide shadow-[0_0_30px_rgba(61,10,107,0.25)] hover:bg-black hover:shadow-[0_0_45px_rgba(61,10,107,0.4)] hover:scale-105 transition-all duration-300">
-            
-          {/* 3 Renkli Kesintisiz Gradient (HEX ile garantilendi) */}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1F0838] via-[#3D0A6B] to-[#D3D3D3]">
-              İşlerimiz
-            </span>
-            
-          </button>
+          {/* Yeni Premium Gradient Buton Bileşenimiz */}
+          <GradientButton text="İşlerimiz" />
         </motion.div>
         
       </div>

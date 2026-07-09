@@ -7,7 +7,7 @@ interface BadgeProps {
 
 export default function Badge({ text, className = "" }: BadgeProps) {
   return (
-    <div className={`relative inline-flex overflow-hidden rounded-full p-[1px] shadow-lg ${className}`}>
+    <div className={`relative inline-flex overflow-hidden rounded-full mb-6 p-[1px] shadow-lg ${className}`}>
       
       {/* Çerçeve Parlaması: 
         Kenarlara çok daha parlak ve patlayan bir mor (#A855F7) eklendi.

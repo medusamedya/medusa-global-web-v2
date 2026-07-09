@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import MobileMenu from "./MobileMenu"; // Yeni bileşenimizi içe aktardık
 import Link from "next/link";
+import GradientButton from "../ui/GradientButton";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,14 +65,14 @@ export default function Header() {
               { name: "Anasayfa", path: "/" },
               { name: "Hakkımızda", path: "/about" },
               { name: "Hizmetler", path: "/services" },
-              { name: "Fiyatlandırma", path: "/pricing" },
+              { name: "Çalışmalarımız", path: "/projects" },
               { name: "Blog", path: "/blog" },
               { name: "İletişim", path: "/contact" },
             ].map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
-                className="font-sans text-[13px] px-4 py-1.5 text-white dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors duration-300 rounded-full hover:bg-black/50 dark:hover:bg-white/10"
+                className="font-sans text-[16px] px-4 py-1.5 text-white dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors duration-300 rounded-full hover:bg-black/50 dark:hover:bg-white/10"
               >
                 {item.name}
               </Link>
@@ -81,16 +82,7 @@ export default function Header() {
           {/* RIGHT: Theme Toggle, CTA & Mobile Menu Button */}
           <div className="flex items-center gap-3">
             
-            {/* Header Aksiyon Butonu (Masaüstünde görünür, mobilde gizlenebilir veya kalabilir - şu an görünür) */}
-            <div className="hidden sm:inline-flex relative overflow-hidden rounded-full p-[1.5px] group flex-shrink-0 cursor-pointer">
-              <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--color-medusa-purple)_0%,var(--color-medusa-spark)_50%,var(--color-medusa-purple)_100%)] opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-              <button className="font-sans relative z-10 flex items-center justify-center gap-3 bg-[#08020F] text-white px-5 py-2.5 rounded-full font-bold text-[13px] tracking-wide transition-all duration-300 hover:bg-transparent hover:text-white group/btn">
-                <span>İletişime Geçin</span>
-                <div className="w-6 h-6 rounded-full bg-medusa-purple/10 dark:bg-medusa-spark/20 flex items-center justify-center group-hover:bg-medusa-spark group-hover:rotate-45 transition-all duration-300">
-                  <ArrowRight className="w-4 h-4 text-white group-hover/btn:text-[#08020F] transition-colors" />
-                </div>
-              </button>
-            </div>
+           <GradientButton text="İletişime Geçin" paddingClass="px-6 py-2" />
 
             {/* Mobil Hamburger Butonu */}
             <button 

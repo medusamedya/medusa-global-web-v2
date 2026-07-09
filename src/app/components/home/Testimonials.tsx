@@ -73,17 +73,17 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative w-full py-24 bg-background transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-12 md:py-16 bg-background transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         
         {/* --- ÜST BAŞLIK VE İMZA BADGE --- */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-6">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16 space-y-6">
           <Badge text="Testimonials" className="mb-4" />
 
-          <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
             25+ Markanın Güvendiği İş Ortağı
           </h2>
-          <p className="font-sans text-lg text-medusa-text-secondary">
+          <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
             Danışmanlık, hızlandırma ve yatırım hizmetlerimizle markaların yaşam
             döngüsünün her aşamasında yanındayız.
           </p>
@@ -112,7 +112,7 @@ export default function Testimonials() {
                       <div className="relative z-10 h-full rounded-[calc(1.5rem-1px)] bg-gradient-to-br from-[#1a1726] to-[#241c33] p-8 flex flex-col gap-6 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
                         
                         {/* Profil Bilgileri */}
-                        <div className="flex items-center space-x-4 mb-16">
+                        <div className="flex items-center space-x-4 mb-4 md:mb-16">
                           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#853ec7] to-[#3D0A6B] flex items-center justify-center border border-white/20 shrink-0 shadow-lg">
                             <span className="font-heading text-xl text-white font-bold tracking-wider">
                               {testimonial.initials}

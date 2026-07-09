@@ -57,20 +57,20 @@ export default function CaseStudies() {
   };
 
   return (
-    <section className="relative w-full py-24 bg-background transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-12 md:py-16 bg-background transition-colors duration-500 overflow-hidden">
       {/* --- YUKARIDAN VURAN SPOT IŞIĞI --- */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[60vw] max-w-[1000px] max-h-[600px] bg-medusa-purple/10 blur-[120px] rounded-full pointer-events-none z-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* --- BAŞLIK VE BADGE BÖLÜMÜ --- */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-6">
-          <Badge text="Case Studies" className="mb-4" />
-          <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16 space-y-6">
+          <Badge text="Case Studies" className="mb-6" />
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
             Real-World Growth
             <br />
             Case Studies
           </h2>
-          <p className="font-sans text-lg text-medusa-text-secondary">
+          <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
             See how companies are revolutionizing their workflows and growth
             using our strategies.
           </p>
@@ -108,10 +108,10 @@ export default function CaseStudies() {
                               key={index}
                               className="flex flex-col items-center justify-center p-3 rounded-xl bg-[#0A0510] backdrop-blur-md border border-white/10 text-center"
                             >
-                              <span className="font-heading text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#A855F7] to-[#ded8ff]">
+                              <span className="font-heading text-normal md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#A855F7] to-[#ded8ff]">
                                 {stat.value}
                               </span>
-                              <span className="font-sans text-[18px]  text-medusa-text-muted leading-tight">
+                              <span className="font-sans text-[14px] md:text-[18px]  text-medusa-text-muted leading-tight">
                                 {stat.label}
                               </span>
                             </div>
@@ -120,21 +120,21 @@ export default function CaseStudies() {
                       </div>
 
                       {/* SAĞ: Metin ve Detaylar Bölümü */}
-                      <div className="w-full lg:w-1/2 flex flex-col justify-center py-4 lg:py-8 lg:pr-8">
+                      <div className="w-full lg:w-1/2 flex flex-col justify-center py-0 lg:py-8 lg:pr-8">
                         {/* Logo ve Marka İsmi */}
-                        <div className="flex items-center space-x-3 mb-18">
+                        <div className="flex items-center space-x-3 mb-8 md:mb-18">
                           {/* shrink-0: İkonun metin uzasa bile ezilmesini engeller */}
                           <study.Icon className="w-8 h-8 text-white shrink-0" />
                           
                           {/* leading-none: Fontun ekstra satır boşluğunu kaldırıp hizalamayı keskinleştirir. 
                               Eğer fonttan kaynaklı yukarıda kalma hissi devam ederse "mt-1" veya "pt-1" ekleyebilirsin. */}
-                          <span className="font-heading text-xl font-semibold text-white tracking-wide leading-none">
+                          <span className="font-heading text-small md:text-xl font-semibold text-white tracking-wide leading-none">
                             {study.companyName}
                           </span>
                         </div>
 
                         {/* Hikaye Başlığı */}
-                        <h3 className="font-heading text-2xl  font-bold text-white leading-tight mb-6">
+                        <h3 className="font-heading text-lg md:text-2xl  font-bold text-white leading-tight mb-2 md:mb-6">
                           {study.title}
                         </h3>
 

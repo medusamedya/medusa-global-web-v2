@@ -50,16 +50,15 @@ const servicesData: ServiceCard[] = [
 
 export default function Services() {
   return (
-    <section className="relative w-full pb-24 z-20 -mt-24 md:-mt-32 transition-colors duration-500 pointer-events-none">
+    <section className="relative w-full pb-12 md:pb-16 z-20 -mt-28 md:-mt-32 transition-colors duration-500 pointer-events-none">
       <div className="container mx-auto px-6 relative z-10 pointer-events-auto">
-        {/* --- BAŞLANGIÇ MERKEZİ (MOUSE ICON) --- */}
-        <div className="flex flex-col items-center justify-center w-full relative z-20">
+        {/* --- BAŞLANGIÇ MERKEZİ (MOUSE ICON - Sadece PC) --- */}
+        <div className="hidden lg:flex flex-col items-center justify-center w-full relative z-20">
           <div className="flex flex-col items-center gap-2 mb-4">
             <Mouse
               className="w-8 h-8 text-medusa-purple-light"
               strokeWidth={1.5}
             />
-            
           </div>
         </div>
 
@@ -123,7 +122,7 @@ export default function Services() {
               className="group flex flex-col items-center text-center px-2 cursor-default"
             >
               {/* DIŞ KATMAN: 3 Renkli Gradient Border (Üst ince ışık, Alt Sol Spark, Alt Sağ Mor) */}
-              <div className="relative rounded-[1.3rem] p-[1px] mb-6 transition-transform duration-500 group-hover:-translate-y-1 shadow-[0_8px_30px_rgba(92,6,140,0.25)] bg-gradient-to-br from-white/5 via-medusa-spark/60 to-medusa-purple">
+              <div className="relative rounded-[1.3rem] p-[1px] mb-6 transition-transform duration-500 group-hover:-translate-y-1 shadow-[0_8px_30px_rgba(92,6,140,0.25)] bg-gradient-to-br from-white/5 via-medusa-purple-light/60 to-medusa-secondary/40">
                 {/* İÇ KATMAN: Üstü kurumsal siyah, altı çift renkli Mesh Gradient zemin */}
                 <div className="relative flex items-center justify-center w-14 h-14 md:w-18 md:h-18 rounded-[calc(1.3rem-1px)] bg-[#08020F] overflow-hidden">
                   {/* Alt sol köşeden yayılan sıcak Medusa Spark (Gold/Krem Işık) */}
@@ -144,7 +143,7 @@ export default function Services() {
               </div>
 
               {/* Başlık */}
-              <h3 className="text-lg md:text-xl font-bold font-heading text-foreground dark:text-white tracking-wide mb-3 transition-colors duration-300 group-hover:text-medusa-purple dark:group-hover:text-medusa-spark">
+              <h3 className="text-lg md:text-xl font-bold font-heading text-foreground  tracking-wide mb-3 transition-colors duration-300 group-hover:text-medusa-purple-light ">
                 {service.title}
               </h3>
 
