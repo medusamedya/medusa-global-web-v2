@@ -66,10 +66,10 @@ export default function FAQ() {
                 {/* Kartın İç Zemini: Görseldeki gibi koyu, mat ve derin */}
                 <div className="relative z-10 w-full h-full rounded-[calc(1rem-1px)] bg-[#141128] border border-white/5 shadow-[inset_0_1px_2px_rgba(255,255,255,0.02)] backdrop-blur-xl">
                   {/* Soru Satırı (Header) */}
-                  <div className="flex items-center justify-between px-4 py-4 ">
+                  <div className="flex items-center text-center justify-between px-3 py-3 ">
                     <h3
                       // leading-snug dikey ortalamayı kusursuzlaştırır, antialiased fontu daha ince ve zarif gösterir.
-                      className={`font-sans text-base md:text-[16px] font-light antialiased leading-snug tracking-wide transition-colors duration-300 pr-6 md:pr-8 ${
+                      className={`font-sans flex items-center text-base md:text-[16px] font-light antialiased leading-snug tracking-wide transition-colors duration-300 pl-6 pr-6 md:pr-12 ${
                         isOpen
                           ? "text-white"
                           : "text-foreground group-hover:text-white"
