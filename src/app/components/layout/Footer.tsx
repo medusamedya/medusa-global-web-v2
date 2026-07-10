@@ -10,9 +10,16 @@ export default function Footer() {
     <footer className="relative w-full pt-16 pb-12 bg-background transition-colors duration-500 overflow-hidden border-t border-medusa-border/20">
       <div className="container mx-auto px-6 relative z-10">
         
-        {/* --- ÜST BÖLÜM: BÜYÜK VİZYON MESAJI --- */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 mb-8 md:mb-16">
-          <div className="max-w-2xl relative">
+       {/* --- ÜST BÖLÜM: BÜYÜK VİZYON MESAJI --- */}
+        <div className="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 mb-8 md:mb-16">
+          
+          {/* Sol Alt Işık Hüzmesi */}
+          <div className="absolute -bottom-10 -left-10 w-[40vw] max-w-[400px] h-[300px] bg-medusa-primary/90 blur-[120px] rounded-full pointer-events-none -z-10" />
+          
+          {/* Sağ Alt Işık Hüzmesi */}
+          <div className="absolute -bottom-10 -right-10 w-[40vw] max-w-[400px] h-[300px] bg-medusa-purple-light/20 blur-[120px] rounded-full pointer-events-none -z-10" />
+
+          <div className="max-w-2xl relative z-10">
             <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground tracking-tight leading-tight transition-colors duration-300">
               Ticaretinizi büyütmek için <br className="hidden sm:block" />
               doğru iş ortağını buldunuz.
@@ -20,7 +27,7 @@ export default function Footer() {
           </div>
           
           {/* Gradient Buton Entegrasyonu */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 relative z-10">
             <Link href="mailto:hello@medusaglobal.com">
               <GradientButton text="Bize Ulaşın" showIcon={false} />
             </Link>
