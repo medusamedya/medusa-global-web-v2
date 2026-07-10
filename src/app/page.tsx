@@ -9,6 +9,7 @@ import FAQ from "./components/home/Faq";
 import FinalCta from "./components/home/FinalCta";
 
 export default function Home() {
+  
   return (
     <>
       {/* Cinematic Bottom-Aligned Hero */}

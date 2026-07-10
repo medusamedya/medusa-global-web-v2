@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 
 // Header ve Footer'ı layout'a dahil ediyoruz
 import Header from "./components/layout/Header";
@@ -27,22 +26,19 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <body
-        className={`${jakarta.variable} font-sans antialiased transition-colors duration-500 bg-background text-foreground`}
-        suppressHydrationWarning
+        className={`${jakarta.variable} font-sans antialiased bg-background text-foreground min-h-screen flex flex-col`}
+        suppressHydrationWarning={true}
       >
-        {" "}
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {/* Her sayfada en üstte Header olacak */}
-          <Header />
+        {/* Her sayfada en üstte Header olacak */}
+        <Header />
 
-          {/* Hangi sayfadaysak (Home, About vb.) o sayfanın içeriği burada render edilecek */}
-          <main className="relative flex flex-col overflow-hidden min-h-screen">
-            {children}
-          </main>
+        {/* Hangi sayfadaysak o sayfanın içeriği burada render edilecek */}
+        <main className="relative flex flex-col flex-grow overflow-hidden">
+          {children}
+        </main>
 
-          {/* Her sayfada en altta Footer olacak */}
-          <Footer />
-        </ThemeProvider>
+        {/* Her sayfada en altta Footer olacak */}
+        <Footer />
       </body>
     </html>
   );
