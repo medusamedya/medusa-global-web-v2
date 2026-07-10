@@ -15,6 +15,7 @@ interface MobileMenuProps {
 const menuItems = [
   { name: "Anasayfa", path: "/" },
   { name: "Hakkımızda", path: "/about" },
+  { name: "Ekibimiz", path: "/team" },
   { name: "Hizmetler", path: "/services" },
   { name: "Çalışmalarımız", path: "/projects" },
   { name: "Blog", path: "/blog" },

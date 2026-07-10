@@ -10,44 +10,43 @@ const stackData = [
   {
     step: "HAT 01",
     category: "BRANDING",
-    title: "Branding",
-    subtitle: "Markanızın sesi, görüntüsü, duruşu.",
+    title: "Kimlik İnşası",
+    subtitle: "Bir marka; hatırlanan sesi, tanınan yüzü ve sarsılmaz duruşuyla vardır. Biz bu üçünü kurarız.",
     items: [
-      "Kurumsal kimlik & logo tasarımı",
+      "Kurumsal kimlik inşaası",
       "Marka konumlandırma",
-      "Marka yönetimi",
+      "Marka yönetimi ve süreklilik",
+      "Dijital sistem kurulumu (Web Site)",
       "Grafik & katalog çalışmaları",
-      "Web sitesi tasarımı",
     ],
   },
   {
     step: "HAT 02",
     category: "DİJİTAL PAZARLAMA",
-    title: "Dijital Pazarlama",
-    subtitle: "Doğru kişiye ulaşmanın yolu.",
+    title: "Talep Yaratımı",
+    subtitle: "Doğru mesajı, doğru kişiye, doğru anda ulaştırmak tesadüf değil; kurulan bir sistemdir.",
     items: [
       "Sosyal medya pazarlaması",
       "Google Ads & Meta reklam kampanyaları",
-      "SEO & İçerik pazarlaması",
-      "Dijital pazarlama stratejileri",
-      "E-ticaret tabanlı web siteleri",
+      "SEO & içerik pazarlaması",
+      "Dönüşüm odaklı e-ticaret siteleri",
+      "Veriye dayalı pazarlama stratejisi",
     ],
   },
   {
     step: "HAT 03",
     category: "PRODÜKSİYON",
-    title: "Prodüksiyon",
-    subtitle: "Markanızın görüntüsü, hikayesi.",
+    title: "Görsel Anlatı",
+    subtitle: "Bir markayı akılda kalıcı yapan, anlattığı hikâyedir. Biz o hikâyeyi görüntüye çeviririz.",
     items: [
       "Reklam & tanıtım filmleri",
+      "Sosyal Medya içerik çekimleri",
       "Kurumsal & ekip çekimleri",
-      "Belgesel & film prodüksiyonu",
       "Ürün çekimleri",
       "Influencer & etkinlik çekimleri",
     ],
   },
 ];
-
 export default function StackedServices() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
@@ -116,7 +115,7 @@ export default function StackedServices() {
   }, []);
 
   return (
-    // transition-colors ile çift temaya uyum sağlayan kapsayıcı
+    <div>
     <section
       ref={sectionRef}
       className="relative w-full py-12 md:py-16 h-screen bg-background transition-colors duration-500 flex flex-col justify-center"
@@ -174,10 +173,7 @@ export default function StackedServices() {
                         {data.subtitle}
                       </p>
                     </div>
-                    {/* Arka Plan Numarası (Filigran) */}
-                    <div className="font-heading hidden sm:block text-7xl font-bold text-foreground/5 dark:text-white/5 leading-none select-none transition-colors duration-300">
-                      0{index + 1}
-                    </div>
+                  
                   </div>
 
                   {/* Kart Listesi */}
@@ -189,7 +185,7 @@ export default function StackedServices() {
                       >
                         <div className="w-6 h-6 flex items-center justify-center  ">
                           <img
-                            src="/Beyaz_Medusa_Bullet.png"
+                            src="/Sarı_Medusa_Bullet.png"
                             alt="Medusa Bullet"
                             className="w-full h-full p-0.5 object-contain "
                           />
@@ -220,5 +216,6 @@ export default function StackedServices() {
         </div>
       </div>
     </section>
+    </div>
   );
 }

@@ -1,23 +1,21 @@
 // app/about/page.tsx
 
 import InnerHero from "../components/InnerHero";
+import AboutManifesto from "./components/AboutManifesto";
 import Clients from "./components/Clients";
 import FinalCta from "./components/FinalCta";
-import GlobalVisionSection from "./components/GlobalVisionSection";
 import ProcessSection from "./components/ProcessSection";
-import Team from "./components/Team";
 
 export default function AboutPage() {
   return (
     <>
       <InnerHero 
-        title="Biz Kimiz" 
-        accentTitle="Medusa Global" 
-        description="Dijital varlıklarınızı büyütmek için stratejiyi kodla, tasarımı veriyle birleştiriyoruz."
+        title="Ajans değiliz. " 
+        accentTitle="Dijital iş ortağınızız." 
+        description="2010'dan beri markalar kuruyor, işletiyor ve büyütüyoruz. Dışarıdan rapor sunan bir tedarikçi değil; sizinle aynı masada oturan, aynı sonucun peşinde koşan bir ortağız."
       />
-      <GlobalVisionSection />
+      <AboutManifesto />
       <ProcessSection   />
-      <Team />
       <Clients />
       <FinalCta />
     </>

@@ -12,133 +12,114 @@ export default function HighImpactSolutions() {
         
         {/* --- ÜST BAŞLIK BÖLÜMÜ --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16  space-y-6">
-          <Badge text="Performans & Ölçeklenme" className="mb-4" />
+          <Badge text="Kendi Girişimlerimiz" className="mb-4" />
           
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-            İşletmenizi Büyütecek Yüksek Etkili Çözümler
+            Kürsüden Anlatmıyor, Sahada İnşa Ediyoruz.
           </h2>
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
-            Ekibinizi operasyonel iş akışlarını hızlandıran, satışları
-            ölçekleyen ve müşteri bağını güçlendiren veriye dayalı stratejilerle
-            donatın.
+            Riski tanıyoruz, çünkü kendi markalarımızla aldık. Sıfırdan kurduğumuz, 
+            işlettiğimiz ve teknolojik altyapısını kurguladığımız dijital ürün ekosistemimiz.
           </p>
         </div>
 
         {/* --- BENTO BOX GRID BÖLÜMÜ (Global.css Renkleriyle Glassmorphism) --- */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-7xl mx-auto">
           
-          {/* 1. KUTU: Sektör Liderlerinin Tercihi (Top Left) */}
+          {/* 1. KUTU: ODIMAX CRM (Top Left) */}
           <div className="md:col-span-6 lg:col-span-4 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)]">
             <div className="relative z-10 w-full h-full flex flex-col justify-between rounded-[calc(32px-1px)] bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 p-8 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] transition-colors duration-500 group-hover:from-medusa-primary group-hover:to-medusa-surface-1">
-              <div className="flex justify-between items-start mb-6">
-                <h3 className="font-heading text-2xl font-bold text-foreground leading-tight">
-                  Lider Markaların
-                  <br />
-                  Tercihi
+              <div className="mb-6">
+                <p className="font-sans text-xs font-bold tracking-widest text-medusa-purple-light uppercase mb-2">
+                  SaaS · CRM
+                </p>
+                <h3 className="font-heading text-3xl font-bold text-foreground leading-tight">
+                  Odimax CRM
                 </h3>
-                {/* Avatarlar Yertutucu */}
-                <div className="flex -space-x-3">
-                  <div className="w-10 h-10 rounded-full border-2 border-medusa-surface-1 bg-medusa-secondary flex items-center justify-center shadow-md">
-                    <Users className="w-4 h-4 text-foreground" />
-                  </div>
-                  <div className="w-10 h-10 rounded-full border-2 border-medusa-surface-1 bg-medusa-purple-light flex items-center justify-center shadow-md">
-                    <TrendingUp className="w-4 h-4 text-medusa-primary" />
-                  </div>
-                  <div className="w-10 h-10 rounded-full border-2 border-medusa-surface-1 bg-medusa-border flex items-center justify-center shadow-md">
-                    <Activity className="w-4 h-4 text-foreground" />
-                  </div>
-                </div>
               </div>
               <p className="font-sans text-medusa-text-muted text-sm font-light mt-auto leading-relaxed">
-                Latanwood, Naser Group ve onlarca vizyoner marka dijital dönüşüm
-                operasyonlarında bize güveniyor.
+                İşitme cihazı merkezleri için geliştirilmiş çok şubeli satış ve lead takip sistemi. Randevudan satışa tüm süreci tek ekranda yönetir.
               </p>
             </div>
           </div>
 
-          {/* 2. KUTU: Müşteri Memnuniyeti / ROAS (Top Middle) */}
+          {/* 2. KUTU: ALTIN KELİME (Top Middle) */}
           <div className="md:col-span-6 lg:col-span-4 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)]">
             <div className="relative z-10 w-full h-full flex flex-col justify-between rounded-[calc(32px-1px)] bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 p-8 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] transition-colors duration-500 group-hover:from-medusa-primary group-hover:to-medusa-surface-1">
-              <div className="flex items-center gap-4 mb-6">
-                <span className="font-heading text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-foreground to-medusa-text-secondary tracking-tighter">
-                  3x
-                </span>
-                <span className="font-sans text-sm font-medium text-medusa-text-secondary leading-tight">
-                  Ortalama
-                  <br />
-                  ROAS Artışı
-                </span>
+              <div className="mb-6">
+                <p className="font-sans text-xs font-bold tracking-widest text-medusa-purple-light uppercase mb-2">
+                  Mobil Oyun
+                </p>
+                <h3 className="font-heading text-3xl font-bold text-foreground leading-tight">
+                  Altın Kelime
+                </h3>
               </div>
               <p className="font-sans text-medusa-text-muted text-sm font-light mt-auto leading-relaxed">
-                Omnichannel pazarlama stratejilerimiz ve huni (funnel)
-                optimizasyonlarımızla yatırım getirinizi maksimize ediyoruz.
+                TDK sözlüğüne dayalı rekabetçi bir Türkçe kelime oyunu. Sıralama sistemi, çoklu oyun modu ve sosyal katmanıyla oyuncuyu her gün geri getirir.
               </p>
             </div>
           </div>
 
-          {/* 3. KUTU: Sağ Kolon Dikey İmaj Kartı ve Buton (Spans 2 Rows) */}
+          {/* 3. KUTU: TURIO (Sağ Kolon Dikey İmaj Kartı ve Buton - Spans 2 Rows) */}
           <div className="md:col-span-12 lg:col-span-4 lg:row-span-2 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)] min-h-[400px] lg:min-h-[550px]">
             <div className="relative z-10 w-full h-full rounded-[calc(32px-1px)] overflow-hidden bg-medusa-surface-1 border border-medusa-border/20 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
               
-
               {/* İçerik ve Gradient Katmanı */}
-              <div className="absolute inset-0 bg-gradient-to-t from-medusa-surface-1 via-medusa-surface-1/80 to-transparent flex flex-col justify-end p-8">
-                <h3 className="font-heading text-3xl font-bold text-foreground mb-3 leading-tight">
-                  Veriyi Eyleme
-                  <br />
-                  Dönüştürün
-                </h3>
-                <p className="font-sans text-medusa-text-secondary text-sm font-light mb-8 leading-relaxed">
-                  Sektörel analizler ve dijital sağlık kontrolleriyle ekibinizin
-                  her zaman doğru kararı almasını sağlıyoruz.
-                </p>
+              <div className="absolute inset-0 bg-gradient-to-t from-medusa-surface-1 via-medusa-surface-1/80 to-transparent flex flex-col justify-between p-8">
                 
-                {/* Gradient Butonumuz */}
-                <GradientButton text="Tüm Çözümleri İncele" className="w-full sm:w-max" />
+                {/* Üst Kısım: Metinler */}
+                <div>
+                  <p className="font-sans text-xs font-bold tracking-widest text-medusa-purple-light uppercase mb-2">
+                    SaaS · Turizm Teknolojisi
+                  </p>
+                  <h3 className="font-heading text-4xl font-bold text-foreground mb-3 leading-tight">
+                    Turio
+                  </h3>
+                  <p className="font-sans text-medusa-text-secondary text-sm font-light leading-relaxed">
+                    Turizm işletmeleri için dinamik fiyatlandırma motoru, tüketiciler için akıllı tur platformu. Talebe göre fiyatı gerçek zamanlı optimize ederek hem işletmenin gelirini hem gezginin fırsatını büyütür.
+                  </p>
+                </div>
+                
+                {/* Alt Kısım: Aksiyon Butonu (CTA) */}
+                <div className="mt-auto pt-6">
+                  <GradientButton text="Tüm Ürünlerimiz →" className="w-full sm:w-max" />
+                </div>
+                
               </div>
             </div>
           </div>
 
-          {/* 4. KUTU: 360° Omnichannel (Bottom Left - Geniş Kutu) */}
+          {/* 4. KUTU: CELEBİM (Bottom Left - Geniş Kutu) */}
           <div className="md:col-span-7 lg:col-span-5 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)]">
             <div className="relative z-10 w-full h-full flex flex-col justify-between rounded-[calc(32px-1px)] bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 p-8 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] transition-colors duration-500 group-hover:from-medusa-primary group-hover:to-medusa-surface-1">
-              <div className="flex items-center gap-4 mb-6">
-                <span className="font-heading text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-foreground to-medusa-text-secondary tracking-tighter">
-                  360°
-                </span>
-                <span className="font-sans text-sm font-medium text-medusa-text-secondary leading-tight">
-                  Omnichannel
-                  <br />
-                  Ekosistem
-                </span>
+              <div className="mb-6">
+                <p className="font-sans text-xs font-bold tracking-widest text-medusa-purple-light uppercase mb-2">
+                  Pazar Yeri
+                </p>
+                <h3 className="font-heading text-3xl font-bold text-foreground leading-tight">
+                  Celebim
+                </h3>
               </div>
               <p className="font-sans text-medusa-text-muted text-sm font-light mt-auto max-w-[90%] leading-relaxed">
-                Fiziksel ve dijital kanallarınızı (Web, Mobil, Sosyal Medya,
-                CRM) tek bir çatı altında birleştirerek kesintisiz ve tutarlı
-                bir müşteri deneyimi (CX) yaratıyoruz.
+                Büyükbaş hayvan alım-satımını çiftçi, besici ve tüccar arasında tek platformda buluşturur. İlan, güven altyapısı ve canlı piyasa verisini bir arada sunar.
               </p>
             </div>
           </div>
 
-          {/* 5. KUTU: Dijital Sağlık Kontrolü (Bottom Middle - Dar Kutu) */}
+          {/* 5. KUTU: SAFHA (Bottom Middle - Dar Kutu) */}
           <div className="md:col-span-5 lg:col-span-3 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)]">
             <div className="relative z-10 w-full h-full flex flex-col justify-between rounded-[calc(32px-1px)] bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 p-8 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] transition-colors duration-500 group-hover:from-medusa-primary group-hover:to-medusa-surface-1">
               <div className="mb-6">
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-1">
-                  Kapsamlı Analiz
-                </h3>
-                <p className="font-sans text-sm text-medusa-purple-light font-medium">
-                  Dijital Sağlık Kontrolü
+                <p className="font-sans text-xs font-bold tracking-widest text-medusa-purple-light uppercase mb-2">
+                  SaaS · Üretim
                 </p>
+                <h3 className="font-heading text-2xl font-bold text-foreground leading-tight">
+                  Safha
+                </h3>
               </div>
-              <div className="mt-auto flex items-end justify-between">
-                <span className="font-heading text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-foreground to-medusa-text-secondary tracking-tighter">
-                  14
-                </span>
-                <span className="font-sans text-medusa-text-muted text-sm font-light mb-1.5">
-                  Günde Raporlama
-                </span>
-              </div>
+              <p className="font-sans text-medusa-text-muted text-sm font-light mt-auto leading-relaxed">
+                Hammaddeden sevkiyata kadar her üretim aşamasını tek panelde izleyen takip sistemi. Hangi ürün hangi aşamada, anlık görürsünüz; darboğazı oluşmadan yakalarsınız.
+              </p>
             </div>
           </div>
 

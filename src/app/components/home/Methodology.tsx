@@ -2,41 +2,66 @@
 
 import React from "react";
 import Badge from "../ui/Badge";
-import Image from 'next/image';
+import Image from "next/image";
 
 const workflowSteps = [
   {
     id: 1,
     badge: "01 / Uygulama",
     title: "Hızlandırma",
-    description:
-      "Stratejiyi içerik, prodüksiyon ve dijital sistemlerle sahaya indiririz. Süreçlerde kazanılan zaman ve ulaşılan ölçek, her adımda raporlanır.",
+    description: (
+      <>
+        Stratejiyi{" "}
+        <span className="text-[#ef6906]">
+          içerik, prodüksiyon ve dijital sistemlerle
+        </span>{" "}
+        sahaya indiririz. Süreçlerde kazanılan zaman ve ulaşılan ölçek, her
+        adımda raporlanır.
+      </>
+    ),
     image: "/methodology/hızlandırma_beyaz.png", // Icon yerine görsel yolu
   },
-  
+
   {
     id: 2,
     badge: "02 / Strateji",
     title: "Danışmanlık",
-    description:
-      "İş süreçlerinizdeki yaygın sorunları operasyonel verimlilik, finansal yönetim ve pazarlama stratejisi başlıklarında çevik çözümlerle ele alırız. Tedarikçi değil, akıl veren bir ortak gibi çalışırız.",
+    description: (
+      <>
+        İş süreçlerinizdeki yaygın sorunları operasyonel verimlilik, finansal
+        yönetim ve pazarlama stratejisi başlıklarında çevik çözümlerle ele
+        alırız. Tedarikçi değil,{" "}
+        <span className="text-[#ef6906]">bir ortak gibi çalışırız.</span>
+      </>
+    ),
     image: "/methodology/danışmanlık_siyah.png", // Icon yerine görsel yolu
   },
-  
+
   {
     id: 3,
     badge: "03 / Ölçek",
     title: "Yatırım",
-    description:
-      "Sermaye vermekle yetinmeyiz; inandığımız ticaretlerde ortak yönetim ve strateji desteğiyle uzun vadeli büyümeyi birlikte kurarız.",
+    description: (
+      <>
+        Sermaye vermekle yetinmeyiz; inandığımız ticaretlerde ortak yönetim ve
+        strateji desteğiyle{" "}
+        <span className="text-[#ef6906]">uzun vadeli büyümeyi</span> birlikte
+        kurarız.
+      </>
+    ),
     image: "/methodology/yatırım_beyaz.png", // Icon yerine görsel yolu
   },
   {
     id: 4,
     badge: "04 / Analiz",
     title: "Dijital Karne",
-    description:
-      "Web sitenizi, sosyal medyanızı ve reklamlarınızı bağımsız olarak analiz eder, 14 günde raporlarız. Bir sonraki adıma nereden başlayacağınızı birlikte görürüz.",
+    description: (
+    <>
+      Web sitenizi, sosyal medyanızı ve reklamlarınızı bağımsız olarak analiz eder, 
+      <span className="text-[#ef6906]"> 14 günde </span> 
+      raporlarız. Bir sonraki adıma nereden başlayacağınızı birlikte görürüz.
+    </>
+  ),
     image: "/methodology/dijitalkarne_siyah.png", // Icon yerine görsel yolu
   },
 ];
@@ -50,7 +75,7 @@ export default function Methodology() {
           <Badge text="Dijital Büyüme Metodolojimiz" className="mb-8" />
 
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-            Markanızın büyüme yolculuğunu tek çatı altında kuruyoruz
+            Markanızın büyüme yolculuğunu tek çatı altında kuruyoruz.
           </h2>
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
             Stratejiyi önce kurar, sonra sahaya indiririz. Her aşama ölçülür,
@@ -192,8 +217,8 @@ export default function Methodology() {
                           <div className="w-3 h-3 rounded-full bg-medusa-purple-light/80"></div>
                         </div>
                         <div className="flex-1 rounded-xl border border-foreground/5  bg-background/40  flex items-center justify-center relative overflow-hidden">
-                         <Image 
-                            src={step.image} 
+                          <Image
+                            src={step.image}
                             alt={step.title}
                             fill // Bu, resmi container'a yayar
                             className="object-cover" // Resmi kırparak sığdırır

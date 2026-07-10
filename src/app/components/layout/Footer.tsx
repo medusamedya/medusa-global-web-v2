@@ -2,20 +2,18 @@
 
 import React from "react";
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import GradientButton from "../ui/GradientButton";
 
 export default function Footer() {
   return (
     <footer className="relative w-full pt-16 pb-12 bg-background transition-colors duration-500 overflow-hidden border-t border-medusa-border/20">
       <div className="container mx-auto px-6 relative z-10">
-        
-       {/* --- ÜST BÖLÜM: BÜYÜK VİZYON MESAJI --- */}
+        {/* --- ÜST BÖLÜM: BÜYÜK VİZYON MESAJI --- */}
         <div className="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 mb-8 md:mb-16">
-          
           {/* Sol Alt Işık Hüzmesi */}
-          <div className="absolute -bottom-10 -left-10 w-[40vw] max-w-[400px] h-[300px] bg-medusa-primary/90 blur-[120px] rounded-full pointer-events-none -z-10" />
-          
+          <div className="absolute -bottom-10 -left-10 w-[40vw] max-w-[400px] h-[300px] bg-medusa-primary blur-[100px] rounded-full pointer-events-none -z-10" />
+
           {/* Sağ Alt Işık Hüzmesi */}
           <div className="absolute -bottom-10 -right-10 w-[40vw] max-w-[400px] h-[300px] bg-medusa-purple-light/20 blur-[120px] rounded-full pointer-events-none -z-10" />
 
@@ -25,7 +23,7 @@ export default function Footer() {
               doğru iş ortağını buldunuz.
             </h2>
           </div>
-          
+
           {/* Gradient Buton Entegrasyonu */}
           <div className="flex-shrink-0 relative z-10">
             <Link href="mailto:hello@medusaglobal.com">
@@ -39,7 +37,6 @@ export default function Footer() {
 
         {/* --- ORTA BÖLÜM: LİNKLER VE BİLGİLER (GRID) --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
-          
           {/* Marka ve Vizyon (Col Span 4) */}
           <div className="lg:col-span-4 flex flex-col space-y-6">
             <div className="flex items-start gap-4 group">
@@ -50,17 +47,8 @@ export default function Footer() {
                   className="w-full h-full object-contain"
                 />
               </div>
-
-              <div className="flex flex-col justify-center">
-                <span className="font-heading text-2xl font-black tracking-widest text-foreground uppercase transition-colors duration-300 leading-tight">
-                  MEDUSAGLOBAL
-                </span>
-                <span className="font-sans text-[10px] font-medium tracking-[0.2em] uppercase text-medusa-purple-light mt-0.5">
-                  ACCELERATION & CONSULTANCY
-                </span>
-              </div>
             </div>
-            
+
             <p className="font-sans text-medusa-text-secondary text-sm leading-relaxed max-w-sm transition-colors duration-300">
               Dünyaya yenilik katarak ticaretini büyütmek isteyen işverenlerin
               destekçisiyiz. Stratejiyi kurar, sahaya indirir ve verilerle
@@ -73,7 +61,16 @@ export default function Footer() {
                 href="#"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
-                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -83,7 +80,16 @@ export default function Footer() {
                 href="#"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
-                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect x="2" y="9" width="4" height="12"></rect>
                   <circle cx="4" cy="4" r="2"></circle>
@@ -93,7 +99,16 @@ export default function Footer() {
                 href="#"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
                   <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
                 </svg>
@@ -128,25 +143,31 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Kurumsal */}
+            {/* Kurumsal (Hızlı Bağlantılar) */}
             <div className="flex flex-col space-y-6">
               <h4 className="text-sm font-bold text-foreground uppercase tracking-widest transition-colors duration-300">
                 Kurumsal
               </h4>
               <ul className="space-y-4">
-                {["Hakkımızda", "Vaka Çalışmaları", "Manifesto", "Kariyer"].map(
-                  (item, idx) => (
-                    <li key={idx}>
-                      <Link
-                        href="#"
-                        className="text-medusa-text-secondary text-sm hover:text-medusa-purple-light transition-colors duration-300 flex items-center gap-2 group"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-medusa-purple-light/50 scale-0 group-hover:scale-100 transition-transform flex-shrink-0"></span>
-                        {item}
-                      </Link>
-                    </li>
-                  )
-                )}
+                {[
+                  { name: "Anasayfa", path: "/" },
+                  { name: "Hakkımızda", path: "/about" },
+                  { name: "Ekibimiz", path: "/team" },
+                  { name: "Hizmetler", path: "/services" },
+                  { name: "Çalışmalarımız", path: "/projects" },
+                  { name: "Blog", path: "/blog" },
+                  { name: "İletişim", path: "/contact" },
+                ].map((item, idx) => (
+                  <li key={idx}>
+                    <Link
+                      href={item.path}
+                      className="text-medusa-text-secondary text-sm hover:text-medusa-purple-light transition-colors duration-300 flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-medusa-purple-light/50 scale-0 group-hover:scale-100 transition-transform flex-shrink-0"></span>
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -155,26 +176,61 @@ export default function Footer() {
           {/* İletişim (Col Span 3) */}
           <div className="lg:col-span-3 flex flex-col space-y-6">
             <h4 className="text-sm font-bold text-foreground uppercase tracking-widest transition-colors duration-300">
-              Merkez Ofis
+              İletişim
             </h4>
             <ul className="space-y-5">
-              <li className="flex items-start gap-3 text-medusa-text-secondary text-sm transition-colors duration-300">
-                <MapPin className="w-5 h-5 text-medusa-purple-light flex-shrink-0" />
-                <span>
-                  İzmir, Türkiye <br />{" "}
-                  <span className="text-xs opacity-70">
-                    Global Operasyon Merkezi
-                  </span>
-                </span>
-              </li>
+              {/* Email */}
               <li className="flex items-center gap-3 text-medusa-text-secondary text-sm transition-colors duration-300">
                 <Mail className="w-5 h-5 text-medusa-purple-light flex-shrink-0" />
                 <Link
-                  href="mailto:hello@medusaglobal.com"
+                  href="mailto:hello@medusaglobal.com.tr"
                   className="hover:text-medusa-purple-light transition-colors break-all"
                 >
-                  hello@medusaglobal.com
+                  hello@medusaglobal.com.tr
                 </Link>
+              </li>
+
+              {/* Telefon Numaraları */}
+              <li className="flex items-start gap-3 text-medusa-text-secondary text-sm transition-colors duration-300">
+                <Phone className="w-5 h-5 text-medusa-purple-light flex-shrink-0 mt-0.5" />
+                <div className="flex flex-col space-y-1">
+                  <Link
+                    href="tel:08503026353"
+                    className="hover:text-medusa-purple-light transition-colors"
+                  >
+                    0 850 302 63 53
+                  </Link>
+                  <Link
+                    href="tel:05537343500"
+                    className="hover:text-medusa-purple-light transition-colors"
+                  >
+                    0 553 734 35 00
+                  </Link>
+                </div>
+              </li>
+
+              {/* İzmir Ofis */}
+              <li className="flex items-start gap-3 text-medusa-text-secondary text-sm transition-colors duration-300">
+                <MapPin className="w-5 h-5 text-medusa-purple-light flex-shrink-0 mt-1" />
+                <span>
+                  <strong className="block text-foreground font-semibold mb-0.5">
+                    İzmir Ofis
+                  </strong>
+                  Çınarlı Mh. 1587/1. Sk. NO:4/1E <br />
+                  Kat.1, Konak/İzmir
+                </span>
+              </li>
+
+              {/* İstanbul Ofis */}
+              <li className="flex items-start gap-3 text-medusa-text-secondary text-sm transition-colors duration-300">
+                <MapPin className="w-5 h-5 text-medusa-purple-light flex-shrink-0 mt-1" />
+                <span>
+                  <strong className="block text-foreground font-semibold mb-0.5">
+                    İstanbul Ofis
+                  </strong>
+                  Kardeşler Caddesi No: 57 Kat: 6 <br />
+                  Daire: 35, Şişli/İstanbul
+                </span>
               </li>
             </ul>
           </div>

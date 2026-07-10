@@ -8,21 +8,21 @@ import ProcessCard from "@/app/components/ui/ProcessCard"; // Dosya yolunu kendi
 const expectationsData = [
   {
     id: "01",
-    title: "Başlangıçtan itibaren beklentilerinizi netleştirin.",
+    title: "Tahmin değil, veri konuşur.",
     description:
-      "Herkesin hedefleri, programı ve üzerinde anlaşılan çıktıları anlamasını sağlayarak projeleri yolunda tutuyor ve yanlış anlamaları önlüyoruz.",
+      "Kararlarımızı hislere değil rakamlara dayandırırız. Her öneri, arkasındaki veriyle birlikte masaya gelir; böylece neye neden yatırım yaptığınızı tam olarak bilirsiniz.",
   },
   {
     id: "02",
-    title: "İşinizle ilgili güncellemelerimizi takip edin.",
+    title: "Kötü haberi de zamanında verir.",
     description:
-      "Üstün şeffaflık seviyemiz, şirket yöneticilerine yatırımlarının gerçek getiri sağladığına dair güvence verir.",
+      "Şeffaflık yalnızca iyi giden işleri paylaşmak değildir. İşe yaramayan bir hamleyi ilk biz söyler, yönü vakit kaybetmeden düzeltiriz. Gerçek güven buradan doğar.",
   },
   {
     id: "03",
-    title: "Haftalık ve aylık olarak veriye dayalı raporlarımızı alın.",
+    title: "İlerlemeyi birlikte okuruz.",
     description:
-      "Hedeflerinize ulaşmanıza yardımcı olacak ve gelecekteki gelişim alanlarını daha kolay belirleyecek tavsiyeler sunabilmemiz için, bir projenin performansına ve ilerlemesine ilişkin analize dayalı içgörüler gereklidir.",
+      "Rapor, dosyada kalan bir formalite değil, ortak kararların zeminidir. Haftalık ve aylık verileri birlikte yorumlar, bir sonraki adımı bu tabloya bakarak seçeriz.",
   },
 ];
 
@@ -42,18 +42,17 @@ export default function ExpectationsSection() {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center"
           >
-            <Badge text="Bizden Neler Bekleyebilirsiniz?" className="mb-8" />
+            <Badge text="Nasıl Çalışırız?" className="mb-8" />
             
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-              Şeffaflık ve Veriyle <br className="hidden sm:block" />
-              Desteklenen Büyüme
+              Rakamla Konuşuruz,  <br className="hidden sm:block" />
+              Sözle Değil
             </h2>
             
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
-              Medusa Global Acceleration & Consultancy mükemmel sonuçlar sunmaya ve tüm 
-              müşterilerimize değer sağlamaya kendini adamıştır. Düzenli güncellemeler ve raporlarla 
-              desteklenen, açıkça tanımlanmış beklentilere sahip yüksek bir şeffaflık standardı 
-              aracılığıyla kendimizi sorumlu tutuyoruz.
+              Büyüme, tahminle değil kanıtla olur. Attığımız her adımı ölçer, ölçtüğümüz her şeyi sizinle paylaşırız.
+               Neyin işe yaradığını da, yaramadığını da açıkça görürsünüz — 
+               çünkü bir markayı ancak gerçek veriyle doğru yöne çevirebilirsiniz.
             </p>
           </motion.div>
         </div>
@@ -72,7 +71,6 @@ export default function ExpectationsSection() {
               className="h-full" // İçerideki ProcessCard'ın h-full özelliğini desteklemek için
             >
               <ProcessCard
-                number={item.id}
                 title={item.title}
                 description={item.description}
                 // Tag prop'u burada opsiyonel olarak kullanılmadı (İçerik yapımıza uygun şekilde)

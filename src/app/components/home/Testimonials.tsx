@@ -73,7 +73,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative w-full py-12 md:py-16 bg-background transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-4 md:py-16 bg-background transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         
         {/* --- ÜST BAŞLIK VE İMZA BADGE --- */}
@@ -105,11 +105,11 @@ export default function Testimonials() {
                   className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                 >
                   {/* --- YENİ KART TASARIMI (Görseldeki Çift Katmanlı Yapı) --- */}
-                  <div className="flex flex-col bg-[#1b1a21] border border-white/5 rounded-[2rem] p-3 shadow-2xl h-full">
+                  <div className="flex flex-col bg-[#1b1a21] border border-white/5 rounded-[2rem] p-2 md:p-3 shadow-2xl h-full">
                     
                     {/* Üst Kısım: İç Kart (Gradient Border + İç Arka Plan) */}
                     <div className="relative flex-grow overflow-hidden rounded-[1.5rem] p-[1px] bg-[#853ec7]/60">
-                      <div className="relative z-10 h-full rounded-[calc(1.5rem-1px)] bg-gradient-to-br from-[#1a1726] to-[#241c33] p-8 flex flex-col gap-6 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
+                      <div className="relative z-10 h-full rounded-[calc(1.5rem-1px)] bg-gradient-to-br from-[#1a1726] to-[#241c33] p-4 md:p-8 flex flex-col gap-6 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
                         
                         {/* Profil Bilgileri */}
                         <div className="flex items-center space-x-4 mb-4 md:mb-16">
@@ -119,7 +119,7 @@ export default function Testimonials() {
                             </span>
                           </div>
                           <div className="flex flex-col">
-                            <h4 className="font-heading text-lg font-semibold text-white leading-tight">
+                            <h4 className="font-heading text-normal md:text-lg font-semibold text-white leading-tight">
                               {testimonial.name}
                             </h4>
                             <p className="font-sans text-sm font-light text-white/60 mt-1">
@@ -129,14 +129,14 @@ export default function Testimonials() {
                         </div>
 
                         {/* Yorum Metni */}
-                        <p className="font-sans text-white/95 text-base md:text-[17px] font-medium leading-relaxed">
+                        <p className="font-sans text-white/95 text-base text-[14px] md:text-[17px] font-medium leading-relaxed">
                           "{testimonial.quote}"
                         </p>
                       </div>
                     </div>
 
                     {/* Alt Kısım: Şirket Logosu Yer Tutucu */}
-                    <div className="flex items-center space-x-3 px-5 py-5 shrink-0 opacity-90">
+                    <div className="flex items-center space-x-3 p-3 md:px-5 md:py-5 shrink-0 opacity-90">
                       {/* Görseldeki gibi Dalgalı Örnek Logo İkonu */}
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="2.5"/>
@@ -156,7 +156,7 @@ export default function Testimonials() {
           </div>
 
           {/* --- CAROUSEL KONTROLLERİ --- */}
-          <div className="flex items-center justify-center space-x-4 mt-8">
+          <div className="flex items-center justify-center space-x-4 mt-2 md:mt-8">
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}

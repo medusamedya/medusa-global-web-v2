@@ -8,18 +8,18 @@ import Badge from "@/app/components/ui/Badge";
 const processSteps = [
   {
     num: "01",
-    title: "Başlangıçtan itibaren beklentilerinizi netleştirin.",
-    desc: "Herkesin hedefleri, programı ve üzerinde anlaşılan çıktıları anlamasını sağlayarak projeleri yolunda tutuyor ve yanlış anlamaları önlüyoruz.",
+    title: "Başlangıçta beklentileri netleştiririz.",
+    desc: "Kimin neyden sorumlu olduğunu, hedefleri ve teslim edilecek çıktıları en baştan yazılı hale getiririz. Yanlış anlaşılmalara yer bırakmayız.",
   },
   {
     num: "02",
-    title: "İşinizle ilgili güncellemelerimizi takip edin.",
-    desc: "Üstün şeffaflık seviyemiz, şirket yöneticilerine yatırımlarının gerçek getiri sağladığına dair güvence verir.",
+    title: "Süreci canlı takip edersiniz.",
+    desc: "İşin hangi aşamada olduğunu görmek için rapor beklemezsiniz; ilerlemeyi anlık paylaşırız.",
   },
   {
     num: "03",
-    title: "Haftalık ve aylık olarak veriye dayalı raporlarımızı alın.",
-    desc: "Hedeflerinize ulaşmanıza yardımcı olacak ve gelecekteki gelişim alanlarını daha kolay belirleyecek tavsiyeler sunabilmemiz için, bir projenin performansına ve ilerlemesine ilişkin analize dayalı içgörüler gereklidir.",
+    title: "Veriye dayalı raporları düzenli alırsınız.",
+    desc: " Haftalık ve aylık raporlarımız sadece ne yaptığımızı değil, bunun işinize ne kattığını ve bir sonraki adımı gösterir.",
   },
 ];
 
@@ -49,11 +49,8 @@ export default function WorkProcess() {
 
             {/* Açıklama */}
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
-              Medusa Global Acceleration & Consultancy mükemmel sonuçlar sunmaya
-              ve tüm müşterilerimize değer sağlamaya kendini adamıştır. Düzenli
-              güncellemeler ve raporlarla desteklenen, açıkça tanımlanmış
-              beklentilere sahip yüksek bir şeffaflık standardı aracılığıyla
-              kendimizi sorumlu tutuyoruz.
+              Her markanın ihtiyacı farklı; çalışma biçimimiz de öyle. Değişmeyen tek şey şeffaflık: ne yaptığımızı, neden yaptığımızı ve sizi nereye götürdüğünü her adımda açıkça görürsünüz.
+
             </p>
           </motion.div>
         </div>
@@ -64,7 +61,7 @@ export default function WorkProcess() {
         <div className="max-w-4xl mx-auto relative">
           <div className="relative space-y-16 sm:space-y-24">
             {/* Arkadaki sürekli dikey parlayan çizgi (Yeni Renkler) */}
-            <div className="absolute top-4 bottom-4 left-[23px] sm:left-[31px] w-[2px] bg-gradient-to-b from-medusa-purple-light/80 via-medusa-secondary/60 to-transparent" />
+            <div className="absolute top-4 bottom-4 left-[23px] sm:left-[31px] w-[2px] bg-medusa-purple-light/80 " />
 
             {processSteps.map((step, index) => (
               <motion.div

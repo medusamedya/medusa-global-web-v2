@@ -6,24 +6,25 @@ import StackedServices from "./components/home/StackedServices";
 import Testimonials from "./components/home/Testimonials";
 import HighImpactSolutions from "./components/home/HighImpactSolutions";
 import FAQ from "./components/home/Faq";
-import FinalCta from "./components/home/FinalCta";
+import Clients from "./about/components/Clients";
+import ClientsGrid from "./components/home/ClientsGrid";
 
 export default function Home() {
-  
   return (
     <>
       {/* Cinematic Bottom-Aligned Hero */}
       <Hero />
-      
+
       {/* Medusa Global İçerik Blokları */}
       <Services />
-      <Methodology  />
+      <Methodology />
+      <Clients />
       <CaseStudies />
       <StackedServices />
       <Testimonials />
       <HighImpactSolutions />
       <FAQ />
-      <FinalCta />
+      <ClientsGrid />
     </>
   );
 }
