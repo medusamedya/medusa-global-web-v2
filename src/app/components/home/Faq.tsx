@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion"; // <-- Framer Motion Eklendi
 import Badge from "../ui/Badge";
 
 // Medusa Global Sıkça Sorulan Sorular Veri Seti
@@ -56,8 +57,14 @@ const faqData = [
   },
 ];
 
-export default function FAQ() {
+interface FAQProps {
+  showMore?: boolean;
+  initialCount?: number;
+}
+
+export default function FAQ({ showMore = false, initialCount = 4 }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(!showMore);
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -65,84 +72,121 @@ export default function FAQ() {
 
   return (
     <section className="relative w-full py-12 md:py-16 bg-background transition-colors duration-500 overflow-hidden">
-      {/* --- MERKEZİ ORTAM IŞIĞI (Görseldeki gibi arkadan vuran yatay mor glow) --- */}
+      
+      {/* --- MERKEZİ ORTAM IŞIĞI --- */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[20vw] max-w-[800px] max-h-[800px] bg-medusa-secondary/20 blur-[100px] rounded-full pointer-events-none transition-colors duration-700" />
+      
       <div className="container mx-auto px-6 relative z-10">
+        
         {/* --- ÜST BAŞLIK BÖLÜMÜ --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16 space-y-6">
           <Badge text="Sıkça Sorulan Sorular" className="mb-4" />
-
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
             Hâlâ Sorularınız mı Var?
           </h2>
-          <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
+          <p className="font-sans text-normal md:text-lg text-medusa-text-secondary">
             Aradığınız cevabı bulamadıysanız, markanızın büyüme yolculuğunu birlikte konuşmak için doğrudan bize ulaşabilirsiniz.
-
           </p>
         </div>
 
-        {/* --- AKORDEON (FAQ LIST) BÖLÜMÜ (Görseldeki Glassmorphism Yapı) --- */}
-        <div className="max-w-4xl mx-auto flex flex-col space-y-5">
-          {faqData.map((faq, index) => {
-            const isOpen = openIndex === index;
+        {/* --- AKORDEON (FAQ LIST) BÖLÜMÜ --- */}
+        {/* space-y yerine gap kullandık ki animasyon esnasında daha stabil davransın */}
+        <div className="max-w-4xl mx-auto flex flex-col gap-4">
+          <AnimatePresence initial={false}>
+            {faqData.map((faq, index) => {
+              const isVisible = !showMore || isExpanded || index < initialCount;
+              const isOpen = openIndex === index;
 
-            return (
-              <div
-                key={faq.id}
-                // Dış Çerçeve: Sol taraftan beyaza yakın, sağa doğru mora dönen premium gradient border
-                className="relative rounded-2xl p-[1px] cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(61,10,107,0.5)] bg-gradient-to-br from-white via-medusa-secondary to-[#853ec7] shadow-2xl transition-all duration-500 group"
-                onClick={() => toggleFaq(index)}
-              >
-                {/* Kartın İç Zemini: Görseldeki gibi koyu, mat ve derin */}
-                <div className="relative z-10 w-full h-full rounded-[calc(1rem-1px)] bg-[#141128] border border-white/5 shadow-[inset_0_1px_2px_rgba(255,255,255,0.02)] backdrop-blur-xl">
-                  {/* Soru Satırı (Header) */}
-                  <div className="flex items-center text-center justify-between px-3 py-3 ">
-                    <h3
-                      // leading-snug dikey ortalamayı kusursuzlaştırır, antialiased fontu daha ince ve zarif gösterir.
-                      className={`font-sans flex items-center text-base md:text-[16px] font-light antialiased leading-snug tracking-wide transition-colors duration-300 pl-6 pr-6 md:pr-12 ${
-                        isOpen
-                          ? "text-white"
-                          : "text-foreground group-hover:text-white"
-                      }`}
+              if (!isVisible) return null;
+
+              return (
+                <motion.div
+                  key={faq.id}
+                  // Buradaki initial, animate ve exit ayarları kartların yumuşakça aşağı kayarak belirmesini sağlar
+                  initial={{ opacity: 0, height: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, height: "auto", scale: 1 }}
+                  exit={{ opacity: 0, height: 0, scale: 0.95 }}
+                  transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
+                  style={{ overflow: "hidden" }} // Animasyon sırasında taşmaları gizler
+                >
+                  {/* Gölgelerin (shadow-2xl) "overflow-hidden" yüzünden kesilmemesi için ufak bir koruyucu boşluk (py-1 px-1) */}
+                  <div className="py-1 px-1">
+                    <div
+                      className="relative rounded-2xl p-[1px] cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(61,10,107,0.5)] bg-gradient-to-br from-white via-medusa-secondary to-[#853ec7] shadow-2xl group"
+                      onClick={() => toggleFaq(index)}
                     >
-                      {faq.question}
-                    </h3>
+                      <div className="relative z-10 w-full h-full rounded-[calc(1rem-1px)] bg-[#141128] border border-white/5 shadow-[inset_0_1px_2px_rgba(255,255,255,0.02)] backdrop-blur-xl">
+                        
+                        {/* Soru Satırı (Header) */}
+                        <div className="flex items-center text-center justify-between px-3 py-3 ">
+                          <h3
+                            className={`font-sans flex items-center text-base md:text-[16px] font-light antialiased leading-snug tracking-wide transition-colors duration-300 pl-6 pr-6 md:pr-12 ${
+                              isOpen
+                                ? "text-white"
+                                : "text-foreground group-hover:text-white"
+                            }`}
+                          >
+                            {faq.question}
+                          </h3>
 
-                    {/* --- İKON KUTUSU (Görseldeki gibi belirgin, koyu kutu içi açık renk ikon) --- */}
-                    <div className="relative flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-xl bg-white/5 border border-white/10 shrink-0 group-hover:bg-white/10 transition-colors duration-300 shadow-inner">
-                      {isOpen ? (
-                        <Minus
-                          className="w-5 h-5 text-medusa-purple-light transition-transform duration-300 rotate-0"
-                          strokeWidth={2}
-                        />
-                      ) : (
-                        <Plus
-                          className="w-5 h-5 text-medusa-purple-light transition-transform duration-300 rotate-90"
-                          strokeWidth={2}
-                        />
-                      )}
+                          {/* İKON KUTUSU */}
+                          <div className="relative flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-xl bg-white/5 border border-white/10 shrink-0 group-hover:bg-white/10 transition-colors duration-300 shadow-inner">
+                            {isOpen ? (
+                              <Minus
+                                className="w-5 h-5 text-medusa-purple-light transition-transform duration-300 rotate-0"
+                                strokeWidth={2}
+                              />
+                            ) : (
+                              <Plus
+                                className="w-5 h-5 text-medusa-purple-light transition-transform duration-300 rotate-90"
+                                strokeWidth={2}
+                              />
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Cevap Satırı */}
+                        <div
+                          className={`grid transition-all duration-500 ease-in-out ${
+                            isOpen
+                              ? "grid-rows-[1fr] opacity-100"
+                              : "grid-rows-[0fr] opacity-0"
+                          }`}
+                        >
+                          <div className="overflow-hidden">
+                            <p className="font-sans px-5 md:px-6 lg:px-8 pb-6 md:pb-8 text-medusa-text-secondary text-base leading-relaxed font-light">
+                              {faq.answer}
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
                     </div>
                   </div>
-
-                  {/* Cevap Satırı */}
-                  <div
-                    className={`grid transition-all duration-500 ease-in-out ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <p className="font-sans px-5 md:px-6 lg:px-8 pb-6 md:pb-8 text-medusa-text-secondary text-base leading-relaxed font-light">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </div>
+
+        {/* --- 3. DAHA FAZLA GÖSTER BUTONU --- */}
+        {showMore && (
+          <motion.div 
+            layout 
+            className="flex justify-center mt-8"
+          >
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-sans text-sm font-medium hover:bg-white/10 hover:border-medusa-purple-light/50 transition-all duration-300 group"
+            >
+              {isExpanded ? "Daha Az Göster" : "Tüm Soruları Göster"}
+              <ChevronDown 
+                className={`w-4 h-4 transition-transform duration-500 ${isExpanded ? "rotate-180" : ""}`} 
+              />
+            </button>
+          </motion.div>
+        )}
+
       </div>
     </section>
   );

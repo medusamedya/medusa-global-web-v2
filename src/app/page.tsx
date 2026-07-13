@@ -23,7 +23,7 @@ export default function Home() {
       <StackedServices />
       <Testimonials />
       <HighImpactSolutions />
-      <FAQ />
+      <FAQ showMore={true}/>
     </>
   );
 }

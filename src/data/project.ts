@@ -36,6 +36,14 @@ export const mockProjects: ProjectData[] = [
           "https://images.unsplash.com/photo-1611162618071-b39a2ec055ce?q=80&w=800&auto=format&fit=crop",
           "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
         ],
+        reels: [
+          "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1611162618071-b39a2ec055ce?q=80&w=800&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=800&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1611162618071-b39a2ec055ce?q=80&w=800&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
+        ]
       },
       webDesign: {
         title: "Net. Modern. İşlevsel.",

@@ -1,5 +1,6 @@
 // app/about/page.tsx
 
+import FAQ from "../components/home/Faq";
 import InnerHero from "../components/InnerHero";
 import AboutManifesto from "./components/AboutManifesto";
 import Clients from "./components/Clients";
@@ -17,6 +18,7 @@ export default function AboutPage() {
       <AboutManifesto />
       <ProcessSection   />
       <Clients />
+      <FAQ initialCount={8}/>
       <FinalCta />
     </>
   );
