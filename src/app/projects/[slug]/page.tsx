@@ -49,7 +49,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       />
 
       {/* 2. Dinamik Hizmet Bileşenleri (Conditional Rendering) */}
-      <div className="w-full flex flex-col gap-24 py-24">
+      <div className="w-full flex flex-col gap-12 py-24">
         {project.services.strategy && (
           <StrategySection data={project.services.strategy} />
         )}

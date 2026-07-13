@@ -58,7 +58,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </span>
           <button 
             onClick={onClose}
-            className="w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center hover:bg-medusa-purple/20 transition-colors group"
+            className="w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center hover:bg-medusa-secondary/20 transition-colors group"
             aria-label="Menüyü Kapat"
           >
             <X className="w-5 h-5 text-foreground group-hover:text-medusa-purple-light transition-colors" />
@@ -72,7 +72,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               key={item.name}
               href={item.path}
               onClick={onClose}
-              className="group flex items-center justify-between py-4 border-b border-foreground/5 text-lg font-medium text-foreground/80 hover:text-medusa-primary transition-colors"
+              className="group flex items-center justify-between py-4 border-b border-foreground/5 text-lg font-medium text-foreground/80 hover:text-medusa-purple-light transition-colors"
             >
               <span>{item.name}</span>
               <span className="text-medusa-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">

@@ -10,19 +10,49 @@ const faqData = [
     id: 1,
     question: "Danışmanlık sürecine nasıl başlıyoruz?",
     answer:
-      "Önce markanızın mevcut durumunu birlikte değerlendiririz. İhtiyacınıza göre Dijital Sağlık Kontrolü, Danışmanlık ya da doğrudan Hızlandırma sürecine geçebiliriz.",
+      "Süreç, tanışma görüşmesiyle başlar. Bu görüşmede markanızın mevcut durumunu, hedeflerini ve kısıtlarını birlikte konuşuruz. Ardından ekibimiz markanızın dijital varlıklarını, iletişim yapısını ve büyüme potansiyelini analiz eder; size özel bir yol haritası ve hizmet paketi sunarız. Anlaşma sonrası ilk 30 gün, birlikte çalışacağımız sistemin kurulmasına ayrılır; brief formatı, raporlama düzeni, iletişim kanalları ve karar akışları netleştirilir.",
   },
   {
     id: 2,
     question: "Hangi sektörlerle çalışıyorsunuz?",
     answer:
-      "Türkiye'de büyümek isteyen orta-üst segment markalarla çalışıyoruz. 25'i aşkın markayı farklı sektörlerde sahada yönetiyoruz.",
+      "Sektör bağımsız çalışıyoruz; markanın büyüme ihtiyacı ve bizim uzmanlık alanlarımızın örtüşmesi bizim için sektörden daha belirleyici. Portföyümüzde hukuk teknolojisi, sağlık, gayrimenkul, perakende, gastronomi, moda, çocuk ve eğitim alanlarından markalar yer alıyor. Farklı sektörlerde çalışmamız, deneyimlerimizi çapraz ilerlemeye çevirmemizi sağlıyor ve bir kategorideki iyi bir strateji, başka bir kategorinin sıçrama noktası olabiliyor.",
   },
   {
     id: 3,
-    question: "Dijital Sağlık Kontrolü ne kadar sürer?",
+    question: "Hangi hizmetleri sunuyorsunuz?",
     answer:
-      "14 gün içinde web sitenizi, sosyal medyanızı ve reklamlarınızı bağımsız olarak analiz eder, raporla teslim ederiz.",
+      "Medusa Global'ın hizmetleri dört ana başlıkta toplanır: Marka İletişimi & Strateji, Dijital Pazarlama & Reklam Yönetimi, Yaratıcı Prodüksiyon (foto, video, tanıtım filmi), ve Dijital Sistem & Branding. Bu hizmetleri tekil olarak değil, birbirini besleyen bir sistem olarak kurguluyoruz; bir markanın kimliğinden reklamına, içeriğinden web sitesine kadar tüm dokunuşların aynı stratejik hikayeyi taşıması bizim için temel yaklaşımdır.",
+  },
+  {
+    id: 4,
+    question: "Bir markayla ne kadar süreyle çalışıyorsunuz?",
+    answer:
+      "Aylık hizmet paketlerimiz genellikle 12 aylık dönemler halinde ilerler; proje bazlı işler (kimlik tasarımı, web geliştirme, tanıtım filmi) tek seferlik teslimat şeklindedir. Uzun soluklu çalışma tercih etmemizin sebebi, marka büyümesinin 3-6 aylık kısa döngülerde ölçülebilir sonuca dönüşmemesi; gerçek dönüşüm için sistemli ve sabırlı bir çalışma gerekir. Süreç boyunca üç ayda bir performans değerlendirmesi yapar, gerekirse stratejiyi yeniden şekillendiririz.",
+  },
+  {
+    id: 5,
+    question: "Muhatabım kim olacak?",
+    answer:
+      "Her marka için bir Marka Operasyon Yöneticisi atanır; günlük iletişim, raporlama ve süreç koordinasyonu bu kişi üzerinden yürür. Yaratıcı, teknik ve stratejik konularda ilgili uzmanlar (tasarımcı, reklam uzmanı, prodüksiyon ekibi, strateji danışmanı) süreçte devrede olur. Ekibimizin yapısı sizi tek bir kişiye bağımlı bırakmayacak şekilde kurgulanmıştır.",
+  },
+  {
+    id: 6,
+    question: "Raporlama ve iletişim nasıl işliyor?",
+    answer:
+      "Aylık ve haftalık performans raporları standarttır: reklam sonuçları, sosyal medya metrikleri, web trafiği ve marka büyümesine dair somut veriler. Bunun yanında iki haftada bir düzenli online toplantı, WhatsApp üzerinden hızlı iletişim ve önemli kararlar için yüz yüze görüşmeler süreci besler. Şeffaflık bizim için bir ilke: kampanya sonuçları, harcamalar ve stratejik kararlar açıkça paylaşılır.",
+  },
+  {
+    id: 7,
+    question: "Hizmet paketlerinin ücretleri nasıl belirleniyor?",
+    answer:
+      "Fiyatlandırmayı hizmet kapsamına, marka büyüklüğüne ve hedeflere göre birlikte belirliyoruz, standart bir paket listesi ile başlamıyoruz çünkü her markanın ihtiyacı farklı. Tanışma görüşmesi sonrasında hazırlanan öneri dosyasında hizmet kalemleri, aylık yatırım tutarı ve beklenen sonuçlar net olarak yer alır. Şeffaflık açısından: reklam bütçeleri hizmet ücretinden ayrıdır ve tamamen sizin kontrolünüzdedir.",
+  },
+  {
+    id: 8,
+    question: "Mevcut ekibimiz veya ajansımız varsa nasıl ilerliyoruz?",
+    answer:
+      "Bu çok karşılaştığımız bir durum. Bazı markalarda kendi iç ekibiyle birlikte çalışıyor, stratejik danışman rolünde ilerliyoruz; bazılarında mevcut ajans yapısını bizim sistemimize entegre ediyoruz. Amaç sizin ekibinizi yerinden etmek değil, doğru yerde konumlandırıp büyümeye odaklamak. Görüşmede mevcut yapınızı birlikte inceler, en verimli işbirliği modelini öneririz.",
   },
 ];
 
@@ -46,8 +76,8 @@ export default function FAQ() {
             Hâlâ Sorularınız mı Var?
           </h2>
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
-            Aradığınız cevabı bulamadıysanız, iş süreçlerinizi otomatize etmek
-            ve büyümek için doğrudan bize ulaşabilirsiniz.
+            Aradığınız cevabı bulamadıysanız, markanızın büyüme yolculuğunu birlikte konuşmak için doğrudan bize ulaşabilirsiniz.
+
           </p>
         </div>
 

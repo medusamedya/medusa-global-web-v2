@@ -19,8 +19,8 @@ export default function Footer() {
 
           <div className="max-w-2xl relative z-10">
             <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground tracking-tight leading-tight transition-colors duration-300">
-              Ticaretinizi büyütmek için <br className="hidden sm:block" />
-              doğru iş ortağını buldunuz.
+              Eksiksiz danışmanlık veren <br className="hidden sm:block" />
+              dijital iş ortağınız.
             </h2>
           </div>
 
@@ -50,9 +50,8 @@ export default function Footer() {
             </div>
 
             <p className="font-sans text-medusa-text-secondary text-sm leading-relaxed max-w-sm transition-colors duration-300">
-              Dünyaya yenilik katarak ticaretini büyütmek isteyen işverenlerin
-              destekçisiyiz. Stratejiyi kurar, sahaya indirir ve verilerle
-              yönetiriz.
+              Medusa Global, markaların dijital büyüme yolculuğunu strateji, içerik, prodüksiyon ve dijital sistemlerle uçtan uca yöneten bir hızlandırma ve danışmanlık ortağıdır.
+
             </p>
 
             {/* Sosyal Medya İkonları */}
@@ -74,6 +73,23 @@ export default function Footer() {
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </Link>
+              <Link
+                href="#"
+                className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                 </svg>
               </Link>
               <Link
@@ -213,7 +229,7 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-medusa-text-secondary text-sm transition-colors duration-300">
                 <MapPin className="w-5 h-5 text-medusa-purple-light flex-shrink-0 mt-1" />
                 <span>
-                  <strong className="block text-foreground font-semibold mb-0.5">
+                  <strong className="block text-foreground font-semibold  mb-0.5">
                     İzmir Ofis
                   </strong>
                   Çınarlı Mh. 1587/1. Sk. NO:4/1E <br />
@@ -243,13 +259,13 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href="#"
+              href="/privacy"
               className="text-medusa-text-muted hover:text-foreground text-xs transition-colors duration-300"
             >
               Gizlilik Politikası
             </Link>
             <Link
-              href="#"
+              href="/terms"
               className="text-medusa-text-muted hover:text-foreground text-xs transition-colors duration-300"
             >
               Kullanım Koşulları

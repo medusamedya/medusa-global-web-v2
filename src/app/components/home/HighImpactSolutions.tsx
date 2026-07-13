@@ -62,7 +62,7 @@ export default function HighImpactSolutions() {
 
           {/* 3. KUTU: TURIO (Sağ Kolon Dikey İmaj Kartı ve Buton - Spans 2 Rows) */}
           <div className="md:col-span-12 lg:col-span-4 lg:row-span-2 relative group flex overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(133,62,199,0.5)] min-h-[400px] lg:min-h-[550px]">
-            <div className="relative z-10 w-full h-full rounded-[calc(32px-1px)] overflow-hidden bg-medusa-surface-1 border border-medusa-border/20 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
+            <div className="relative z-10 w-full h-full rounded-[calc(32px-1px)] overflow-hidden bg-gradient-to-br from-medusa-surface-1 to-medusa-primary border border-medusa-border/20 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
               
               {/* İçerik ve Gradient Katmanı */}
               <div className="absolute inset-0 bg-gradient-to-t from-medusa-surface-1 via-medusa-surface-1/80 to-transparent flex flex-col justify-between p-8">

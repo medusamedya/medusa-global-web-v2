@@ -54,7 +54,7 @@ const workflowSteps = [
   {
     id: 4,
     badge: "04 / Analiz",
-    title: "Dijital Karne",
+    title: "Dijital Sağlık Karnesi",
     description: (
     <>
       Web sitenizi, sosyal medyanızı ve reklamlarınızı bağımsız olarak analiz eder, 
@@ -241,7 +241,7 @@ export default function Methodology() {
                         {step.title}
                       </h3>
 
-                      <p className="text-foreground/80  text-base md:text-lg font-sans leading-relaxed">
+                      <p className="text-medusa-text-secondary  text-base md:text-lg font-sans leading-relaxed">
                         {step.description}
                       </p>
                     </div>

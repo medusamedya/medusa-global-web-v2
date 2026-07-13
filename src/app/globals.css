@@ -34,7 +34,8 @@
   --medusa-surface-1: #0c0811;
   --medusa-surface-2: #292737;
   --medusa-text-muted: #D2D2D2;
-  --medusa-text-secondary: #D3D3D3;
+  --medusa-text-secondary: #FFFFFF;
+  --medusa-text-reserve: #D3D3D3;
   --medusa-border: #606060;
   --medusa-purple-light: #ded8ff;
 
@@ -63,6 +64,7 @@
   --color-medusa-surface-2: var(--medusa-surface-2);
   --color-medusa-text-muted: var(--medusa-text-muted);
   --color-medusa-text-secondary: var(--medusa-text-secondary);
+  --color-medusa-text-reserve: var(--medusa-text-reserve);
   --color-medusa-border: var(--medusa-border);
   --color-medusa-purple-light: var(--medusa-purple-light);
 }

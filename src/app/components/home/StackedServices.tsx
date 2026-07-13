@@ -169,7 +169,7 @@ export default function StackedServices() {
                       <h3 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground dark:text-white mb-2 tracking-tight transition-colors duration-300">
                         {data.title}
                       </h3>
-                      <p className="font-sans text-foreground/70 dark:text-white/70 italic text-lg font-light transition-colors duration-300">
+                      <p className="font-sans text-medusa-text-secondary   italic text-lg font-light transition-colors duration-300">
                         {data.subtitle}
                       </p>
                     </div>
@@ -205,7 +205,7 @@ export default function StackedServices() {
 
       {/* SAĞ TARAFTAKİ SCROLL İNDİKATÖRÜ (VISUAL TRACKER) - Mobilde Gizli */}
       <div className="absolute right-3 md:right-40 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center gap-4 z-50">
-        <span className="font-sans text-[16px] font-mono text-medusa-text-secondary tracking-widest rotate-90 mb-6 opacity-60 transition-colors duration-300">
+        <span className="font-sans text-[16px] text-medusa-text-secondary tracking-widest rotate-90 mb-6 opacity-60 transition-colors duration-300">
           KAYDIR
         </span>
         <div className="relative w-1 h-[25vh] bg-medusa-border/20 rounded-full overflow-hidden transition-colors duration-300">

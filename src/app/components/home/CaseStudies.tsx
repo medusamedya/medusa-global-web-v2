@@ -1,44 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, Building, TreePine } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Badge from "../ui/Badge";
 
-// Vaka Çalışmaları Veri Yapısı
-const caseStudiesData = [
-  {
-    id: 1,
-    companyName: "Maximum Kabakum",
-    title:
-      "Maximum Kabakum: Sessiz Bir Villa Projesini 6 Ayda Dolduran Konumlandırma",
-    description:
-      "Maximum Kabakum bize geldiğinde isimsiz, sessiz ama yüksek prestijli bir villa gelişimiydi. Müşteri kitlesi belliydi, nasıl konuşulacağı belli değildi. İsimlendirme, prestij sakini profil haritası ve seçilmiş erişim stratejisiyle üç adımda kurduk.",
-    Icon: Building,
-    image:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop", // Rastgele placeholder görsel
-    stats: [
-      { value: "%100", label: "Doluluk Oranı" },
-      { value: "3 Adım", label: "Erişim Stratejisi" },
-      { value: "2x", label: "Hızlı Kapanış" },
-    ],
-  },
-  {
-    id: 2,
-    companyName: "Latanwood",
-    title:
-      "Latanwood: Geleneksel Ahşap İşçiliğinin Global Omnichannel Büyümesi",
-    description:
-      "Kaliteli üretimi dijital vitrinle buluşturduk. B2B ve B2C kitleleri için ayrı huniler (funnels) kurgulayarak, veri odaklı reklam yapılandırması ve marka konumlandırmasıyla globaldeki dijital ayak izini baştan inşa ettik.",
-    Icon: TreePine,
-    image:
-      "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2000&auto=format&fit=crop", // Rastgele placeholder görsel
-    stats: [
-      { value: "5+", label: "Yeni Pazar" },
-      { value: "%150", label: "Dönüşüm Artışı" },
-      { value: "3x", label: "Daha Yüksek ROAS" },
-    ],
-  },
-];
+// Veriyi import ediyoruz! (Yolu kendi proje yapına göre düzenle)
+import { caseStudiesData } from "@/data/caseStudies";
 
 export default function CaseStudies() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,15 +31,13 @@ export default function CaseStudies() {
       <div className="container mx-auto px-6 relative z-10">
         {/* --- BAŞLIK VE BADGE BÖLÜMÜ --- */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16 space-y-6">
-          <Badge text="Case Studies" className="mb-6" />
+          <Badge text="Yeniliklerimiz" className="mb-6" />
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-            Real-World Growth
-            <br />
-            Case Studies
+            Markaların Dönüşüm Hikayeleri
           </h2>
-          <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
-            See how companies are revolutionizing their workflows and growth
-            using our strategies.
+          <p className="font-sans text-normal md:text-lg text-medusa-text-secondary">
+            Farklı sektörlerden markaların dijital yolculuğunu, kurduğumuz
+            sistemleri ve elde ettiğimiz sonuçları inceleyin.
           </p>
         </div>
 
@@ -86,22 +51,25 @@ export default function CaseStudies() {
               {caseStudiesData.map((study) => (
                 <div key={study.id} className="w-full flex-shrink-0 px-2">
                   {/* --- YENİ VAKA KARTI YAPISI --- */}
-                  {/* Dış Çerçeve (Gradient Border: Beyazdan -> #853ec7 mora) */}
                   <div className="relative overflow-hidden rounded-[32px] p-[1px] bg-gradient-to-br from-white via-white/30 to-[#853ec7] shadow-2xl">
-                    {/* İç Kart Zemini ve Padding (Görsel ve metin ile çerçeve arasındaki boşluk) */}
                     <div className="relative z-10 flex flex-col lg:flex-row gap-8 rounded-[31px] bg-[#0A0510] p-4 ">
                       {/* SOL: Görsel ve İstatistik Kutuları */}
                       <div className="relative w-full lg:w-1/2 rounded-2xl overflow-hidden min-h-[350px] lg:min-h-[450px]">
-                        {/* Arka Plan Görseli */}
                         <img
-                          src={study.image}
+                          src={
+                            study.image ||
+                            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop"
+                          }
                           alt={study.companyName}
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          onError={(e) => {
+                            // Eğer public klasöründeki görsel silinirse veya bulunamazsa tasarımın çökmemesi için
+                            e.currentTarget.src =
+                              "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop";
+                          }}
                         />
-                        {/* Metinlerin okunabilirliği için görselin altına binen hafif siyah gradient */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
 
-                        {/* Görselin Üzerindeki 3'lü İstatistik Kutuları */}
                         <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-3">
                           {study.stats.map((stat, index) => (
                             <div
@@ -111,7 +79,7 @@ export default function CaseStudies() {
                               <span className="font-heading text-normal md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#A855F7] to-[#ded8ff]">
                                 {stat.value}
                               </span>
-                              <span className="font-sans text-[14px] md:text-[18px]  text-medusa-text-muted leading-tight">
+                              <span className="font-sans text-[14px] md:text-[18px] text-medusa-text-muted leading-tight">
                                 {stat.label}
                               </span>
                             </div>
@@ -121,24 +89,17 @@ export default function CaseStudies() {
 
                       {/* SAĞ: Metin ve Detaylar Bölümü */}
                       <div className="w-full lg:w-1/2 flex flex-col justify-center py-0 lg:py-8 lg:pr-8">
-                        {/* Logo ve Marka İsmi */}
                         <div className="flex items-center space-x-3 mb-8 md:mb-18">
-                          {/* shrink-0: İkonun metin uzasa bile ezilmesini engeller */}
                           <study.Icon className="w-8 h-8 text-white shrink-0" />
-                          
-                          {/* leading-none: Fontun ekstra satır boşluğunu kaldırıp hizalamayı keskinleştirir. 
-                              Eğer fonttan kaynaklı yukarıda kalma hissi devam ederse "mt-1" veya "pt-1" ekleyebilirsin. */}
                           <span className="font-heading text-small md:text-xl font-semibold text-white tracking-wide leading-none">
                             {study.companyName}
                           </span>
                         </div>
 
-                        {/* Hikaye Başlığı */}
-                        <h3 className="font-heading text-lg md:text-2xl  font-bold text-white leading-tight mb-2 md:mb-6">
+                        <h3 className="font-heading text-lg md:text-2xl font-bold text-white leading-tight mb-2 md:mb-6">
                           {study.title}
                         </h3>
 
-                        {/* Hikaye Özeti */}
                         <p className="font-sans text-base md:text-lg text-medusa-text-secondary leading-relaxed font-light">
                           {study.description}
                         </p>
@@ -150,7 +111,7 @@ export default function CaseStudies() {
             </div>
           </div>
 
-          {/* --- CAROUSEL BUTONLARI (Görseldeki gibi sade, karemsi ve minimalist) --- */}
+          {/* --- CAROUSEL BUTONLARI --- */}
           <div className="flex items-center justify-center space-x-4 mt-4">
             <button
               onClick={handlePrev}

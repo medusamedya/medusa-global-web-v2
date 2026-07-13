@@ -10,7 +10,7 @@ export interface ProjectData {
   services: {
     strategy?: { title: string; description: string; items: string[] };
     socialMedia?: { title: string; description: string; images: string[] };
-    webDesign?: { title: string; description: string; mockup: string };
+    webDesign?: { title: string; description: string; mockups: string[]; };
     digitalAds?: { title: string; description: string; metrics: string[] };
     brandIdentity?: { title: string; description: string; assets: string[] };
   };

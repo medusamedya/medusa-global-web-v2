@@ -41,7 +41,7 @@ const servicesData: ServiceCard[] = [
   },
   {
     id: 4,
-    title: "Sağlık Kontrolü",
+    title: "Dijital Sağlık Karnesi",
     description:
       "Web, sosyal medya ve reklamlarınızın kapsamlı, bağımsız analizini yaparız.",
     Icon: Activity,
@@ -148,7 +148,7 @@ export default function Services() {
               </h3>
 
               {/* Açıklama */}
-              <p className="text-foreground/70 dark:text-white/60 text-sm md:text-[15px] font-sans leading-relaxed max-w-[260px] mx-auto">
+              <p className="text-white  text-sm md:text-[15px] font-sans leading-relaxed max-w-[260px] mx-auto">
                 {service.description}
               </p>
             </div>

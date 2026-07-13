@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { XCircle } from "lucide-react";
 import Badge from "@/app/components/ui/Badge";
 import GradientButton from "@/app/components/ui/GradientButton";
 
@@ -65,7 +65,15 @@ export default function FinalCta() {
                 "Çabuk tükenen taktiklerden çok, markanızın uzun soluklu büyümesini önemseyen bir ekip."
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 shrink-0 text-medusa-purple-light mt-0.5" />
+                  {/* ÖZEL MEDUSA BULLET EKLENDİ */}
+                  <div className="relative w-6 h-6 shrink-0 mt-0.5">
+                    <Image 
+                      src="/Sarı_Medusa_Bullet.webp" 
+                      alt="Medusa Bullet" 
+                      fill 
+                      className="object-contain" 
+                    />
+                  </div>
                   <span className="font-sans text-medusa-text-secondary text-base leading-relaxed">
                     {item}
                   </span>
@@ -81,13 +89,13 @@ export default function FinalCta() {
                 </p>
             </div>
 
-            {/* Kapanış Metni */}
-            <p className="font-sans text-lg text-white font-medium mb-8 leading-relaxed">
+            {/* Kapanış Metni (H3 Olarak Güncellendi) */}
+            <h3 className="font-heading text-xl md:text-2xl font-bold text-white mb-8 leading-relaxed">
               Doğru ortak biz miyiz? Bunu konuşarak öğrenelim. <br className="hidden md:block" />
-              <span className="text-medusa-text-secondary font-normal text-base mt-2 inline-block">
+              <span className="font-sans text-medusa-text-secondary font-normal text-base mt-2 inline-block">
                 Kısa bir görüşme, işinizin bugün nerede durduğunu ve nereye gidebileceğini netleştirmeye yeter. Dijital iş ortağınız burada.
               </span>
-            </p>
+            </h3>
 
             {/* Aksiyon Butonu */}
             <GradientButton 

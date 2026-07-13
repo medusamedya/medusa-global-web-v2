@@ -38,26 +38,30 @@ export default function Header() {
       >
         <div className="max-w-[1440px] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* LEFT: Logo (Kurumsal Hiyerarşi) */}
-          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+          <Link
+            href="/"
+            className="flex-shrink-0 flex items-center gap-3 cursor-pointer group"
+          >
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/Logo.png"
-                alt="Logo"
+                alt="Medusa Global Logo"
                 width={48}
                 height={48}
                 priority
                 className="object-contain"
               />
             </div>
-          </div>
+          </Link>
 
           {/* MIDDLE: Pill Menu (Sadece Masaüstü) */}
           <nav
             className={`hidden md:flex items-center rounded-full transition-all duration-500 ease-in-out ${
               isScrolled
                 ? "bg-transparent gap-8"
-                : "bg-black/30 dark:bg-white/10 backdrop-blur-md px-6 py-2 border border-black/10 dark:border-white/10 gap-2 shadow-lg"
+                : "bg-white/5  backdrop-blur-md px-6 py-2 border border-black/10  gap-2 shadow-lg"
             }`}
+            style={{ transition: "gap 1s" }}
           >
             {[
               { name: "Anasayfa", path: "/" },
@@ -71,7 +75,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.path}
-                className="font-sans text-[16px] px-4 py-1.5 text-white dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors duration-300 rounded-full hover:bg-black/50 dark:hover:bg-white/10"
+                className="font-sans text-[16px] px-4 py-1.5 text-white  hover:text-white  transition-colors duration-300 rounded-full hover:bg-black/50 "
               >
                 {item.name}
               </Link>
@@ -79,19 +83,35 @@ export default function Header() {
           </nav>
 
           {/* RIGHT: Theme Toggle, CTA & Mobile Menu Button */}
+          <div className="flex items-center gap-3 ">
+            {/* RIGHT: Theme Toggle, CTA & Mobile Menu Button */}
           <div className="flex items-center gap-3">
-            <GradientButton
-              text="İletişime Geçin"
-              paddingClass="px-6 py-2"
-              showIcon={false}
-            />
+            
+            {/* Masaüstü CTA Butonu (lg yani 1024px altında gizlenir) */}
+            <div className="hidden lg:block">
+              <GradientButton
+                text="İletişime Geçin"
+                paddingClass="px-6 py-2"
+                showIcon={false}
+              />
+            </div>
+
+            {/* Mobil Hamburger Butonu (lg yani 1024px altında görünür) */}
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="lg:hidden w-10 h-10 bg-black/5 backdrop-blur-md rounded-full flex items-center justify-center border border-black/5 active:scale-95 transition-transform"
+            >
+              <Menu className="w-5 h-5 text-[#08020F]" />
+            </button>
+            
+          </div>
 
             {/* Mobil Hamburger Butonu */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden w-10 h-10 bg-black/5 dark:bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-black/5 dark:border-white/10 active:scale-95 transition-transform"
+              className="lg:hidden w-10 h-10 bg-white/5  backdrop-blur-md rounded-full flex items-center justify-center border border-black/5  active:scale-95 transition-transform"
             >
-              <Menu className="w-5 h-5 text-[#08020F] dark:text-white" />
+              <Menu className="w-5 h-5 text-[#FFFFFFF] " />
             </button>
           </div>
         </div>
