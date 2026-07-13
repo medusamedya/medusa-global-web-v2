@@ -15,7 +15,7 @@ export const caseStudiesData = [
     title: "HukukChat AI: Hukukun Diline Yapay Zekanın Sesini Kazandırdık",
     description: "Hukuk kategorisinin karmaşık dilini herkes için anlaşılır kılmayı hedefleyen Türk hukukuna özel eğitilmiş yapay zeka asistanı HukukChat AI'a, sıfırdan bir kimlik ve iletişim ekosistemi kurduk. Güven veren bir dil, ölçülebilir bir kullanıcı hunisi ve ürünün doğasına yakışan bir dijital yüz tasarladık; performans reklamlarını içerikle senkronize ederek büyümeyi öngörülebilir bir sisteme bağladık.",
     Icon: Shield,
-    image: "/hizmetler/1.png",
+    image: "/hizmetler/1.webp",
     stats: [
       { value: "10K+", label: "Kayıtlı Kullanıcı" },
       { value: "%200", label: "Organik Trafik Artışı" },
@@ -28,7 +28,7 @@ export const caseStudiesData = [
     title: "Cool Sandalye: Üretim Gücünü Dijital Zekayla Buluşturan Marka Dönüşümü",
     description: "Yılların üretim tecrübesi vardı ama kapasitedeki çeşitlilik marka hikayesine dönüşmüyordu. Kimliği sıfırdan kurduk, üretim çeşitliliğini sistematik bir yazılımla düzenli bir vitrine dönüştürdük; markayı 'sandalye üreten fabrika'dan 'tasarım dilini konuşan bir mobilya markasına' taşıdık. Bugün Cool Sandalye, üretim gücünü marka değerine çeviren nadir örneklerden biri.",
     Icon: Briefcase,
-    image: "/hizmetler/2.png",
+    image: "/hizmetler/2.webp",
     stats: [
       { value: "50+", label: "Model Çeşitliliği" },
       { value: "3x", label: "B2B Talep Artışı" },
@@ -41,7 +41,7 @@ export const caseStudiesData = [
     title: "Florist: Bitki Besinini Bir Bakım Kültürüne Dönüştürdük",
     description: "Uzman bir üreticinin fonksiyonel ürününü, ev bitkisi tutkunlarının günlük diline çevirmek gerekiyordu. Sosyal medyayı bir kültür alanına, video prodüksiyonunu ürünün etkisinin görsel kanıtına dönüştürdük; reklamı davranışa dayalı segmentlerle kurguladık. Toptan satışa odaklanarak Florist’in B2B’de ürün kullanım ve fayda farkındalığını yaratarak, doğru lead akışı sağladık.",
     Icon: TreePine,
-    image: "/hizmetler/3.png",
+    image: "/hizmetler/3.webp",
     stats: [
       { value: "%150", label: "B2B Farkındalığı" },
       { value: "2x", label: "Aylık Satış Artışı" },
@@ -54,7 +54,7 @@ export const caseStudiesData = [
     title: "Estafiz: Reformer Pilates'i Franchise'a Hazırlayan Marka Sistemi",
     description: "4 şubelik köklü bir stüdyoydu; büyümenin nasıl kurgulanacağı belirsizdi. Kimlik, dijital altyapı ve iletişim tonunu franchise'a ölçeklenebilecek şekilde yeniden kurduk. İçerik ve reklamı şube performansına bağladık; sonuç, kendi kendini büyüten bir marka anayasası oldu. Şu an 5 şube ve franchise talepleri ile İzmir’de sağlık kökenli bir marka olarak iletişimine devam ediyor.",
     Icon: Activity,
-    image: "/hizmetler/4.png",
+    image: "/hizmetler/4.webp",
     stats: [
       { value: "3x", label: "Rezervasyon Artışı" },
       { value: "20+", label: "Franchise Başvuru Sayısı" },
@@ -93,7 +93,7 @@ export const caseStudiesData = [
     title: "Ayduk Yapı: İnşaat Markasına Satış Odaklı Performans Disiplini Getirdik",
     description: "Sektör emlak diline sıkışmışken Ayduk için farklı bir yol seçtik: satın alma kararının duygusal tarafını performans reklamının verisiyle birleştirdik. Kanal bazlı kurgu, doğru anahtar mesaj ve satış ekibiyle senkronize CRM akışı, huninin her katmanını görünür kıldı. Güvenilir paylaşımlar, UGC odaklı içerikler marka bilinirliğine önemli ölçüde etki etti.",
     Icon: Target,
-    image: "/hizmetler/7.png",
+    image: "/hizmetler/7.webp",
     stats: [
       { value: "1000+", label: "Nitelikli Lead Sayısı" },
       { value: "%40", label: "Randevu Dönüşümü" },
@@ -106,7 +106,7 @@ export const caseStudiesData = [
     title: "Blight Studios: Sessiz Bir Tasarım Markasını Konuşturduk",
     description: "Yüksek estetikli ürünlerin görünürlüğü, tasarımına yetişmiyordu. Marka kimliğini disiplinli bir sisteme kavuşturduk, satış sistemi bir dijital web deneyimi tasarladık; sosyal medyada ürünlerin doğasına uygun sakin ama iddialı bir ton kurduk. Amerika ve Avustralya kıtasına satış oranında ölçeklenebilir sistemle %40 artış yakaladık.",
     Icon: Star,
-    image: "/hizmetler/8.png",
+    image: "/hizmetler/8.webp",
     stats: [
       { value: "4X", label: "ROAS" },
       { value: "10K+", label: "Web Trafiği" },
@@ -132,7 +132,7 @@ export const caseStudiesData = [
     title: "Control Overland: Off-Road Tutkusunu Bir Yaşam Kültürüne Dönüştürdük",
     description: "Bir aksesuar markasından çok bir topluluk lideri olma potansiyeli vardı. Kimliği bu iddiaya göre yeniden kurduk, hikaye anlatımına dayalı bir web deneyimi inşa ettik; sosyal medyayı ürün pazarlamasından çok bir yaşam kültürünün dili haline getirdik.",
     Icon: MapPin,
-    image: "/hizmetler/10.png",
+    image: "/hizmetler/10.webp",
     stats: [
       { value: "50K+", label: "Topluluk Büyümesi" },
       { value: "%12", label: "Etkileşim Oranı" },
@@ -145,7 +145,7 @@ export const caseStudiesData = [
     title: "Oasis: Üreticiyi Mimar Odaklı Deneyim Markasına Çevirdik",
     description: "Fiziksel deneyim güçlüydü, ama dijital karşılığı bu ağırlığı taşımıyordu. Kimlikten prodüksiyona, huniyi tamamlayan reklam kurgusundan sosyal medya tonuna kadar tüm dokunuşları kullanıcının ilk kareden itibaren aynı hikayeyi hissedeceği şekilde tasarladık.",
     Icon: ShoppingCart,
-    image: "/hizmetler/11.png",
+    image: "/hizmetler/11.webp",
     stats: [
       { value: "2x", label: "Nitelikli Lead Artışı" },
       { value: "+%45", label: "Toptan Odaklı Ort. Sepet Değeri" },
@@ -158,7 +158,7 @@ export const caseStudiesData = [
     title: "Lezzetli Yaşam: Sağlıklı Ürünü Raftan Sepete Taşıdık",
     description: "Ürün iyiydi ama raftaki dili tüketiciye ulaşmıyordu. Ambalajdan web'e, sosyal medyadan reklama kadar tüm iletişimi 'yaşamın lezzetli hali' ekseninde kurguladık; e-ticaret hunisini besleyen kanallar birbirini destekleyen bir sisteme dönüştü.",
     Icon: ShoppingCart,
-    image: "/hizmetler/12.png",
+    image: "/hizmetler/12.webp",
     stats: [
       { value: "%300", label: "E-ticaret Ciro Artışı" },
       { value: "%4.2", label: "Sepet Dönüşümü" },
@@ -171,7 +171,7 @@ export const caseStudiesData = [
     title: "Memorifys: Anıyı Ürüne Çeviren Markanın Dijital Yüzünü Kurduk",
     description: "Duygusal bir ürün kategorisinde farklılaşmak için hikaye anlatımı şarttı. Kimlikten prodüksiyona, video temposundan reklam yaratıcı akışına kadar tüm iletişimi 'bir anı yaşatan hediye' ekseninde kurguladık. Doğru bir dijital satış sistemi ile marka kategorisinde lider hale geldi.",
     Icon: Heart,
-    image: "/hizmetler/13.png",
+    image: "/hizmetler/13.webp",
     stats: [
       { value: "6X", label: "Özel Gün Kampanya ROAS" },
       { value: "10K+", label: "Sipariş Adet Artışı" },
@@ -184,7 +184,7 @@ export const caseStudiesData = [
     title: "Health Wonders: Sağlık Turizminde Küresel Vizyonu Güçlü Bir Kimliğe Dönüştürdük",
     description: "Sektör tecrübesi olan bir müşterinin kendi markasıyla yeni bir yola çıkması için 'güven veren küresel bir sağlık markası' tonu gerekiyordu. Marka iletişim mimarisini, kimliğini ve konumlandırmasını yurtdışı hasta yolculuğuna göre kurguladık; ilk temas anından tedavi sonrası bağlılığa kadar tutarlı bir marka deneyimi tasarladık.",
     Icon: Activity,
-    image: "/hizmetler/14.png",
+    image: "/hizmetler/14.webp",
     stats: [
       { value: "5x", label: "Yurtdışı Hasta Yönlendirmesi" },
       { value: "Top 5", label: "Uluslararası Marka Bilinirliği" },

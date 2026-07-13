@@ -1,4 +1,4 @@
-import { ProjectData } from "@/types/project"; // Kendi yoluna göre güncelle
+import { ProjectData } from "@/types/project"; 
 
 export const mockProjects: ProjectData[] = [
   {
