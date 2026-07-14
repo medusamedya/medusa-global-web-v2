@@ -57,15 +57,16 @@ export default function CaseStudies() {
                       <div className="relative w-full lg:w-1/2 rounded-2xl overflow-hidden min-h-[350px] lg:min-h-[450px]">
                         <img
                           src={
-                            study.image ||
-                            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop"
+                            study.image?.trim()
+                              ? study.image
+                              : "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1280&auto=format&fit=crop"
                           }
                           alt={study.companyName}
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                           onError={(e) => {
-                            // Eğer public klasöründeki görsel silinirse veya bulunamazsa tasarımın çökmemesi için
+                            // Eğer yüklenen bir görsel ileride hata verirse yine güvenli limana (placeholder) döneriz.
                             e.currentTarget.src =
-                              "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop";
+                              "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1280&auto=format&fit=crop";
                           }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />

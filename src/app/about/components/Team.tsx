@@ -9,66 +9,122 @@ import Badge from "@/app/components/ui/Badge";
 const teamMembers = [
   {
     id: 1,
-    name: "Alex Sterling",
-    role: "Kurucu & CEO",
+    name: "Muammer Sarıkaya",
+    role: "Founder",
     image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop",
+      "/team/MuammerSarıkaya.webp",
   },
   {
     id: 2,
-    name: "Sarah Chen",
-    role: "Kıdemli Stratejist",
+    name: "Müjde Kaynar",
+    role: "Head Of Agency",
     image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+      "/team/MüjdeKaynar.webp",
   },
   {
     id: 3,
-    name: "Marcus Cole",
-    role: "Teknoloji Direktörü (CTO)",
+    name: "Faruk Özdemir",
+    role: "Managıng Dırector | Strategy & Growth",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+      "/team/FarukÖzdemir.webp",
   },
   {
     id: 4,
-    name: "Elena Rodriguez",
-    role: "Kreatif Direktör",
+    name: "Safa Bertan",
+    role: "Dıgıtal Marketıng & operatıons manager",
     image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
+      "/team/SafaBertan.webp",
   },
   {
     id: 5,
-    name: "David Kim",
-    role: "Performans Pazarlama",
+    name: "Ahmet Üstel",
+    role: "Technology lead",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
+      "/team/AhmetÜstel.webp",
   },
   {
     id: 6,
-    name: "Maya Patel",
-    role: "Dijital Analist",
+    name: "Kadir Devran",
+    role: "sales & ınternatıonal busıness development specıalıst",
     image:
-      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop",
+      "/team/KadirDevran.webp",
   },
   {
     id: 7,
-    name: "James Wilson",
-    role: "Müşteri Başarı Yöneticisi",
+    name: "Güray Bahçe",
+    role: "publıc relatıons & pr consultant",
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop",
+      "/team/GürayBahçe.webp",
   },
   {
     id: 8,
-    name: "Olivia Trent",
-    role: "UI/UX Baş Tasarımcısı",
+    name: "Cağrı Cerit",
+    role: "art dırector",
     image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop",
+      "/team/CağrıCerit.webp",
   },
   {
     id: 9,
-    name: "Lucas Gray",
-    role: "Full-stack Geliştirici",
+    name: "Cağlar Erel",
+    role: "dırector of photography",
     image:
-      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800&auto=format&fit=crop",
+      "/team/ÇağlarErel.webp",
+  },
+  {
+    id: 10,
+    name: "Sena Türkyaman",
+    role: "junıor customer growth specıalıst",
+    image:
+      "/team/SenaTürkyaman.webp",
+  },
+  {
+    id: 11,
+    name: "Enes Gürsoy Nergiz",
+    role: "studıo manager",
+    image:
+      "/team/EnesGürsoyNergiz.webp",
+  },
+  {
+    id: 12,
+    name: "Elif Su Aslan",
+    role: "jr. software developer",
+    image:
+      "/team/ElifSuAslan.webp",
+  },
+  {
+    id: 13,
+    name: "Rüzgar Alibaşoğlu",
+    role: "jr. photographer",
+    image:
+      "/team/Rüzgar.webp",
+  },
+    {
+    id: 14,
+    name: "Duygu Can",
+    role: "Brand operatıons manager",
+    image:
+      "/team/Anonim.webp",
+  },
+    {
+    id: 15,
+    name: "Alp Şeker",
+    role: "Art dırector",
+    image:
+      "/team/Anonim.webp",
+  },
+    {
+    id: 16,
+    name: "Nergiz Gökmen",
+    role: "Graphıc desıgner",
+    image:
+      "/team/Anonim.webp",
+  },
+    {
+    id: 17,
+    name: "Berkay Kaptan",
+    role: "Software developer",
+    image:
+      "/team/Anonim.webp",
   },
 ];
 
@@ -141,7 +197,7 @@ export default function Team() {
                 </div>
 
                 <div className="relative z-10 p-2">
-                  <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-white/5">
+                  <div className="relative w-full  rounded-xl overflow-hidden bg-white/5">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -156,7 +212,7 @@ export default function Team() {
                         {member.name}
                       </h3>
                       {/* Unvan (Yeni Renk: Purple Light) */}
-                      <p className="font-sans text-sm text-medusa-purple-light tracking-wide font-medium">
+                      <p className="font-sans uppercase text-sm text-medusa-purple-light tracking-wide font-medium">
                         {member.role}
                       </p>
                     </div>

@@ -40,24 +40,27 @@ export default function Footer() {
           {/* Marka ve Vizyon (Col Span 4) */}
           <div className="lg:col-span-4 flex flex-col space-y-6">
             <div className="flex items-start gap-4 group">
-              <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-105">
-                <img
-                  src="/Logo.png"
-                  alt="Medusa Global Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+              <Link href="/" aria-label="Medusa Global Anasayfa">
+                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                  <img
+                    src="/Logo.png"
+                    alt="Medusa Global Logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </Link>
             </div>
 
             <p className="font-sans text-medusa-text-secondary text-sm leading-relaxed max-w-sm transition-colors duration-300">
-              Medusa Global, markaların dijital büyüme yolculuğunu strateji, içerik, prodüksiyon ve dijital sistemlerle uçtan uca yöneten bir hızlandırma ve danışmanlık ortağıdır.
-
+              Medusa Global, markaların dijital büyüme yolculuğunu strateji,
+              içerik, prodüksiyon ve dijital sistemlerle uçtan uca yöneten bir
+              hızlandırma ve danışmanlık ortağıdır.
             </p>
 
             {/* Sosyal Medya İkonları */}
             <div className="flex items-center gap-4 pt-2">
               <Link
-                href="#"
+                href="https://www.instagram.com/medusaglobaltr/"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
                 <svg
@@ -76,7 +79,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href="https://www.facebook.com/people/Medusa-Global-Acceleration-Consultancy/61560020665944/?locale=es_LA#"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
                 <svg
@@ -93,7 +96,7 @@ export default function Footer() {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/medusaglobaltr/?originalSubdomain=tr"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
                 <svg
@@ -166,7 +169,6 @@ export default function Footer() {
               </h4>
               <ul className="space-y-4">
                 {[
-                  { name: "Anasayfa", path: "/" },
                   { name: "Hakkımızda", path: "/about" },
                   { name: "Ekibimiz", path: "/team" },
                   { name: "Hizmetler", path: "/services" },

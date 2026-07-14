@@ -96,13 +96,7 @@ export default function Header() {
               />
             </div>
 
-            {/* Mobil Hamburger Butonu (lg yani 1024px altında görünür) */}
-            <button
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="lg:hidden w-10 h-10 bg-black/5 backdrop-blur-md rounded-full flex items-center justify-center border border-black/5 active:scale-95 transition-transform"
-            >
-              <Menu className="w-5 h-5 text-[#08020F]" />
-            </button>
+         
             
           </div>
 
