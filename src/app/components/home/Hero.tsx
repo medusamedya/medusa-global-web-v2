@@ -19,10 +19,10 @@ export default function Hero() {
           ========================================= */}
       
       {/* Sol Orta Işık */}
-      <div className="absolute top-1/2 -translate-y-1/2 -left-[10%] w-[70vw] h-[70vw] max-w-[700px] max-h-[700px] bg-[#3D0A6B] blur-[120px] rounded-full pointer-events-none opacity-50 mix-blend-screen" />
+      <div className="absolute top-[35%] md:top-1/2 -translate-y-1/2 -left-[10%] w-[90vw] h-[90vw] md:w-[70vw] md:h-[70vw] max-w-[700px] max-h-[700px] bg-[#3D0A6B] blur-[120px] rounded-full pointer-events-none opacity-50 mix-blend-screen" />
       
       {/* Sağ Orta Işık */}
-      <div className="absolute top-1/2 -translate-y-1/2 -right-[10%] w-[70vw] h-[70vw] max-w-[700px] max-h-[700px] bg-[#3D0A6B] blur-[120px] rounded-full pointer-events-none opacity-50 mix-blend-screen" />
+      <div className="absolute top-[35%] md:top-1/2 -translate-y-1/2 -right-[10%] w-[90vw] h-[90vw] md:w-[70vw] md:h-[70vw] max-w-[700px] max-h-[700px] bg-[#3D0A6B] blur-[120px] rounded-full pointer-events-none opacity-50 mix-blend-screen" />
       {/* =========================================
           2. İÇERİK BÖLÜMÜ
           ========================================= */}
