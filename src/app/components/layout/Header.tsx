@@ -89,15 +89,14 @@ export default function Header() {
             
             {/* Masaüstü CTA Butonu (lg yani 1024px altında gizlenir) */}
             <div className="hidden lg:block">
-              <GradientButton
-                text="İletişime Geçin"
-                paddingClass="px-6 py-2"
-                showIcon={false}
-              />
+              <Link href="/contact" className="inline-block">
+                <GradientButton
+                  text="İletişime Geçin"
+                  paddingClass="px-6 py-2"
+                  showIcon={false}
+                />
+              </Link>
             </div>
-
-         
-            
           </div>
 
             {/* Mobil Hamburger Butonu */}

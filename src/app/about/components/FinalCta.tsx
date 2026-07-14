@@ -6,6 +6,8 @@ import Image from "next/image";
 import { XCircle } from "lucide-react";
 import Badge from "@/app/components/ui/Badge";
 import GradientButton from "@/app/components/ui/GradientButton";
+import Link from "next/link";
+
 
 export default function FinalCta() {
   return (
@@ -98,14 +100,14 @@ export default function FinalCta() {
             </h3>
 
             {/* Aksiyon Butonu */}
-            <GradientButton 
-              text="Birlikte Değerlendirelim" 
-              className="w-full sm:w-max" 
-              paddingClass="px-8 py-4 w-full sm:w-auto"
-            />
-
+            <Link href="/contact" className="inline-block">
+              <GradientButton 
+                text="Birlikte Değerlendirelim" 
+                className="w-full sm:w-max" 
+                paddingClass="px-8 py-4 w-full sm:w-auto"
+              />
+            </Link>
           </motion.div>
-
         </div>
       </div>
       

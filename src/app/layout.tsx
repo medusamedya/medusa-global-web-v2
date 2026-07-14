@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "Medusa Global | Dijital Dönüşüm ve Büyüme Danışmanlığı",
   description:
     "Dünyaya yenilik katarak ticaretini büyütmek isteyen işverenlerin destekçisi.",
+    icons: {
+    icon: '/Logo.png',
+    apple: '/Logo.png', 
+  },
 };
 
 export default function RootLayout({

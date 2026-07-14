@@ -4,6 +4,8 @@ import React from "react";
 import { ArrowUpRight, TrendingUp, Activity, Users } from "lucide-react";
 import Badge from "../ui/Badge";
 import GradientButton from "../ui/GradientButton";
+import Link from "next/link";
+
 
 export default function HighImpactSolutions() {
   return (
@@ -82,8 +84,11 @@ export default function HighImpactSolutions() {
                 
                 {/* Alt Kısım: Aksiyon Butonu (CTA) */}
                 <div className="mt-auto pt-6">
-                  <GradientButton text="Tüm Ürünlerimiz →" className="w-full sm:w-max" />
+                  <Link href="/projects" className="inline-block">
+                    <GradientButton text="Tüm Ürünlerimiz " className="w-full sm:w-max" />
+                  </Link>
                 </div>
+                 
                 
               </div>
             </div>

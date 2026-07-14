@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Badge from "../ui/Badge"; // Kendi Badge yolunu kontrol etmeyi unutma
 import GradientButton from "../ui/GradientButton";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -61,8 +62,11 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          {/* Yeni Premium Gradient Buton Bileşenimiz */}
-          <GradientButton text="İşlerimiz" />
+          {/* Butonu Link ile sarmalıyoruz */}
+          <Link href="/projects" className="inline-block">
+            {/* Yeni Premium Gradient Buton Bileşenimiz */}
+            <GradientButton text="İşlerimiz" />
+          </Link>
         </motion.div>
         
       </div>
