@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Badge from "@/app/components/ui/Badge";
 
-const excludedIds = [2, 12, 17,47,48,31,56,25,32,52];
+const excludedIds = [2, 12, 17,47,48,31,56,25,32,52,54,55,51,41,40,33,37,36,22,20,62,57,59,39,34,61,13,14];
 
 // 1'den 62'ye kadar olan logoları dinamik olarak oluşturuyoruz.
 // NOT: Eğer görsellerinin uzantısı .png değilse (.svg, .jpg, .webp vb.),

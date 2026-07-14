@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Badge from "../ui/Badge";
-
+import Image from "next/image";
 // Veriyi import ediyoruz! (Yolu kendi proje yapına göre düzenle)
 import { caseStudiesData } from "@/data/caseStudies";
 
@@ -90,9 +90,17 @@ export default function CaseStudies() {
 
                       {/* SAĞ: Metin ve Detaylar Bölümü */}
                       <div className="w-full lg:w-1/2 flex flex-col justify-center py-0 lg:py-8 lg:pr-8">
-                        <div className="flex items-center space-x-3 mb-8 md:mb-18">
-                          <study.Icon className="w-8 h-8 text-white shrink-0" />
-                          <span className="font-heading text-small md:text-xl font-semibold text-white tracking-wide leading-none">
+                        <div className="flex items-center space-x-3 mb-8 md:mb-16">
+                          {/* İkonun optik olarak metinle hizalanması için mt-[-2px] gibi ince ayarlar eklendi */}
+                          <Image
+                            src="/Beyaz_Medusa_Bullet.webp"
+                            alt="Medusa Global Bullet"
+                            width={32}
+                            height={32}
+                            className="shrink-0 object-contain -mt-[4px]"
+                          />
+                          {/* leading-none yerine leading-snug veya tight kullanmak fontun dikey merkezini düzeltir */}
+                          <span className="font-heading text-small md:text-xl font-semibold text-white tracking-wide leading-tight">
                             {study.companyName}
                           </span>
                         </div>
@@ -113,7 +121,7 @@ export default function CaseStudies() {
           </div>
 
           {/* --- CAROUSEL BUTONLARI --- */}
-          <div className="flex items-center justify-center space-x-4 mt-4">
+          <div className="flex items-center justify-center space-x-4 mt-0 md:mt-4">
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}

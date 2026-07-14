@@ -23,21 +23,24 @@ export default function ContactPage() {
             {/* =========================================
                 SOL KOLON: İLETİŞİM BİLGİLERİ
                 ========================================= */}
-            <div className="flex flex-col justify-center space-y-12">
+            {/* Mobilde text-center, büyük ekranda text-left */}
+            <div className="flex flex-col justify-center space-y-12 text-center lg:text-left">
               
               {/* Başlık */}
               <div>
                 <h2 className="font-heading text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-foreground">
                   Ofislerimiz
                 </h2>
-                <div className="w-16 h-1 bg-medusa-purple-light rounded-full" />
+                {/* Mobilde ortalı, büyük ekranda sola dayalı çizgi */}
+                <div className="w-16 h-1 bg-medusa-purple-light rounded-full mx-auto lg:mx-0" />
               </div>
 
               {/* Lokasyonlar (Grid) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {/* İzmir Ofis */}
                 <div className="flex flex-col space-y-3">
-                  <div className="flex items-center gap-2 text-medusa-purple-light">
+                  {/* Flex öğelerini mobilde ortalıyoruz */}
+                  <div className="flex items-center justify-center lg:justify-start gap-2 text-medusa-purple-light">
                     <MapPin className="w-5 h-5" />
                     <h3 className="font-heading text-lg font-bold text-foreground">İzmir (Merkez)</h3>
                   </div>
@@ -49,7 +52,7 @@ export default function ContactPage() {
 
                 {/* İstanbul Ofis */}
                 <div className="flex flex-col space-y-3">
-                  <div className="flex items-center gap-2 text-medusa-purple-light">
+                  <div className="flex items-center justify-center lg:justify-start gap-2 text-medusa-purple-light">
                     <MapPin className="w-5 h-5" />
                     <h3 className="font-heading text-lg font-bold text-foreground">İstanbul</h3>
                   </div>
@@ -68,7 +71,7 @@ export default function ContactPage() {
                 
                 {/* Çalışma Saatleri */}
                 <div className="flex flex-col space-y-4">
-                  <div className="flex items-center gap-2 text-medusa-purple-light">
+                  <div className="flex items-center justify-center lg:justify-start gap-2 text-medusa-purple-light">
                     <Clock className="w-5 h-5" />
                     <h3 className="font-heading text-lg font-bold text-foreground">Çalışma Saatlerimiz</h3>
                   </div>
@@ -82,15 +85,15 @@ export default function ContactPage() {
                 <div className="flex flex-col space-y-4">
                   <h3 className="font-heading text-lg font-bold text-foreground">Bize Ulaşın</h3>
                   <ul className="font-sans text-medusa-text-secondary text-sm space-y-3">
-                    <li className="flex items-center gap-3">
+                    <li className="flex items-center justify-center lg:justify-start gap-3">
                       <Phone className="w-4 h-4 text-medusa-purple-light" />
                       <a href="tel:+905537343500" className="hover:text-medusa-purple-light transition-colors">0 553 734 35 00</a>
                     </li>
-                    <li className="flex items-center gap-3">
+                    <li className="flex items-center justify-center lg:justify-start gap-3">
                       <Phone className="w-4 h-4 text-medusa-purple-light" />
                       <a href="tel:+908503026353" className="hover:text-medusa-purple-light transition-colors">0 850 302 63 53</a>
                     </li>
-                    <li className="flex items-center gap-3">
+                    <li className="flex items-center justify-center lg:justify-start gap-3">
                       <Mail className="w-4 h-4 text-medusa-purple-light" />
                       <a href="mailto:hello@medusaglobal.com.tr" className="hover:text-medusa-purple-light transition-colors">hello@medusaglobal.com.tr</a>
                     </li>
@@ -106,10 +109,6 @@ export default function ContactPage() {
                 ========================================= */}
             <div className="w-full h-[400px] lg:h-auto min-h-[400px] rounded-[2rem] overflow-hidden border border-medusa-border/20 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative group p-1 bg-medusa-surface-1/50 backdrop-blur-sm">
               <div className="w-full h-full rounded-[calc(2rem-4px)] overflow-hidden relative">
-                
-                {/* Haritayı gömmek için iframe kullanıyoruz. 
-                  'q=' parametresine adresi URL formatında (%20 boşluk vb.) yazıyoruz.
-                */}
                 <iframe
                   title="Medusa Global İzmir Merkez Ofis"
                   src="https://maps.google.com/maps?q=Çınarlı%20Mh.%201587%2F1.%20Sk.%20NO%3A4%2F1E%20Konak%2Fİzmir&t=m&z=15&output=embed&iwloc=near"
@@ -122,7 +121,6 @@ export default function ContactPage() {
                   className="absolute inset-0 w-full h-full filter contrast-[1.1] grayscale-[0.2]"
                 />
                 
-                {/* Hover durumunda hafif bir çerçeve parlaması efekti */}
                 <div className="absolute inset-0 ring-1 ring-inset ring-white/10 group-hover:ring-medusa-purple-light/30 transition-all duration-500 pointer-events-none rounded-[calc(2rem-4px)]" />
               </div>
             </div>

@@ -15,9 +15,9 @@ interface MobileMenuProps {
 const menuItems = [
   { name: "Anasayfa", path: "/" },
   { name: "Hakkımızda", path: "/about" },
-  { name: "Ekibimiz", path: "/team" },
+  //{ name: "Ekibimiz", path: "/team" },
   { name: "Hizmetler", path: "/services" },
-  { name: "Çalışmalarımız", path: "/projects" },
+  //{ name: "Çalışmalarımız", path: "/projects" },
   { name: "Blog", path: "/blog" },
   { name: "İletişim", path: "/contact" },
 ];
@@ -85,7 +85,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* Alt Kısım (Hızlı İletişim / CTA) */}
         <div className="p-6 border-t border-medusa-border/20 bg-medusa-surface-1/50">
           <Link 
-            href="mailto:hello@medusaglobal.com"
+            href="/contact"
             onClick={onClose}
             className="block w-full"
           >
