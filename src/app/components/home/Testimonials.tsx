@@ -112,7 +112,7 @@ export default function Testimonials() {
                       <div className="relative z-10 h-full rounded-[calc(1.5rem-1px)] bg-gradient-to-br from-[#1a1726] to-[#241c33] p-4 md:p-8 flex flex-col gap-6 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
                         
                         {/* Profil Bilgileri */}
-                        <div className="flex items-center space-x-4 mb-0 md:mb-16">
+                        <div className="flex items-center space-x-4 mb-0 md:mb-12">
                           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#853ec7] to-[#3D0A6B] flex items-center justify-center border border-white/20 shrink-0 shadow-lg">
                             <span className="font-heading text-xl text-white font-bold tracking-wider">
                               {testimonial.initials}

@@ -167,7 +167,7 @@ export default function Team() {
         >
           <Badge text="Ekibimiz" className="mb-8" />
 
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
             Büyümenin{" "}
            
               Mimarları
@@ -201,11 +201,11 @@ export default function Team() {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                      className="w-full h-full object-cover filter lg:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
                     />
 
                     {/* Resim Üzeri Karartma (Yeni Renk: Surface-1 ile uyumlu geçiş) */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-medusa-surface-1 via-medusa-surface-1/20 to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-medusa-surface-1 via-medusa-surface-1/20 to-transparent opacity-80 " />
 
                     <div className="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                       <h3 className="font-heading text-xl font-bold text-white mb-1">
