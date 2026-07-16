@@ -20,6 +20,7 @@ const workflowSteps = [
       </>
     ),
     image: "/methodology/hızlandırma_beyaz.png", // Icon yerine görsel yolu
+    video: "/videos/Hızlandırma.webm",
   },
 
   {
@@ -35,6 +36,7 @@ const workflowSteps = [
       </>
     ),
     image: "/methodology/danışmanlık_siyah.png", // Icon yerine görsel yolu
+    video: "/videos/Danışmanlık.webm",
   },
 
   {
@@ -50,6 +52,7 @@ const workflowSteps = [
       </>
     ),
     image: "/methodology/yatırım_beyaz.png", // Icon yerine görsel yolu
+    video: "/videos/Yatırım.webm",
   },
   {
     id: 4,
@@ -63,6 +66,7 @@ const workflowSteps = [
     </>
   ),
     image: "/methodology/dijitalkarne_siyah.png", // Icon yerine görsel yolu
+    video: "/videos/Sağlık karnesi.webm",
   },
 ];
 
@@ -206,24 +210,32 @@ export default function Methodology() {
                     </svg>
                   </div>
 
-                  {/* --- GÖRSEL YER TUTUCU BÖLÜMÜ --- */}
+                 {/* --- GÖRSEL / VİDEO YER TUTUCU BÖLÜMÜ --- */}
                   <div className="w-full lg:w-[calc(50%-4rem)] z-10">
                     <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-foreground/10  bg-background/50  backdrop-blur-md shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--color-medusa-primary)_0%,transparent_50%),radial-gradient(ellipse_at_bottom_left,var(--color-medusa-purple-light)_0%,transparent_50%)] opacity-20  transition-opacity duration-500 group-hover:opacity-40"></div>
                       <div className="absolute inset-4 flex flex-col gap-4">
-                        <div className="w-full h-8 rounded-lg bg-foreground/5 dborder border-foreground/10  flex items-center px-4">
+                        
+                        {/* Sahte Tarayıcı / Pencere Üst Barı */}
+                        <div className="w-full h-8 rounded-lg bg-foreground/5 border border-foreground/10 flex items-center px-4">
                           <div className="w-3 h-3 rounded-full bg-medusa-primary/80 mr-2"></div>
                           <div className="w-3 h-3 rounded-full bg-medusa-secondary/80 mr-2"></div>
                           <div className="w-3 h-3 rounded-full bg-medusa-purple-light/80"></div>
                         </div>
-                        <div className="flex-1 rounded-xl border border-foreground/5  bg-background/40  flex items-center justify-center relative overflow-hidden">
-                          <Image
-                            src={step.image}
-                            alt={step.title}
-                            fill // Bu, resmi container'a yayar
-                            className="object-cover" // Resmi kırparak sığdırır
-                            sizes="(max-width: 1024px) 100vw, 50vw" // Performans için sizes
+
+                        {/* Video İçerik Alanı */}
+                        <div className="flex-1 rounded-xl border border-foreground/5 bg-background/40 flex items-center justify-center relative overflow-hidden">
+                          
+                          {/* YENİ: Optimize Edilmiş Video Bileşeni */}
+                          <video
+                            src={step.video} /* Data modelindeki video yolu (örn: '/videolar/adim1.mp4') */
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="absolute inset-0 w-full h-full object-cover"
                           />
+
                           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-medusa-purple/10 to-transparent"></div>
                         </div>
                       </div>
