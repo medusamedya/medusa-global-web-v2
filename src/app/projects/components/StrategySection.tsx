@@ -26,7 +26,7 @@ export default function StrategySection({ data }: Props) {
             ========================================= */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
           <Badge text="Strateji & Yaklaşım" className="mb-6" />
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
             {data.title}
           </h2>
         </div>

@@ -71,7 +71,7 @@ export default function FAQ({ showMore = false, initialCount = 4 }: FAQProps) {
   };
 
   return (
-    <section className="relative w-full py-12 md:py-16 bg-background transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full mt-12 bg-background transition-colors duration-500 overflow-hidden">
       
       {/* --- MERKEZİ ORTAM IŞIĞI --- */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[20vw] max-w-[800px] max-h-[800px] bg-medusa-secondary/20 blur-[100px] rounded-full pointer-events-none transition-colors duration-700" />
@@ -79,9 +79,9 @@ export default function FAQ({ showMore = false, initialCount = 4 }: FAQProps) {
       <div className="container mx-auto px-6 relative z-10">
         
         {/* --- ÜST BAŞLIK BÖLÜMÜ --- */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16 space-y-6">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8  space-y-1">
           <Badge text="Sıkça Sorulan Sorular" className="mb-4" />
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
             Hâlâ Sorularınız mı Var?
           </h2>
           <p className="font-sans text-normal md:text-lg text-medusa-text-secondary">
@@ -120,7 +120,7 @@ export default function FAQ({ showMore = false, initialCount = 4 }: FAQProps) {
                         {/* Soru Satırı (Header) */}
                         <div className="flex items-center text-center justify-between px-3 py-3 ">
                           <h3
-                            className={`font-sans flex items-center text-base md:text-[16px] font-light antialiased leading-snug tracking-wide transition-colors duration-300 pl-6 pr-6 md:pr-12 ${
+                            className={`font-sans flex items-center text-md md:text-[18px] font-light antialiased leading-snug tracking-wide transition-colors duration-300 pl-6 pr-6 md:pr-12 ${
                               isOpen
                                 ? "text-white"
                                 : "text-foreground group-hover:text-white"
@@ -154,7 +154,7 @@ export default function FAQ({ showMore = false, initialCount = 4 }: FAQProps) {
                           }`}
                         >
                           <div className="overflow-hidden">
-                            <p className="font-sans px-5 md:px-6 lg:px-8 pb-6 md:pb-8 text-medusa-text-secondary text-base leading-relaxed font-light">
+                            <p className="font-sans px-5 md:px-6 lg:px-8 pb-6 md:pb-8 text-medusa-text-muted md:text-lg text-sm leading-relaxed font-light">
                               {faq.answer}
                             </p>
                           </div>
@@ -177,7 +177,7 @@ export default function FAQ({ showMore = false, initialCount = 4 }: FAQProps) {
           >
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-sans text-sm font-medium hover:bg-white/10 hover:border-medusa-purple-light/50 transition-all duration-300 group"
+              className="flex items-center gap-2 px-6 py-3 mb-4 rounded-full bg-white/5 border border-white/10 text-white font-sans text-sm font-medium hover:bg-white/10 hover:border-medusa-purple-light/50 transition-all duration-300 group"
             >
               {isExpanded ? "Daha Az Göster" : "Tüm Soruları Göster"}
               <ChevronDown 

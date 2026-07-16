@@ -28,7 +28,7 @@ export default function ContactPage() {
               
               {/* Başlık */}
               <div>
-                <h2 className="font-heading text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-foreground">
+                <h2 className="font-heading text-3xl md:text-4xl font-extrabold tracking-wide mb-4 text-foreground">
                   Ofislerimiz
                 </h2>
                 {/* Mobilde ortalı, büyük ekranda sola dayalı çizgi */}

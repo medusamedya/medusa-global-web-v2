@@ -16,7 +16,6 @@ export default function Home() {
       <Hero />
 
       {/* Medusa Global İçerik Blokları */}
-      <Services />
       <Methodology />
       <Clients />
       <CaseStudies />

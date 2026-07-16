@@ -44,7 +44,7 @@ export default function ExpectationsSection() {
           >
             <Badge text="Nasıl Çalışırız?" className="mb-8" />
             
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
               Rakamla Konuşuruz,  <br className="hidden sm:block" />
               Sözle Değil
             </h2>

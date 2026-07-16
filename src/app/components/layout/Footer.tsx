@@ -43,7 +43,7 @@ export default function Footer() {
               <Link href="/" aria-label="Medusa Global Anasayfa">
                 <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-105 cursor-pointer">
                   <img
-                    src="/Logo.png"
+                    src="/logo_beyaz.png"
                     alt="Medusa Global Logo"
                     className="w-full h-full object-contain"
                   />

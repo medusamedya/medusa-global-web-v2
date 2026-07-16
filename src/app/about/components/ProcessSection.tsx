@@ -42,7 +42,7 @@ export default function ProcessSection() {
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-4 space-y-6">
           <Badge text="Peki, bizimle çalışınca ne oluyor?" className="mb-4" />
 
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
             Bir tedarikçi ile yola çıkmış olmazsınız;{" "}
             <br className="hidden md:block" />
             bir <span className="text-[#ef6906] italic">ortak</span>{" "}

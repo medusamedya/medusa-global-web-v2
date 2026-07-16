@@ -24,7 +24,7 @@ export default function ProjectHero({ category, title, tags, description, heroMo
         <div className="w-full lg:w-5/12 flex flex-col justify-center">
           <Badge text={category} className="mb-6 w-max" />
           
-          <h1 className="font-heading text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
+          <h1 className="font-heading text-4xl md:text-6xl font-extrabold text-white tracking-wide mb-6">
             {title}
           </h1>
           

@@ -42,7 +42,7 @@ export default function WorkProcess() {
             <Badge text="Bizden Neler Bekleyebilirsiniz?" className="mb-8" />
             
             {/* Başlık */}
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
               Şirketinize En Uygun Şekilde <br className="hidden md:block" />
                 Birlikte Çalışalım.
             </h2>

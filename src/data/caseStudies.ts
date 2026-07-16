@@ -12,7 +12,7 @@ export const caseStudiesData = [
   {
     id: 1,
     companyName: "HukukChat AI",
-    title: "HukukChat AI: Hukukun Diline Yapay Zekanın Sesini Kazandırdık",
+    title: "Hukukun Diline Yapay Zekanın Sesini Kazandırdık",
     description: "Hukuk kategorisinin karmaşık dilini herkes için anlaşılır kılmayı hedefleyen Türk hukukuna özel eğitilmiş yapay zeka asistanı HukukChat AI'a, sıfırdan bir kimlik ve iletişim ekosistemi kurduk. Güven veren bir dil, ölçülebilir bir kullanıcı hunisi ve ürünün doğasına yakışan bir dijital yüz tasarladık; performans reklamlarını içerikle senkronize ederek büyümeyi öngörülebilir bir sisteme bağladık.",
     Icon: Shield,
     image: "",
@@ -25,7 +25,7 @@ export const caseStudiesData = [
   {
     id: 2,
     companyName: "Cool Sandalye",
-    title: "Cool Sandalye: Üretim Gücünü Dijital Zekayla Buluşturan Marka Dönüşümü",
+    title: "Üretim Gücünü Dijital Zekayla Buluşturan Marka Dönüşümü",
     description: "Yılların üretim tecrübesi vardı ama kapasitedeki çeşitlilik marka hikayesine dönüşmüyordu. Kimliği sıfırdan kurduk, üretim çeşitliliğini sistematik bir yazılımla düzenli bir vitrine dönüştürdük; markayı 'sandalye üreten fabrika'dan 'tasarım dilini konuşan bir mobilya markasına' taşıdık. Bugün Cool Sandalye, üretim gücünü marka değerine çeviren nadir örneklerden biri.",
     Icon: Briefcase,
     image: "",
@@ -38,7 +38,7 @@ export const caseStudiesData = [
   {
     id: 3,
     companyName: "Florist",
-    title: "Florist: Bitki Besinini Bir Bakım Kültürüne Dönüştürdük",
+    title: "Bitki Besinini Bir Bakım Kültürüne Dönüştürdük",
     description: "Uzman bir üreticinin fonksiyonel ürününü, ev bitkisi tutkunlarının günlük diline çevirmek gerekiyordu. Sosyal medyayı bir kültür alanına, video prodüksiyonunu ürünün etkisinin görsel kanıtına dönüştürdük; reklamı davranışa dayalı segmentlerle kurguladık. Toptan satışa odaklanarak Florist’in B2B’de ürün kullanım ve fayda farkındalığını yaratarak, doğru lead akışı sağladık.",
     Icon: TreePine,
     image: "",
@@ -51,7 +51,7 @@ export const caseStudiesData = [
   {
     id: 4,
     companyName: "Estafiz",
-    title: "Estafiz: Reformer Pilates'i Franchise'a Hazırlayan Marka Sistemi",
+    title: "Reformer Pilates'i Franchise'a Hazırlayan Marka Sistemi",
     description: "4 şubelik köklü bir stüdyoydu; büyümenin nasıl kurgulanacağı belirsizdi. Kimlik, dijital altyapı ve iletişim tonunu franchise'a ölçeklenebilecek şekilde yeniden kurduk. İçerik ve reklamı şube performansına bağladık; sonuç, kendi kendini büyüten bir marka anayasası oldu. Şu an 5 şube ve franchise talepleri ile İzmir’de sağlık kökenli bir marka olarak iletişimine devam ediyor.",
     Icon: Activity,
     image: "",
@@ -64,7 +64,7 @@ export const caseStudiesData = [
   {
     id: 5,
     companyName: "Naser Group",
-    title: "Naser Group: Üretim Çeşitliliğini Ulusal Perakendede Güçlü Bir B2B Konumlandırmasına Dönüştürdük",
+    title: "Üretim Çeşitliliğini Ulusal Perakendede Güçlü Bir B2B Konumlandırmasına Dönüştürdük",
     description: "18 yıllık bir üreticinin en güçlü değeri — üretim kapasitesindeki çeşitliliği — B2B pazarında hak ettiği yere taşımak gerekiyordu. Markayı Migros, A101, BİM, ŞOK gibi zincir marketlere ve Gratis, Rossman, Watsons gibi kozmetik markalarına fason üretim yapan bir güç noktası olarak yeniden konumlandırdık; iletişim dilini karar vericinin diline göre kurguladık.",
     Icon: Building,
     image: "",
@@ -77,7 +77,7 @@ export const caseStudiesData = [
   {
     id: 6,
     companyName: "Barly's Friends Kids Club",
-    title: "Barly's Friends: Yeni Bir Çocuk Kulübünü Bornova'nın Buluşma Noktası Yaptık",
+    title: "Yeni Bir Çocuk Kulübünü Bornova'nın Buluşma Noktası Yaptık",
     description: "Yeni açılan bir çocuk mekanı için sadece bir logo değil, bir dünya inşa etmek gerekiyordu. Karakter odaklı marka kimliği, ebeveyn diline hitap eden içerik takvimi, ciro artış odaklı aktivasyon planı ve retargeting mimarisiyle marka, İzmir’de çocuklu ailelerin gündemine ilk günden girdi.",
     Icon: Heart,
     image: "",
@@ -90,7 +90,7 @@ export const caseStudiesData = [
   {
     id: 7,
     companyName: "Ayduk Yapı",
-    title: "Ayduk Yapı: İnşaat Markasına Satış Odaklı Performans Disiplini Getirdik",
+    title: "İnşaat Markasına Satış Odaklı Performans Disiplini Getirdik",
     description: "Sektör emlak diline sıkışmışken Ayduk için farklı bir yol seçtik: satın alma kararının duygusal tarafını performans reklamının verisiyle birleştirdik. Kanal bazlı kurgu, doğru anahtar mesaj ve satış ekibiyle senkronize CRM akışı, huninin her katmanını görünür kıldı. Güvenilir paylaşımlar, UGC odaklı içerikler marka bilinirliğine önemli ölçüde etki etti.",
     Icon: Target,
     image: "",
@@ -103,7 +103,7 @@ export const caseStudiesData = [
   {
     id: 8,
     companyName: "Blight Studios",
-    title: "Blight Studios: Sessiz Bir Tasarım Markasını Konuşturduk",
+    title: "Sessiz Bir Tasarım Markasını Konuşturduk",
     description: "Yüksek estetikli ürünlerin görünürlüğü, tasarımına yetişmiyordu. Marka kimliğini disiplinli bir sisteme kavuşturduk, satış sistemi bir dijital web deneyimi tasarladık; sosyal medyada ürünlerin doğasına uygun sakin ama iddialı bir ton kurduk. Amerika ve Avustralya kıtasına satış oranında ölçeklenebilir sistemle %40 artış yakaladık.",
     Icon: Star,
     image: "",
@@ -116,7 +116,7 @@ export const caseStudiesData = [
   {
     id: 9,
     companyName: "Purity Healthcare",
-    title: "Purity Healthcare: Kıtalararası Sağlık Turizmine Bütünsel Bir Konumlanma Kurduk",
+    title: "Kıtalararası Sağlık Turizmine Bütünsel Bir Konumlanma Kurduk",
     description: "Türkiye'nin sağlık turizminde yükselen konumu, Amerika'dan hasta getirmek isteyen bir marka için önemli bir fırsattı; ama bu fırsatı iş sonucuna çevirecek bütünsel bir sistem eksikti. Pazarlama planından iş hedeflerine, marka konumlandırmasından operasyonel akışa kadar tüm halkaları birbirine bağladık.",
     Icon: Activity,
     image: "",
@@ -129,7 +129,7 @@ export const caseStudiesData = [
   {
     id: 10,
     companyName: "Control Overland",
-    title: "Control Overland: Off-Road Tutkusunu Bir Yaşam Kültürüne Dönüştürdük",
+    title: "Off-Road Tutkusunu Bir Yaşam Kültürüne Dönüştürdük",
     description: "Bir aksesuar markasından çok bir topluluk lideri olma potansiyeli vardı. Kimliği bu iddiaya göre yeniden kurduk, hikaye anlatımına dayalı bir web deneyimi inşa ettik; sosyal medyayı ürün pazarlamasından çok bir yaşam kültürünün dili haline getirdik.",
     Icon: MapPin,
     image: "",
@@ -142,7 +142,7 @@ export const caseStudiesData = [
   {
     id: 11,
     companyName: "Oasis",
-    title: "Oasis: Üreticiyi Mimar Odaklı Deneyim Markasına Çevirdik",
+    title: "Üreticiyi Mimar Odaklı Deneyim Markasına Çevirdik",
     description: "Fiziksel deneyim güçlüydü, ama dijital karşılığı bu ağırlığı taşımıyordu. Kimlikten prodüksiyona, huniyi tamamlayan reklam kurgusundan sosyal medya tonuna kadar tüm dokunuşları kullanıcının ilk kareden itibaren aynı hikayeyi hissedeceği şekilde tasarladık.",
     Icon: ShoppingCart,
     image: "",
@@ -155,7 +155,7 @@ export const caseStudiesData = [
   {
     id: 12,
     companyName: "Lezzetli Yaşam",
-    title: "Lezzetli Yaşam: Sağlıklı Ürünü Raftan Sepete Taşıdık",
+    title: "Sağlıklı Ürünü Raftan Sepete Taşıdık",
     description: "Ürün iyiydi ama raftaki dili tüketiciye ulaşmıyordu. Ambalajdan web'e, sosyal medyadan reklama kadar tüm iletişimi 'yaşamın lezzetli hali' ekseninde kurguladık; e-ticaret hunisini besleyen kanallar birbirini destekleyen bir sisteme dönüştü.",
     Icon: ShoppingCart,
     image: "",
@@ -168,7 +168,7 @@ export const caseStudiesData = [
   {
     id: 13,
     companyName: "Memorifys",
-    title: "Memorifys: Anıyı Ürüne Çeviren Markanın Dijital Yüzünü Kurduk",
+    title: "Anıyı Ürüne Çeviren Markanın Dijital Yüzünü Kurduk",
     description: "Duygusal bir ürün kategorisinde farklılaşmak için hikaye anlatımı şarttı. Kimlikten prodüksiyona, video temposundan reklam yaratıcı akışına kadar tüm iletişimi 'bir anı yaşatan hediye' ekseninde kurguladık. Doğru bir dijital satış sistemi ile marka kategorisinde lider hale geldi.",
     Icon: Heart,
     image: "",
@@ -181,7 +181,7 @@ export const caseStudiesData = [
   {
     id: 14,
     companyName: "Health Wonders",
-    title: "Health Wonders: Sağlık Turizminde Küresel Vizyonu Güçlü Bir Kimliğe Dönüştürdük",
+    title: "Sağlık Turizminde Küresel Vizyonu Güçlü Bir Kimliğe Dönüştürdük",
     description: "Sektör tecrübesi olan bir müşterinin kendi markasıyla yeni bir yola çıkması için 'güven veren küresel bir sağlık markası' tonu gerekiyordu. Marka iletişim mimarisini, kimliğini ve konumlandırmasını yurtdışı hasta yolculuğuna göre kurguladık; ilk temas anından tedavi sonrası bağlılığa kadar tutarlı bir marka deneyimi tasarladık.",
     Icon: Activity,
     image: "",
@@ -194,7 +194,7 @@ export const caseStudiesData = [
   {
     id: 15,
     companyName: "No:5 Chocolate",
-    title: "No:5 Chocolate: Premium Çikolatayı Görsel Bir Deneyime Dönüştürdük",
+    title: "Premium Çikolatayı Görsel Bir Deneyime Dönüştürdük",
     description: "Rafta anlaşılan bir ürünün dijitalde de 'ilk bakışta arzulanan' olması gerekiyordu. İçerik yönetimini görsel disiplinin merkezine aldık; reklam kurgusunu dönem, hediye ve deneyim eksenlerine böldük ve premium konumlandırmayı korurken satışa çeviren bir yapı kurduk.",
     Icon: Star,
     image: "",
@@ -207,7 +207,7 @@ export const caseStudiesData = [
   {
     id: 16,
     companyName: "Ders Kafası",
-    title: "Ders Kafası: Öğrencinin Diline Konuşan Eğitim İletişimi",
+    title: "Öğrencinin Diline Konuşan Eğitim İletişimi",
     description: "Eğitim kategorisinde 'resmiyet' yerine 'arkadaşlık' tonunu seçtik. İçerikleri öğrencinin gündemine, reklamları sınav takvimine göre kurguladık; düşük CAC ile büyüyen sadık bir topluluk oluştu.",
     Icon: Users,
     image: "",
@@ -220,7 +220,7 @@ export const caseStudiesData = [
   {
     id: 17,
     companyName: "Odimax",
-    title: "Odimax: İşitme Merkezlerini Dijital Bir CRM Ekosistemine Bağladık",
+    title: "İşitme Merkezlerini Dijital Bir CRM Ekosistemine Bağladık",
     description: "Odimax bir ürün değil, bir sektör dönüşümü hikayesi. Kimlikten web'e, tanıtım filminden reklam kurgusuna kadar tüm iletişimi 'işitme merkezinin ihtiyaç duyduğu ama yapamadığı dijital altyapıyı biz kuruyoruz' mesajı etrafında birleştirdik.",
     Icon: Zap,
     image: "",
@@ -233,7 +233,7 @@ export const caseStudiesData = [
   {
     id: 18,
     companyName: "Mimar Kemalettin",
-    title: "Mimar Kemalettin: Mirası Dijital Vitrine Taşıdık",
+    title: "Mirası Dijital Vitrine Taşıdık",
     description: "Sektörel prestiji yüksek bir derneği dijitalde de aynı ağırlıkta konumlandırmak gerekiyordu. Web deneyimini portfolyo odağında yeniden kurduk, sosyal medyayı kültürel bir vitrin gibi işledik; reklamı doğru karar vericiye ulaşacak şekilde daralttık.",
     Icon: Building,
     image: "",
@@ -246,7 +246,7 @@ export const caseStudiesData = [
   {
     id: 19,
     companyName: "Jamila Abiye",
-    title: "Jamila Abiye: Özel Günlerin Dijital Vitrini",
+    title: "Özel Günlerin Dijital Vitrini",
     description: "Abiyede en kritik nokta, hayal edilen anın doğru anda karşımıza çıkmasıdır. Web'de koleksiyon deneyimini yeniden tasarladık, sosyal medyayı bir stil rehberine dönüştürdük; reklam kurgusunu düğün, mezuniyet gibi mikro takvimlere göre optimize ettik.",
     Icon: Star,
     image: "",
@@ -259,7 +259,7 @@ export const caseStudiesData = [
   {
     id: 20,
     companyName: "Jamila Trend",
-    title: "Jamila Trend: Trend Modayı Dijital Perakendeye Çevirdik",
+    title: "Trend Modayı Dijital Perakendeye Çevirdik",
     description: "Hızlı tüketilen bir kategoride 'kalıcı marka değeri' yaratmak için içerik ritmini disipline ettik. Web'i mobil satış davranışına göre yeniden kurduk, trend-ürün eşleşmesini haftalık kurguya bağladık; reklamı stok döngüsüyle senkronize ettik.",
     Icon: ShoppingCart,
     image: "",
@@ -272,7 +272,7 @@ export const caseStudiesData = [
   {
     id: 21,
     companyName: "Kahve Kitap Lokasyonu",
-    title: "Kahve Kitap Lokasyonu: Sakin Bir Mekanı Şehrin Ritüeline Dönüştürdük",
+    title: "Sakin Bir Mekanı Şehrin Ritüeline Dönüştürdük",
     description: "Bursa’da mekanın sadık ama sessiz bir kitlesi vardı. Bu sadakati büyütmek için sosyal medyayı 'sabah ritüeli' tonuyla kurguladık, reklamları semt ve zaman bazında hedefledik. Sonuç, gündüz sirkülasyonunu ciddi biçimde büyüten organik bir sıçrama oldu.",
     Icon: MapPin,
     image: "",
@@ -285,7 +285,7 @@ export const caseStudiesData = [
   {
     id: 22,
     companyName: "Devrall",
-    title: "Devrall: Kişisel Uzmanlığı Dijital Otoriteye Dönüştürdük",
+    title: "Kişisel Uzmanlığı Dijital Otoriteye Dönüştürdük",
     description: "Kariyeri güçlü bir profesyonelin dijital yüzü, hikayesine yetişmiyordu. Kişisel imaj çekimi, web deneyimi ve iletişim stratejisiyle uzmanlığın öne çıktığı, güvenilirliğin ilk saniyede hissedildiği bir dijital kimlik kurduk.",
     Icon: Award,
     image: "",
@@ -298,7 +298,7 @@ export const caseStudiesData = [
   {
     id: 23,
     companyName: "Tam Ofis",
-    title: "Tam Ofis: B2B Ofis Çözümlerine Görsel Bir Dil Kazandırdık",
+    title: "B2B Ofis Çözümlerine Görsel Bir Dil Kazandırdık",
     description: "Fonksiyonel bir ürün kategorisinde 'duygu' yaratmak zordur. Ofis çözümlerini 'verimli çalışan hayatı' hikayesine bağladık; foto ve video prodüksiyonuyla ürünleri mekanın parçası olarak kurguladık, reklamı karar vericinin diline yerleştirdik.",
     Icon: Briefcase,
     image: "",
@@ -311,7 +311,7 @@ export const caseStudiesData = [
   {
     id: 24,
     companyName: "Gonca Duman",
-    title: "Gonca Duman: Uzman Bir Otoriteyi Kişisel Marka Dünyasına Taşıdık",
+    title: "Uzman Bir Otoriteyi Kişisel Marka Dünyasına Taşıdık",
     description: "Uzmanlığın dijitalde bir yüzü, bir sesi ve bir vaadi olması gerekiyordu. Kimlikten web'e, prodüksiyondan sosyal medya kurgusuna kadar tüm dokunuşları 'güvenilir uzman, ulaşılabilir marka' ekseninde kurduk.",
     Icon: CheckCircle,
     image: "",
@@ -324,7 +324,7 @@ export const caseStudiesData = [
   {
     id: 25,
     companyName: "Maison Çeşme",
-    title: "Maison Çeşme: Bir Otel Konseptine Marka Anayasası Yazdık",
+    title: "Bir Otel Konseptine Marka Anayasası Yazdık",
     description: "Fiziksel deneyim güçlüydü, ama markanın bir 'dili' yoktu. Kimlik ve iletişim stratejisiyle Maison Çeşme'nin ne söyleyeceğini, kime söyleyeceğini ve nasıl söylemeyeceğini belirledik; bundan sonraki her prodüksiyona zemin olacak bir çerçeve kurduk.",
     Icon: Target,
     image: "",
@@ -337,7 +337,7 @@ export const caseStudiesData = [
   {
     id: 26,
     companyName: "Antique Art",
-    title: "Antique Art: Zamansız Ürünlere Dijital Bir Sahne Kurduk",
+    title: "Zamansız Ürünlere Dijital Bir Sahne Kurduk",
     description: "Antika kategorisi, hikaye anlatımını hak eden ama nadiren yapan bir alan. Kimlikten tanıtım filmine, e-ticaret vitrininden reklam kurgusuna kadar tüm iletişimi 'her parçanın bir geçmişi vardır' duygusu üzerine inşa ettik.",
     Icon: Gem,
     image: "",
@@ -350,7 +350,7 @@ export const caseStudiesData = [
   {
     id: 27,
     companyName: "Heravolt",
-    title: "Heravolt: Enerjide Yeni Bir Ses Kurduk",
+    title: "Enerjide Yeni Bir Ses Kurduk",
     description: "Rekabetin teknik dilde yoğunlaştığı bir kategoride Heravolt için 'duygusal fayda' tarafını öne çıkardık. Hollanda’da kurulan marka için kimlikten tanıtım filmine, web'den performans reklamlarına kadar tüm iletişimi 'günlük hayatın enerjisi' ekseninde birleştirdik.",
     Icon: Zap,
     image: "",
@@ -363,7 +363,7 @@ export const caseStudiesData = [
   {
     id: 28,
     companyName: "Maximum Kabakum",
-    title: "Maximum Kabakum: Sessiz Bir Villa Projesini 6 Ayda Dolduran Konumlandırma",
+    title: "Sessiz Bir Villa Projesini 6 Ayda Dolduran Konumlandırma",
     description: "Maximum Kabakum bize geldiğinde isimsiz, sessiz ama yüksek prestijli bir villa gelişimiydi. Müşteri kitlesi belliydi, nasıl konuşulacağı belli değildi. İsimlendirme, prestij sakini profil haritası ve seçilmiş erişim stratejisiyle üç adımda kurduk.",
     Icon: Building,
     image: "",

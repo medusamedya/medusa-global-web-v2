@@ -72,13 +72,13 @@ const workflowSteps = [
 
 export default function Methodology() {
   return (
-    <section className="relative w-full py-12 md:py-16 bg-background transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full mt-12 bg-background transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         {/* --- ÜST BAŞLIK BÖLÜMÜ --- */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16 space-y-6">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8  space-y-1">
           <Badge text="Dijital Büyüme Metodolojimiz" className="mb-8" />
 
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
             Markanızın büyüme yolculuğunu tek çatı altında kuruyoruz.
           </h2>
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
@@ -90,7 +90,7 @@ export default function Methodology() {
         {/* --- İNTERAKTİF OMURGA VE MADDELER BÖLÜMÜ --- */}
         <div className="relative w-full max-w-6xl mx-auto">
           {/* 1. ANA OMURGA (Görünmezlik sorunu çözüldü: Dikey gradient hatası engellendi) */}
-          <div className="hidden lg:block absolute left-1/2 -top-[4rem] bottom-0 w-[4px] -translate-x-1/2 z-0 pointer-events-none">
+          <div className="hidden lg:block absolute left-1/2 -top-[1rem] bottom-0 w-[4px] -translate-x-1/2 z-0 pointer-events-none">
             <svg
               className="w-full h-full"
               preserveAspectRatio="none"
@@ -253,7 +253,8 @@ export default function Methodology() {
                         {step.title}
                       </h3>
 
-                      <p className="text-medusa-text-secondary  text-base md:text-lg font-sans leading-relaxed">
+                      <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
+                        
                         {step.description}
                       </p>
                     </div>

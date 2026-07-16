@@ -69,7 +69,7 @@ export default function AboutManifesto() {
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-8"
+                className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide mb-8"
               >
                 Neyi <span className="italic">Savunuyoruz?</span>
               </motion.h2>
@@ -127,7 +127,7 @@ export default function AboutManifesto() {
             >
               <motion.h2
                 variants={fadeUp}
-                className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-8"
+                className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide mb-8"
               >
                 Neden <span className="italic">Medusa?</span>
               </motion.h2>

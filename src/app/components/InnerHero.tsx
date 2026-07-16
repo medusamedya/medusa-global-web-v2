@@ -37,37 +37,21 @@ export default function InnerHero({ title, accentTitle, description }: InnerHero
           ========================================= */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 flex flex-col items-center text-center max-w-4xl">
         
-        {/* Badge (Ana sayfadaki gibi mb-12 boşluğu ile) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <Badge text={title} className="mb-12" />
-        </motion.div>
+       {/* Badge */}
+        <Badge text={title} className="mb-12" />
 
-        {/* Ana Başlık (Ana sayfadaki gibi mb-8 boşluğu ile) */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-          className="font-heading text-[clamp(2.5rem,6vw,5.5rem)] font-normal leading-[1.1] sm:leading-[0.95] tracking-tight text-white mb-8"
-        >
-          <span className="block sm:inline text-transparent bg-clip-text text-white">
+        {/* Ana Başlık */}
+        <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-wide mb-8">
+          <span className="block">
             {accentTitle}
           </span>
-        </motion.h1>
+        </h1>
 
-        {/* Alt Açıklama (Ana sayfadaki gibi mb-12 ve px-2 boşluğu ile) */}
+        {/* Alt Açıklama */}
         {description && (
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="font-sans text-base sm:text-lg md:text-xl text-medusa-text-secondary font-light leading-relaxed max-w-2xl px-2 mb-12"
-          >
+          <p className="font-sans text-base md:text-lg text-medusa-text-secondary max-w-4xl mb-8 md:mb-12">
             {description}
-          </motion.p>
+          </p>
         )}
         
       </div>

@@ -21,7 +21,7 @@ export default function DigitalAdsSection({ data }: Props) {
         {/* Başlık ve Açıklama Alanı */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
           <Badge text="Dijital Reklamlar" className="mb-6" />
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
             {data.title}
           </h2>
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">

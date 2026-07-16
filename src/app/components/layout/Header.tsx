@@ -44,10 +44,10 @@ export default function Header() {
           >
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/Logo.png"
+                src="/logo_beyaz.png"
                 alt="Medusa Global Logo"
-                width={48}
-                height={48}
+                width={64}
+                height={64}
                 priority
                 className="object-contain"
               />
@@ -56,7 +56,7 @@ export default function Header() {
 
           {/* MIDDLE: Pill Menu (Sadece Masaüstü) */}
           <nav
-            className={`hidden md:flex items-center rounded-full transition-all duration-500 ease-in-out ${
+            className={`hidden lg:flex items-center rounded-full transition-all duration-500 ease-in-out ${
               isScrolled
                 ? "bg-transparent gap-8"
                 : "bg-white/5  backdrop-blur-md px-6 py-2 border border-black/10  gap-2 shadow-lg"

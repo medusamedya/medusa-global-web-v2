@@ -55,7 +55,7 @@ export default function FinalCta() {
           >
             <Badge text="Size Göre Miyiz?" className="mb-6" />
 
-            <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-8">
+            <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-white tracking-wide mb-8">
               Şunları arıyorsanız, aradığınız yer burası:
             </h2>
 

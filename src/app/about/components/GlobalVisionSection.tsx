@@ -66,7 +66,7 @@ export default function GlobalVisionSection() {
         <Badge text="Misyonumuz" className="mb-8" />
 
         {/* --- BAŞLIK --- */}
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-12">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide mb-12">
           Küresel Büyümenin Stratejik Mimarı
         </h2>
 

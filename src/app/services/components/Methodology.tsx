@@ -148,7 +148,7 @@ export default function Methodology() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] max-w-[600px] max-h-[600px] bg-medusa-primary/10 blur-[100px] rounded-full pointer-events-none -z-10" />
 
         <Badge text="Dijital Büyüme Metodolojimiz" className="mb-6" />
-        <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+        <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
           Markanızın büyüme yolculuğunu <br className="hidden md:block" />
           tek çatı altında kuruyoruz
         </h2>

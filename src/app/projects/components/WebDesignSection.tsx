@@ -31,7 +31,7 @@ export default function WebDesignSection({ data }: Props) {
         {/* Üst Metin Alanı */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
           <Badge text="Web Tasarım & Yazılım" className="mb-6" />
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
             {data.title}
           </h2>
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">

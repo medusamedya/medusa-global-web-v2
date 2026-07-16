@@ -73,14 +73,14 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative w-full py-4 md:py-16 bg-background transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full  bg-background transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         
         {/* --- ÜST BAŞLIK VE İMZA BADGE --- */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8 md:mb-16 space-y-6">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-8  space-y-1">
           <Badge text="Testimonials" className="mb-4" />
 
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide">
             25+ Markanın Güvendiği İş Ortağı
           </h2>
           <p className="font-sans  text-normal md:text-lg text-medusa-text-secondary">
@@ -92,7 +92,7 @@ export default function Testimonials() {
         {/* --- CAROUSEL BÖLÜMÜ --- */}
         <div className="relative w-full max-w-7xl mx-auto">
           {/* Slider Kapsayıcısı */}
-          <div className="overflow-hidden w-full px-2 py-6">
+          <div className="overflow-hidden w-full ">
             <div
               className="flex transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
               style={{
@@ -112,7 +112,7 @@ export default function Testimonials() {
                       <div className="relative z-10 h-full rounded-[calc(1.5rem-1px)] bg-gradient-to-br from-[#1a1726] to-[#241c33] p-4 md:p-8 flex flex-col gap-6 shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)]">
                         
                         {/* Profil Bilgileri */}
-                        <div className="flex items-center space-x-4 mb-4 md:mb-16">
+                        <div className="flex items-center space-x-4 mb-0 md:mb-16">
                           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#853ec7] to-[#3D0A6B] flex items-center justify-center border border-white/20 shrink-0 shadow-lg">
                             <span className="font-heading text-xl text-white font-bold tracking-wider">
                               {testimonial.initials}
@@ -129,14 +129,14 @@ export default function Testimonials() {
                         </div>
 
                         {/* Yorum Metni */}
-                        <p className="font-sans text-white/95 text-base text-[14px] md:text-[17px] font-medium leading-relaxed">
+                        <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                           "{testimonial.quote}"
                         </p>
                       </div>
                     </div>
 
                     {/* Alt Kısım: Şirket Logosu Yer Tutucu */}
-                    <div className="flex items-center space-x-3 p-3 md:px-5 md:py-5 shrink-0 opacity-90">
+                    <div className="flex items-center space-x-3 pb-1 p-2 md:px-5 md:py-5 shrink-0 opacity-90">
                       {/* Görseldeki gibi Dalgalı Örnek Logo İkonu */}
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="2.5"/>
@@ -156,7 +156,7 @@ export default function Testimonials() {
           </div>
 
           {/* --- CAROUSEL KONTROLLERİ --- */}
-          <div className="flex items-center justify-center space-x-4 mt-2 md:mt-8">
+          <div className="flex items-center justify-center space-x-4 mt-4 md:mt-12">
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}

@@ -20,7 +20,7 @@ const duplicatedClients = [...clients, ...clients];
 
 export default function Clients() {
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-background z-10 overflow-hidden">
+    <section className="relative w-full my-12 bg-background z-10 overflow-hidden">
       {/* Özel Marquee (Akış) Animasyonu CSS'i */}
       <style>{`
         @keyframes marquee {
@@ -38,7 +38,7 @@ export default function Clients() {
       {/* =========================================
           1. BADGE & BAŞLIK (Merkezlenmiş İçerik)
           ========================================= */}
-      <div className="container mx-auto px-4 sm:px-6 mb-16 flex flex-col items-center text-center">
+      <div className="container mx-auto px-4 sm:px-6 mb-8 flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function Clients() {
         >
           <Badge text="Referanslarımız" className="mb-8" />
 
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-foreground tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-foreground tracking-wide">
             Büyüme Yolculuğunda Bize Güvenen <br className="hidden sm:block" />
             Markalar
           </h2>

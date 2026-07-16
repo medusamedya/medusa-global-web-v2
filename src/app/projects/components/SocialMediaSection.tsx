@@ -28,7 +28,7 @@ export default function SocialMediaSection({ data }: Props) {
         {/* Üst Metin Alanı */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
           <Badge text="Sosyal Medya" className="mb-6" />
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-wide mb-6">
             {data.title}
           </h2>
           <p className="font-sans text-normal md:text-lg text-medusa-text-secondary leading-relaxed">
@@ -106,7 +106,7 @@ export default function SocialMediaSection({ data }: Props) {
             
             {/* Reels Başlık */}
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-6 ">
-              <h3 className="font-heading text-2xl md:text-4xl font-bold text-white">
+              <h3 className="font-heading text-2xl md:text-4xl font-bold text-white tracking-wide">
                 Reels & TikTok
               </h3>
             </div>
