@@ -172,7 +172,7 @@ export default function Methodology() {
             {/* Üst Kısım: Rozet ve Başlık (Merkeze Hizalı) */}
             <div className="flex flex-col items-center text-center mb-8">
               <Badge text={step.badge} className="mb-4 " />
-              <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+              <h2 className="font-heading text-3xl md:text-5xl font-bold text-white tracking-wide">
                 {step.title}
               </h2>
             </div>
@@ -194,7 +194,7 @@ export default function Methodology() {
                   </div>
                 </div>
                 {/* Görsel Altı Açıklama */}
-                <p className="font-sans text-medusa-text-secondary text-sm sm:text-base leading-relaxed font-light pl-1">
+                <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -217,7 +217,7 @@ export default function Methodology() {
                           className="object-contain filter opacity-80 group-hover/item:opacity-100 transition-opacity duration-300"
                         />
                       </div>
-                      <span className="font-sans text-base md:text-[17px] font-medium text-medusa-text-secondary group-hover/item:text-foreground transition-colors duration-300 leading-snug">
+                      <span className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed group-hover/item:text-foreground transition-colors duration-300 leading-snug">
                         {item}
                       </span>
                     </li>

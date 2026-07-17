@@ -3,7 +3,6 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import Badge from "@/app/components/ui/Badge";
 
 // =========================================
 // 1. TİP GÜVENLİ ANİMASYON VARYANTLARI
@@ -74,7 +73,7 @@ export default function AboutManifesto() {
                 Neyi <span className="italic">Savunuyoruz?</span>
               </motion.h2>
 
-              <motion.ul className="space-y-6">
+              <motion.ul className="space-y-6 ">
                 {[
                   "Süreci en ince ayrıntısına kadar planlar, sonuçlara ulaşana kadar takip ederiz.",
                   <React.Fragment key="item-2">
@@ -104,7 +103,7 @@ export default function AboutManifesto() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="font-sans text-medusa-text-secondary text-base md:text-lg leading-relaxed">
+                    <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                       {item}
                     </p>
                   </motion.li>
@@ -146,7 +145,7 @@ export default function AboutManifesto() {
                       className="object-contain"
                     />
                   </div>
-                  <p className="font-sans text-medusa-text-secondary text-base md:text-lg leading-relaxed">
+                  <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                     Bir işe dışarıdan; net, korkusuz ve doğru açıdan bakabilmek
                     ve içeriden göremediğiniz şeyi görürüz.
                   </p>
@@ -165,7 +164,7 @@ export default function AboutManifesto() {
                       className="object-contain"
                     />
                   </div>
-                  <p className="font-sans text-medusa-text-secondary text-base md:text-lg leading-relaxed">
+                  <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                     Önce bütünü görürüz, sonra parçalara ayırırız; her parçanın
                     birbiriyle çalışıp bütünü büyütmesini sağlarız. Bir markayı
                     büyütmek, reklama daha çok para gömmek ya da son trendi
@@ -186,7 +185,7 @@ export default function AboutManifesto() {
                       className="object-contain"
                     />
                   </div>
-                    <p className="font-sans text-white/90 text-base md:text-lg leading-relaxed relative z-10">
+                    <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                       Mesajın, teklifin ve kanalların birbirine kenetlendiği bir{" "}
                       <span className="text-[#ef6906] font-semibold">
                         sistem kurmaktır

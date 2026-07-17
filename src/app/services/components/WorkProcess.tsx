@@ -84,7 +84,7 @@ export default function WorkProcess() {
                   <h3 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-4 group-hover:text-medusa-purple-light transition-all duration-300">
                     {step.title}
                   </h3>
-                  <p className="font-sans text-medusa-text-secondary text-base sm:text-lg leading-relaxed font-light transition-colors duration-300 group-hover:text-foreground">
+                  <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed transition-colors duration-300 group-hover:text-foreground">
                     {step.desc}
                   </p>
                 </div>

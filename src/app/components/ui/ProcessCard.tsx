@@ -53,7 +53,7 @@ export default function ProcessCard({
         </div>
 
         {/* Açıklama Metni */}
-        <p className="font-sans text-sm md:text-[15px] text-medusa-text-secondary leading-relaxed font-light transition-colors duration-300 group-hover:text-foreground mt-auto z-10 relative">
+        <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed transition-colors duration-300 group-hover:text-foreground mt-auto z-10 relative">
           {description}
         </p>
       </div>

@@ -13,7 +13,7 @@ export default function FinalCta() {
   return (
     // bg-background kuralı korundu, flex mimarisi ile ekran tam ortadan ikiye bölündü.
     // border-t ile üstteki section'dan çok şık ve ince bir çizgi ile ayrıldı.
-    <section className="relative w-full bg-background transition-colors duration-500 overflow-hidden z-10 flex flex-col lg:flex-row border-t border-white/5">
+    <section className="relative w-full bg-background transition-colors duration-500 overflow-hidden z-10 flex flex-col lg:flex-row border-t border-white/5 mt-8">
       
       {/* =========================================
           SOL TARAF: SINIRSIZ SİNEMATİK GÖRSEL
@@ -76,7 +76,7 @@ export default function FinalCta() {
                       className="object-contain" 
                     />
                   </div>
-                  <span className="font-sans text-medusa-text-secondary text-base leading-relaxed">
+                  <span className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                     {item}
                   </span>
                 </li>
@@ -86,7 +86,7 @@ export default function FinalCta() {
             {/* Uyarı / Kontrast Bloğu */}
               <div className="flex items-start gap-4 mb-8">
                 <XCircle className="w-6 h-6 shrink-0 text-red-400/80 mt-0.5" />
-                <p className="font-sans text-white/70 text-base leading-relaxed">
+                <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                   Kısa vadede rakam şişirmek isteyen bir markaysanız, muhtemelen doğru adres biz değiliz. <strong className="text-white font-medium">Ama kalıcı bir şey kurmak istiyorsanız, tam da bunun için varız.</strong>
                 </p>
             </div>
@@ -94,7 +94,7 @@ export default function FinalCta() {
             {/* Kapanış Metni (H3 Olarak Güncellendi) */}
             <h3 className="font-heading text-xl md:text-2xl font-bold text-white mb-8 leading-relaxed">
               Doğru ortak biz miyiz? Bunu konuşarak öğrenelim. <br className="hidden md:block" />
-              <span className="font-sans text-medusa-text-secondary font-normal text-base mt-2 inline-block">
+              <span className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
                 Kısa bir görüşme, işinizin bugün nerede durduğunu ve nereye gidebileceğini netleştirmeye yeter. Dijital iş ortağınız burada.
               </span>
             </h3>
