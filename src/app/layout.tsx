@@ -13,12 +13,12 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Medusa Global | Dijital Dönüşüm ve Büyüme Danışmanlığı",
+  title: "Medusa Global | Dijital Hızlandırma ve Danışmanlık",
   description:
     "Dünyaya yenilik katarak ticaretini büyütmek isteyen işverenlerin destekçisi.",
     icons: {
-    icon: '/Logo.png',
-    apple: '/Logo.png', 
+    icon: '/Logo_mor.png',
+    apple: '/Logo_mor.png', 
   },
 };
 
