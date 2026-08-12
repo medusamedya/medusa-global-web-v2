@@ -77,11 +77,13 @@ body {
   color: var(--foreground);
   /* Gövde metinleri için ikincil font (Juturu) varsayılan oldu */
   font-family: var(--font-ikincil);
+  letter-spacing: 0.1em;
 }
 
 /* Başlıklar için ana font (Cook Resans) */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-ana);
+  letter-spacing: 0.1em;
 }
 .hide-scrollbar::-webkit-scrollbar {
   display: none;

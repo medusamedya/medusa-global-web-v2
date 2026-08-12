@@ -42,14 +42,18 @@ export default function Header() {
             href="/"
             className="flex-shrink-0 flex items-center gap-3 cursor-pointer group"
           >
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-105">
+            {/* 
+              GÜNCELLEME: Kare olan w-12 h-12 yapısını, yatay logoya uygun 
+              w-32 sm:w-48 (dikdörtgen) olarak genişlettik. 
+            */}
+            <div className="relative w-32 h-8 sm:w-48 sm:h-10 transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/logo_beyaz.png"
+                src="/HeaderLogo.png"
                 alt="Medusa Global Logo"
-                width={64}
-                height={64}
+                fill
                 priority
-                className="object-contain"
+                sizes="(max-width: 640px) 128px, 192px"
+                className="object-contain object-left"
               />
             </div>
           </Link>

@@ -41,11 +41,15 @@ export default function Footer() {
           <div className="lg:col-span-4 flex flex-col space-y-6">
             <div className="flex items-start gap-4 group">
               <Link href="/" aria-label="Medusa Global Anasayfa">
-                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-105 cursor-pointer">
+                {/* 
+    GÜNCELLEME: Kare formdaki w-14 h-14 yapısını, yatay logomuza uygun olarak 
+    mobilde w-32 h-8, masaüstünde w-48 h-10 (dikdörtgen) olacak şekilde genişlettik. 
+  */}
+                <div className="relative w-32 h-8 sm:w-48 sm:h-10 transition-transform duration-300 group-hover:scale-105 cursor-pointer">
                   <img
-                    src="/logo_beyaz.png"
+                    src="/FooterLogo.png"
                     alt="Medusa Global Logo"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain object-left"
                   />
                 </div>
               </Link>
