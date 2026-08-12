@@ -9,17 +9,26 @@
   font-display: swap;
 }
 
+/* YENİ: General Sans Font Tanımlamaları */
 @font-face {
-  font-family: "Juturu";
-  src: url('/fonts/Juturu-Blaarr-Regular.woff2') format('woff2');
+  font-family: "General Sans";
+  src: url('/fonts/GeneralSans-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Juturu";
-  src: url('/fonts/Juturu-Blaarr-Bold.woff2') format('woff2');
+  font-family: "General Sans";
+  src: url('/fonts/GeneralSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url('/fonts/GeneralSans-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -43,9 +52,10 @@
   --background: var(--medusa-surface-1);
   --foreground: #FFFFFF; /* Ana metinleri en yüksek okunabilirlik için beyaz tuttuk */
   
-  /* Font Değişkenleri (Dokunulmadı) */
+  /* Font Değişkenleri */
   --font-ana: "Cook Resans", sans-serif;
-  --font-ikincil: "Juturu", sans-serif;
+  /* Alt metin fontu General Sans olarak güncellendi */
+  --font-ikincil: "General Sans", sans-serif;
 }
 
 @theme inline {
@@ -56,7 +66,7 @@
   --font-sans: var(--font-ikincil); 
   --font-heading: var(--font-ana);
 
-  /* Yeni Tailwind Renk Sınıfları (bg-medusa-primary, text-medusa-secondary vb.) */
+  /* Yeni Tailwind Renk Sınıfları */
   --color-medusa-primary: var(--medusa-primary);
   --color-medusa-secondary: var(--medusa-secondary);
   --color-medusa-accent-soft: var(--medusa-accent-soft);
@@ -69,22 +79,21 @@
   --color-medusa-purple-light: var(--medusa-purple-light);
 }
 
-/* Dark mode class'ı (.dark) kaldırıldı. Kurumsal vizyonumuz gereği sistem artık sabit ve tek bir premium tema üzerinden çalışıyor. */
-
 /* --- GLOBAL STYLES --- */
 body {
   background: var(--background);
   color: var(--foreground);
-  /* Gövde metinleri için ikincil font (Juturu) varsayılan oldu */
+  /* Gövde metinleri için ikincil font (General Sans) varsayılan oldu */
   font-family: var(--font-ikincil);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
 }
 
 /* Başlıklar için ana font (Cook Resans) */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-ana);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
