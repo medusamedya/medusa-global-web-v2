@@ -17,7 +17,7 @@ export default function Badge({ text, className = "" }: BadgeProps) {
       
       {/* İç Zemin ve Metin */}
       <div className="relative z-10 inline-flex items-center justify-center rounded-full bg-[#24183E] px-5 py-1.5 backdrop-blur-md">
-        <span className="font-sans text-xs sm:text-[13px] font-medium tracking-wide text-white drop-shadow-md">
+        <span className="font-sans text-xs sm:text-[13px] font-medium tracking-widest text-white drop-shadow-md">
           {text}
         </span>
       </div>

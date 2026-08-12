@@ -55,13 +55,13 @@ export default function Services() {
         {/* --- BAŞLANGIÇ MERKEZİ (MOUSE ICON - Sadece PC) --- */}
         <div className="hidden lg:flex flex-col items-center justify-center w-full relative z-20">
           <div className="flex flex-col items-center gap-2 mb-4">
+            {/* animate-bounce sınıfı eklendi */}
             <Mouse
-              className="w-8 h-8 text-medusa-purple-light"
+              className="w-8 h-8 text-medusa-purple-light animate-bounce"
               strokeWidth={1.5}
             />
           </div>
         </div>
-
         {/* --- İNTERAKTİF VERİ KOLLARI (MERKEZ KAVİSLİ & KÜÇÜK KESİK ÇİZGİLER) --- */}
         <div className="hidden lg:block relative w-full max-w-[1200px] mx-auto h-[120px] z-0 pointer-events-none text-medusa-purple-light">
           <svg

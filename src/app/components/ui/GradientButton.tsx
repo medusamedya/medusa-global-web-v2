@@ -27,7 +27,7 @@ export default function GradientButton({
           paddingClass prop'u doğrudan buraya uygulanarak iç boşlukları esnek hale getiriyor.
       */}
       <div className={`relative z-10 flex w-full items-center justify-center gap-2 rounded-full bg-[#24183E] backdrop-blur-md transition-colors duration-300 group-hover:bg-[#2c1d4b] ${paddingClass}`}>
-        <span className="font-sans text-[14px] sm:text-[15px] font-normal tracking-wide text-white drop-shadow-md">
+        <span className="font-sans text-[14px] sm:text-[15px] font-normal tracking-wider text-white drop-shadow-md">
           {text}
         </span>
         
