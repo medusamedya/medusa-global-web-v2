@@ -238,7 +238,7 @@ export default function Footer() {
                   <strong className="block text-foreground font-semibold  mb-0.5">
                     İzmir Ofis
                   </strong>
-                  Çınarlı Mh. 1587/1. Sk. NO:4/1E <br />
+                  Çınarlı Mh. 1587/1. Sk. NO:4/9 <br />
                   Kat.1, Konak/İzmir
                 </span>
               </li>
