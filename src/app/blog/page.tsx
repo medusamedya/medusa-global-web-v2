@@ -12,6 +12,8 @@ import Badge from "../components/ui/Badge";
 import { blogPosts } from "@/data/blogs"; 
 
 export default function BlogPage() {
+  const newestBlogPosts = [...blogPosts].reverse();
+
   return (
     <main className="w-full min-h-screen bg-background">
       {/* 1. INNER HERO COMPONENTİ */}
@@ -34,7 +36,7 @@ export default function BlogPage() {
 
           {/* Yatay Blog Kartları Listesi */}
           <div className="flex flex-col gap-10">
-            {blogPosts.map((post, index) => (
+            {newestBlogPosts.map((post, index) => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 30 }}
