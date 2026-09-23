@@ -16,9 +16,16 @@ export const metadata: Metadata = {
   title: "Medusa Global | Dijital Hızlandırma ve Danışmanlık",
   description:
     "Dünyaya yenilik katarak ticaretini büyütmek isteyen işverenlerin destekçisi.",
-    icons: {
-    icon: '/Logo_mor.png',
-    apple: '/Logo_mor.png', 
+  applicationName: "Medusa Global",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "Medusa Global",
+    statusBarStyle: "black-translucent",
+  },
+  icons: {
+    icon: "/Logo_mor.png",
+    apple: "/pwa-icon-192.png",
   },
 };
 
