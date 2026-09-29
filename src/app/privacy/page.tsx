@@ -1,5 +1,12 @@
 import React from "react";
+import type { Metadata } from "next";
 import InnerHero from "../components/InnerHero";
+
+export const metadata: Metadata = {
+  title: "Gizlilik Politikası",
+  description: "Medusa Global gizlilik ve kişisel veri işleme yaklaşımını inceleyin.",
+  alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPolicyPage() {
   return (

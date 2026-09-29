@@ -4,13 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Badge from "@/app/components/ui/Badge";
-
-// 1'den 62'ye kadar olan logoları dinamik olarak oluşturuyoruz
-const clients = Array.from({ length: 62 }, (_, index) => ({
-  id: index + 1,
-  name: `Referans ${index + 1}`,
-  logo: `/logos/${index + 1}.png`,
-}));
+import { clients } from "@/data/clients";
 
 const containerVariants = {
   hidden: { opacity: 0 },

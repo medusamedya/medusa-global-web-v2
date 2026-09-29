@@ -4,17 +4,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Badge from "@/app/components/ui/Badge";
+import { clients as allClients } from "@/data/clients";
 
 const excludedIds = [2, 12, 17,47,48,31,56,25,32,52,54,55,51,41,40,33,37,36,22,20,62,57,59,39,34,61,13,14];
 
-// 1'den 62'ye kadar olan logoları dinamik olarak oluşturuyoruz.
-// NOT: Eğer görsellerinin uzantısı .png değilse (.svg, .jpg, .webp vb.),
-// aşağıdaki ".png" kısmını kendi uzantına göre değiştirmelisin.
-const clients = Array.from({ length: 62 }, (_, index) => ({
-  id: index + 1,
-  name: `Referans ${index + 1}`,
-  logo: `/logos/${index + 1}.png`, 
-})).filter(client => !excludedIds.includes(client.id));
+const clients = allClients.filter((client) => !excludedIds.includes(client.id));
 
 const duplicatedClients = [...clients, ...clients];
 

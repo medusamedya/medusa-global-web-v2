@@ -1,5 +1,12 @@
 import React from "react";
+import type { Metadata } from "next";
 import InnerHero from "../components/InnerHero";
+
+export const metadata: Metadata = {
+  title: "Kullanım Koşulları",
+  description: "Medusa Global web sitesi ve hizmetlerine ilişkin kullanım koşullarını inceleyin.",
+  alternates: { canonical: "/terms" },
+};
 
 export default function TermsOfUsePage() {
   return (

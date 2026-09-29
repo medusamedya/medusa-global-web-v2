@@ -5,8 +5,9 @@ import InnerHero from "../components/InnerHero";
 
 // SEO ve Dijital Varlık Yönetimi için Sayfa Metadata'sı
 export const metadata: Metadata = {
-  title: "Ekibimiz | Medusa Global",
+  title: "Ekibimiz",
   description: "Sadece kod yazan veya tasarım yapan değil; dijital varlıklarınızı ticari başarıya dönüştüren vizyoner Medusa Global ekibiyle tanışın.",
+  alternates: { canonical: "/team" },
 };
 
 export default function TeamPage() {

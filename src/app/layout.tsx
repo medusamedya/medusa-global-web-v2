@@ -13,10 +13,17 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Medusa Global | Dijital Hızlandırma ve Danışmanlık",
+  metadataBase: new URL("https://medusaglobal.com.tr"),
+  title: {
+    default: "Medusa Global | Dijital Hızlandırma ve Danışmanlık",
+    template: "%s | Medusa Global",
+  },
   description:
     "Dünyaya yenilik katarak ticaretini büyütmek isteyen işverenlerin destekçisi.",
   applicationName: "Medusa Global",
+  alternates: {
+    canonical: "/",
+  },
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
