@@ -7,22 +7,11 @@ interface LazyVideoProps {
   className?: string;
 }
 
-interface NavigatorWithConnection extends Navigator {
-  connection?: {
-    saveData?: boolean;
-  };
-}
-
 export default function LazyVideo({ src, className }: LazyVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const saveData = (navigator as NavigatorWithConnection).connection?.saveData;
-
-    if (reducedMotion.matches || saveData) return;
-
     const video = videoRef.current;
     if (!video) return;
 
