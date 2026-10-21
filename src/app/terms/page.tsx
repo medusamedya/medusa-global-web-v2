@@ -25,7 +25,7 @@ export default function TermsOfUsePage() {
             <div className="space-y-4">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">1. Hizmet Kapsamı ve Kabul</h2>
               <p>
-                Bu web sitesine erişerek ve Medusa Global tarafından sunulan içerik, rapor veya "Dijital Sağlık Kontrolü" gibi danışmanlık hizmetlerini inceleyerek bu kullanım koşullarını kabul etmiş sayılırsınız. Medusa Global, markaların ticari potansiyelini artırmaya yönelik strateji, içerik, prodüksiyon ve performans pazarlaması çözümleri sunan bir danışmanlık ve hızlandırma ajansıdır.
+                Bu web sitesine erişerek ve Medusa Global tarafından sunulan içerik, rapor veya &quot;Dijital Sağlık Kontrolü&quot; gibi danışmanlık hizmetlerini inceleyerek bu kullanım koşullarını kabul etmiş sayılırsınız. Medusa Global, markaların ticari potansiyelini artırmaya yönelik strateji, içerik, prodüksiyon ve performans pazarlaması çözümleri sunan bir danışmanlık ve hızlandırma ajansıdır.
               </p>
             </div>
 
@@ -33,7 +33,7 @@ export default function TermsOfUsePage() {
             <div className="space-y-4">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">2. Fikri Mülkiyet Hakları</h2>
               <p>
-                Web sitemizde yer alan tüm metinler, grafikler, logolar, tasarım mimarileri, stratejik metodolojiler ve vaka çalışmaları (Case Studies - örn: Cool Sandalye, Latanwood projeleri vb.) Medusa Global'in mülkiyetindedir. Şirketin yazılı izni olmaksızın bu içerikler kopyalanamaz, çoğaltılamaz veya ticari amaçlarla başka platformlarda kullanılamaz.
+                Web sitemizde yer alan tüm metinler, grafikler, logolar, tasarım mimarileri, stratejik metodolojiler ve vaka çalışmaları (Case Studies - örn: Cool Sandalye, Latanwood projeleri vb.) Medusa Global&apos;in mülkiyetindedir. Şirketin yazılı izni olmaksızın bu içerikler kopyalanamaz, çoğaltılamaz veya ticari amaçlarla başka platformlarda kullanılamaz.
               </p>
             </div>
 
@@ -58,7 +58,7 @@ export default function TermsOfUsePage() {
             <div className="space-y-4">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">5. Koşulların Güncellenmesi</h2>
               <p>
-                Medusa Global, pazar koşullarına, yasal mevzuatlara ve hizmet altyapısına bağlı olarak önceden haber vermeksizin bu Kullanım Koşulları'nı değiştirme hakkını saklı tutar. Değişiklikler web sitesinde yayınlandığı andan itibaren geçerlilik kazanır.
+                Medusa Global, pazar koşullarına, yasal mevzuatlara ve hizmet altyapısına bağlı olarak önceden haber vermeksizin bu Kullanım Koşulları&apos;nı değiştirme hakkını saklı tutar. Değişiklikler web sitesinde yayınlandığı andan itibaren geçerlilik kazanır.
               </p>
             </div>
 

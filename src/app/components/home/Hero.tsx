@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Badge from "../ui/Badge";
 import GradientButton from "../ui/GradientButton";
 import Link from "next/link";
@@ -40,7 +37,7 @@ export default function Hero() {
 
         {/* Buton */}
         <div>
-          <Link href="/projects" className="inline-block">
+          <Link href="/projects" prefetch={false} className="inline-block">
             <GradientButton text="İşlerimiz" />
           </Link>
         </div>

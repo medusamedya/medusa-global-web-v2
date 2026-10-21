@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 // Variants tipini import ederek TypeScript hatasını çözüyoruz
 import { motion, Variants } from "framer-motion";
 import Badge from "@/app/components/ui/Badge";
@@ -198,10 +199,13 @@ export default function Team() {
 
                 <div className="relative z-10 p-2">
                   <div className="relative w-full  rounded-xl overflow-hidden bg-white/5">
-                    <img
+                    <Image
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover filter lg:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                      width={640}
+                      height={800}
+                      sizes="(max-width: 640px) calc(100vw - 64px), (max-width: 1024px) 50vw, 33vw"
+                      className="w-full h-auto object-cover filter lg:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
                     />
 
                     {/* Resim Üzeri Karartma (Yeni Renk: Surface-1 ile uyumlu geçiş) */}

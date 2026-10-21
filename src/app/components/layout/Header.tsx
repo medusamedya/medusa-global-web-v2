@@ -1,7 +1,7 @@
 // components/layout/Header.tsx
 "use client";
 
-import { ArrowRight, Menu, Sun, Moon } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu"; // Yeni bileşenimizi içe aktardık
 import Link from "next/link";
@@ -106,6 +106,9 @@ export default function Header() {
             {/* Mobil Hamburger Butonu */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
+              aria-label="Menüyü aç"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
               className="lg:hidden w-10 h-10 bg-white/5  backdrop-blur-md rounded-full flex items-center justify-center border border-black/5  active:scale-95 transition-transform"
             >
               <Menu className="w-5 h-5 text-[#FFFFFFF] " />

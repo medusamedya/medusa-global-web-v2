@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
             <div className="space-y-4">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4">1. Veri Güvenliğine Yaklaşımımız</h2>
               <p>
-                Medusa Global (Bundan böyle "Şirket" veya "Biz" olarak anılacaktır), dijital dönüşüm, hızlandırma ve büyüme danışmanlığı süreçlerinde iş ortaklarımızın ve web sitesi ziyaretçilerimizin gizliliğini korumayı taahhüt eder. Bu Gizlilik Politikası, web sitemizi kullanırken veya "Dijital Sağlık Kontrolü" gibi hizmetlerimizden faydalanırken kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.
+                Medusa Global (Bundan böyle &quot;Şirket&quot; veya &quot;Biz&quot; olarak anılacaktır), dijital dönüşüm, hızlandırma ve büyüme danışmanlığı süreçlerinde iş ortaklarımızın ve web sitesi ziyaretçilerimizin gizliliğini korumayı taahhüt eder. Bu Gizlilik Politikası, web sitemizi kullanırken veya &quot;Dijital Sağlık Kontrolü&quot; gibi hizmetlerimizden faydalanırken kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.
               </p>
             </div>
 

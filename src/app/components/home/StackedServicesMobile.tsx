@@ -2,6 +2,7 @@
 
 import React from "react";
 import Badge from "../ui/Badge";
+import Image from "next/image";
 
 // Aynı Props Tipi
 interface StackData {
@@ -59,7 +60,13 @@ export default function StackedServicesMobile({ data }: { data: StackData[] }) {
                   {item.items.map((listItem, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">
-                        <img src="/Sarı_Medusa_Bullet.png" alt="Medusa Bullet" className="w-full h-full object-contain" />
+                        <Image
+                          src="/Sarı_Medusa_Bullet.png"
+                          alt=""
+                          width={20}
+                          height={20}
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                       <span className="font-sans text-medusa-text-muted text-sm font-light mt-auto leading-relaxed">
                         {listItem}

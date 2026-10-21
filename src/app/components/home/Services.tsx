@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import {
   BrainCircuit,
   Lightbulb,
@@ -143,9 +140,9 @@ export default function Services() {
               </div>
 
               {/* Başlık */}
-              <h3 className="text-lg md:text-xl font-bold font-heading text-foreground  tracking-wide mb-2  md:mb-3 transition-colors duration-300 group-hover:text-medusa-purple-light ">
+              <h2 className="text-lg md:text-xl font-bold font-heading text-foreground  tracking-wide mb-2  md:mb-3 transition-colors duration-300 group-hover:text-medusa-purple-light ">
                 {service.title}
-              </h3>
+              </h2>
 
               {/* Açıklama */}
               <p className="text-medusa-text-muted  text-sm md:text-lg font-sans leading-relaxed max-w-[260px] mx-auto">

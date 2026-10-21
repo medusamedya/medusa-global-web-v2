@@ -1,7 +1,3 @@
-"use client";
-
-import React from "react";
-import { ArrowUpRight, TrendingUp, Activity, Users } from "lucide-react";
 import Badge from "../ui/Badge";
 import GradientButton from "../ui/GradientButton";
 import Link from "next/link";
@@ -86,7 +82,7 @@ export default function HighImpactSolutions() {
                 {/* Alt Kısım: Aksiyon Butonu (CTA) */}
                 {/* mt-auto sadece md (masaüstü) ekranlarda çalışacak şekilde sınırlandırıldı */}
                 <div className="mt-6 md:mt-auto md:pt-6">
-                  <Link href="/projects" className="inline-block w-full sm:w-max">
+                  <Link href="/projects" prefetch={false} className="inline-block w-full sm:w-max">
                     <GradientButton text="Tüm Ürünlerimiz" className="w-full sm:w-max" />
                   </Link>
                 </div>

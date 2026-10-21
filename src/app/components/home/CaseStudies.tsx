@@ -105,18 +105,16 @@ export default function CaseStudies() {
                       
                       {/* SOL: Görsel ve İstatistik Kutuları */}
                       <div className="relative w-full lg:w-1/2 rounded-2xl overflow-hidden min-h-[220px] md:min-h-[350px] h-full">
-                        <img
+                        <Image
                           src={
                             study.image?.trim()
                               ? study.image
-                              : "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2000&auto=format&fit=crop"
+                              : "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=70&w=800&auto=format&fit=crop"
                           }
                           alt={study.companyName}
+                          fill
+                          sizes="(max-width: 1024px) calc(100vw - 72px), 480px"
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                          onError={(e) => {
-                            e.currentTarget.src =
-                              "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2000&auto=format&fit=crop";
-                          }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
 
@@ -174,6 +172,7 @@ export default function CaseStudies() {
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
+              aria-label="Önceki dönüşüm hikayesi"
               className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300
                 ${
                   currentIndex === 0
@@ -186,6 +185,7 @@ export default function CaseStudies() {
             <button
               onClick={handleNext}
               disabled={currentIndex === caseStudiesData.length - 1}
+              aria-label="Sonraki dönüşüm hikayesi"
               className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300
                 ${
                   currentIndex === caseStudiesData.length - 1

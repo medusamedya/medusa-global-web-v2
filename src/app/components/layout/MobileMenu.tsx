@@ -47,6 +47,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
       {/* Menü Paneli (Sağdan kayarak gelen akışkan panel) */}
       <div 
+        id="mobile-navigation"
         className={`fixed top-0 right-0 w-[85vw] sm:w-[350px] h-full bg-background border-l border-foreground/10 z-[70] transform transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] flex flex-col shadow-2xl ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}

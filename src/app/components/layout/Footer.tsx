@@ -1,7 +1,5 @@
-"use client";
-
-import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import GradientButton from "../ui/GradientButton";
 
@@ -46,9 +44,11 @@ export default function Footer() {
     mobilde w-32 h-8, masaüstünde w-48 h-10 (dikdörtgen) olacak şekilde genişlettik. 
   */}
                 <div className="relative w-32 h-8 sm:w-48 sm:h-10 transition-transform duration-300 group-hover:scale-105 cursor-pointer">
-                  <img
+                  <Image
                     src="/FooterLogo.png"
                     alt="Medusa Global Logo"
+                    fill
+                    sizes="(max-width: 640px) 128px, 192px"
                     className="w-full h-full object-contain object-left"
                   />
                 </div>
@@ -65,6 +65,7 @@ export default function Footer() {
             <div className="flex items-center gap-4 pt-2">
               <Link
                 href="https://www.instagram.com/medusaglobaltr/"
+                aria-label="Medusa Global Instagram hesabı"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
                 <svg
@@ -84,6 +85,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://www.facebook.com/people/Medusa-Global-Acceleration-Consultancy/61560020665944/?locale=es_LA#"
+                aria-label="Medusa Global Facebook hesabı"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
                 <svg
@@ -101,6 +103,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://www.linkedin.com/company/medusaglobaltr/?originalSubdomain=tr"
+                aria-label="Medusa Global LinkedIn hesabı"
                 className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
               >
                 <svg
@@ -118,24 +121,6 @@ export default function Footer() {
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </Link>
-              <Link
-                href="#"
-                className="w-10 h-10 rounded-full border border-medusa-border/30 flex items-center justify-center text-medusa-text-muted hover:border-medusa-purple-light hover:text-medusa-purple-light transition-all duration-300 hover:-translate-y-1"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
-                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
-                </svg>
-              </Link>
             </div>
           </div>
 
@@ -143,9 +128,9 @@ export default function Footer() {
           <div className="lg:col-span-5 grid grid-cols-2 gap-8">
             {/* Hizmetler */}
             <div className="flex flex-col space-y-6">
-              <h4 className="font-heading text-sm font-bold text-foreground uppercase tracking-widest transition-colors duration-300">
+              <h3 className="font-heading text-sm font-bold text-foreground uppercase tracking-widest transition-colors duration-300">
                 Çözümlerimiz
-              </h4>
+              </h3>
               <ul className="space-y-4">
                 {[
                   "Dijital Sağlık Kontrolü",
@@ -168,9 +153,9 @@ export default function Footer() {
 
             {/* Kurumsal (Hızlı Bağlantılar) */}
             <div className="flex flex-col space-y-6">
-              <h4 className="text-sm font-bold text-foreground uppercase tracking-widest transition-colors duration-300">
+              <h3 className="text-sm font-bold text-foreground uppercase tracking-widest transition-colors duration-300">
                 Kurumsal
-              </h4>
+              </h3>
               <ul className="space-y-4">
                 {[
                   { name: "Hakkımızda", path: "/about" },
@@ -197,9 +182,9 @@ export default function Footer() {
 
           {/* İletişim (Col Span 3) */}
           <div className="lg:col-span-3 flex flex-col space-y-6">
-            <h4 className="text-sm font-bold text-foreground uppercase tracking-widest transition-colors duration-300">
+            <h3 className="text-sm font-bold text-foreground uppercase tracking-widest transition-colors duration-300">
               İletişim
-            </h4>
+            </h3>
             <ul className="space-y-5">
               {/* Email */}
               <li className="flex items-center gap-3 text-medusa-text-secondary text-sm transition-colors duration-300">

@@ -1,7 +1,3 @@
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
 import Badge from "./ui/Badge"; // Badge bileşeninin yolu
 
 interface InnerHeroProps {

@@ -119,9 +119,9 @@ export default function Testimonials() {
                             </span>
                           </div>
                           <div className="flex flex-col">
-                            <h4 className="font-heading text-normal md:text-lg font-semibold text-white leading-tight">
+                            <h3 className="font-heading text-normal md:text-lg font-semibold text-white leading-tight">
                               {testimonial.name}
-                            </h4>
+                            </h3>
                             <p className="font-sans text-sm font-light text-white/60 mt-1">
                               {testimonial.role}
                             </p>
@@ -130,7 +130,7 @@ export default function Testimonials() {
 
                         {/* Yorum Metni */}
                         <p className="font-sans text-medusa-text-muted text-sm md:text-lg font-light mt-auto leading-relaxed">
-                          "{testimonial.quote}"
+                          “{testimonial.quote}”
                         </p>
                       </div>
                     </div>
@@ -160,6 +160,7 @@ export default function Testimonials() {
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
+              aria-label="Önceki müşteri yorumu"
               className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300
                 ${
                   currentIndex === 0
@@ -172,6 +173,7 @@ export default function Testimonials() {
             <button
               onClick={handleNext}
               disabled={currentIndex >= maxIndex}
+              aria-label="Sonraki müşteri yorumu"
               className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300
                 ${
                   currentIndex >= maxIndex

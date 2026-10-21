@@ -1,12 +1,10 @@
 // src/data/caseStudies.ts
 import { 
-  Building, TreePine, Target, Zap, Rocket, TrendingUp, 
+  Building, TreePine, Target, Zap,
   Award, Briefcase, Activity, Heart, Star, Users, MapPin, 
   ShoppingCart, Shield, CheckCircle, 
   Gem
 } from "lucide-react";
-
-const PLACEHOLDER_IMAGE = "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1280&auto=format&fit=crop";
 
 export const caseStudiesData = [
   {

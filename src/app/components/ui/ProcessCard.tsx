@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export interface ProcessCardProps {
   // number: string; // Numarayı çıkardık
@@ -39,9 +40,11 @@ export default function ProcessCard({
         <div className="relative w-full mb-4 flex items-center gap-1.5 pl-1">
           {/* Dev Arka Plan Numarasının Yerine Dönen Görsel */}
           <div className="absolute -left-6 -top-12 md:-left-8 md:-top-16 select-none opacity-[0.1] group-hover:opacity-[0.06] transition-opacity duration-500 z-0 pointer-events-none">
-            <img
+            <Image
               src="/Sarı_Medusa_Bullet.webp" // public klasöründeki yol
-              alt="Medusa Bullet"
+              alt=""
+              width={160}
+              height={160}
               className="w-32 h-32 md:w-40 md:h-40 object-contain animate-medusa-spin" // Özel animasyon ve boyutlandırma
             />
           </div>

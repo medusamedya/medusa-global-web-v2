@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo, useEffect, useState } from "react";
+import { useRef, useMemo, useEffect, useSyncExternalStore } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { useTheme } from "next-themes";
@@ -69,6 +69,8 @@ const VertexShader = `
   }
 `;
 
+const subscribeToClient = () => () => undefined;
+
 function ShaderPlane({ isDark }: { isDark: boolean }) {
   const materialRef = useRef<THREE.ShaderMaterial>(null);
   const { viewport } = useThree();
@@ -121,11 +123,11 @@ function ShaderPlane({ isDark }: { isDark: boolean }) {
 
 export default function FlutedGlassShader() {
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    subscribeToClient,
+    () => true,
+    () => false,
+  );
 
   if (!mounted) return null;
 

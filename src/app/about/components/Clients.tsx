@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Badge from "@/app/components/ui/Badge";
 import { clients as allClients } from "@/data/clients";
@@ -33,20 +32,14 @@ export default function Clients() {
           1. BADGE & BAŞLIK (Merkezlenmiş İçerik)
           ========================================= */}
       <div className="container mx-auto px-4 sm:px-6 mb-8 flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col items-center"
-        >
+        <div className="flex flex-col items-center">
           <Badge text="Referanslarımız" className="mb-8" />
 
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-foreground tracking-wide">
             Büyüme Yolculuğunda Bize Güvenen <br className="hidden sm:block" />
             Markalar
           </h2>
-        </motion.div>
+        </div>
       </div>
 
       {/* =========================================

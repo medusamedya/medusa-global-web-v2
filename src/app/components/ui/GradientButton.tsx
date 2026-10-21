@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 
-interface GradientButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface GradientButtonProps extends React.HTMLAttributes<HTMLSpanElement> {
   text: string;
   className?: string; // Dış kapsayıcı için genel sınıflar (margin vb.)
   paddingClass?: string; // İç zemindeki boşlukları (padding) kontrol etmek için
@@ -16,7 +16,7 @@ export default function GradientButton({
   ...props 
 }: GradientButtonProps) {
   return (
-    <button
+    <span
       className={`group relative inline-flex overflow-hidden rounded-full p-[1px] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] active:scale-95 focus:outline-none ${className}`}
       {...props}
     >
@@ -36,6 +36,6 @@ export default function GradientButton({
           <ArrowRight className="w-4 h-4 text-white transition-transform duration-300 group-hover:-rotate-45" />
         )}
       </div>
-    </button>
+    </span>
   );
 }

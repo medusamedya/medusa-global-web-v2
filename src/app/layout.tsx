@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 // Header ve Footer'ı layout'a dahil ediyoruz
@@ -9,6 +10,12 @@ import Footer from "./components/layout/Footer";
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const cookResans = localFont({
+  src: "../../public/fonts/CookResans.otf",
+  variable: "--font-cook-resans",
   display: "swap",
 });
 
@@ -44,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <body
-        className={`${jakarta.variable} font-sans antialiased bg-background text-foreground min-h-screen flex flex-col`}
+        className={`${jakarta.variable} ${cookResans.variable} font-sans antialiased bg-background text-foreground min-h-screen flex flex-col`}
         suppressHydrationWarning={true}
       >
         {/* Her sayfada en üstte Header olacak */}

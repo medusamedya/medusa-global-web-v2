@@ -1,8 +1,6 @@
-"use client";
-
 import React from "react";
 import Badge from "../ui/Badge";
-import Image from "next/image";
+import LazyVideo from "../ui/LazyVideo";
 
 const workflowSteps = [
   {
@@ -227,12 +225,8 @@ export default function Methodology() {
                         <div className="flex-1 rounded-xl border border-foreground/5 bg-background/40 flex items-center justify-center relative overflow-hidden">
                           
                           {/* YENİ: Optimize Edilmiş Video Bileşeni */}
-                          <video
-                            src={step.video} /* Data modelindeki video yolu (örn: '/videolar/adim1.mp4') */
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
+                          <LazyVideo
+                            src={step.video}
                             className="absolute inset-0 w-full h-full object-cover"
                           />
 

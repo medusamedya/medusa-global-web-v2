@@ -1,39 +1,5 @@
 @import "tailwindcss";
 
-/* --- FONT TANIMLAMALARI (LOCAL FONTS) --- */
-@font-face {
-  font-family: "Cook Resans";
-  src: url('/fonts/CookResans.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* YENİ: General Sans Font Tanımlamaları */
-@font-face {
-  font-family: "General Sans";
-  src: url('/fonts/GeneralSans-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "General Sans";
-  src: url('/fonts/GeneralSans-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "General Sans";
-  src: url('/fonts/GeneralSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* --- TEMA VE DEĞİŞKENLER (TEK TEMA) --- */
 :root {
   /* Yeni Medusa Global Renk Paleti */
@@ -53,9 +19,8 @@
   --foreground: #FFFFFF; /* Ana metinleri en yüksek okunabilirlik için beyaz tuttuk */
   
   /* Font Değişkenleri */
-  --font-ana: "Cook Resans", sans-serif;
-  /* Alt metin fontu General Sans olarak güncellendi */
-  --font-ikincil: "General Sans", sans-serif;
+  --font-ana: var(--font-cook-resans), sans-serif;
+  --font-ikincil: var(--font-inter), sans-serif;
 }
 
 @theme inline {

@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Badge from "../ui/Badge";
+import Image from "next/image";
 
 // Props tipini belirliyoruz
 interface StackData {
@@ -105,7 +106,13 @@ export default function StackedServicesDesktop({ data }: { data: StackData[] }) 
                     {item.items.map((listItem, i) => (
                       <li key={i} className="flex items-center gap-4 group/item cursor-default">
                         <div className="w-6 h-6 flex items-center justify-center">
-                          <img src="/Sarı_Medusa_Bullet.png" alt="Medusa Bullet" className="w-full h-full p-0.5 object-contain" />
+                          <Image
+                            src="/Sarı_Medusa_Bullet.png"
+                            alt=""
+                            width={24}
+                            height={24}
+                            className="w-full h-full p-0.5 object-contain"
+                          />
                         </div>
                         <span className="font-sans text-lg font-medium text-medusa-text-muted group-hover/item:text-white transition-colors duration-300">
                           {listItem}
