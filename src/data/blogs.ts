@@ -387,5 +387,103 @@ export const blogPosts = [
       <p><strong>Bir marka birden fazla hedef kitleye seslenebilir mi?</strong><br>Evet; ancak her segment için özelleştirilmiş mesajlar geliştirilirken markanın temel vaadi ve ayırt edici yönü korunmalıdır.</p>
       <p><strong>Konumlandırmanın başarılı olduğu nasıl anlaşılır?</strong><br>Marka bilinirliği, tercih edilme nedeni, satış dönüşüm oranı, fiyat esnekliği ve müşteri geri bildirimleri birlikte değerlendirilmelidir.</p>
     `
+  },
+  {
+    id: 11,
+    title: "OKR ve KPI ile Stratejik Performans Yönetimi Nasıl Yapılır?",
+    excerpt: "OKR ve KPI arasındaki farkı, doğru hedef belirleme yöntemlerini ve şirket stratejisini ölçülebilir sonuçlara dönüştürmenin adımlarını keşfedin.",
+    slug: "okr-kpi-stratejik-performans-yonetimi-nasil-yapilir",
+    date: "6 Kasım 2026",
+    image: "/blog/okr-kpi-stratejik-performans-yonetimi.png",
+    focusKeyword: "OKR ve KPI ile stratejik performans yönetimi",
+    content: `
+      <p>Şirketler büyüdükçe hedeflerin ekipler arasında doğru aktarılması ve çalışmaların ortak bir yöne ilerlemesi zorlaşır. Stratejik planlar çoğu zaman yıllık sunumlarda kalırken günlük işler acil taleplerin etkisiyle farklı yönlere dağılabilir. <strong>OKR ve KPI ile stratejik performans yönetimi</strong>, şirketin uzun vadeli önceliklerini ölçülebilir sonuçlara dönüştürerek bu kopukluğu gidermeyi amaçlar.</p>
+      <p>OKR (Objectives and Key Results), ulaşılmak istenen iddialı hedefi ve bu hedefe ulaşıldığını gösterecek anahtar sonuçları tanımlar. KPI (Key Performance Indicator) ise bir sürecin veya faaliyetin sağlıklı ilerleyip ilerlemediğini düzenli olarak ölçer. İki yaklaşım doğru birlikte kullanıldığında ekipler hem nereye gitmeleri gerektiğini hem de operasyonun mevcut durumunu açıkça görebilir.</p>
+
+      <h2>OKR ve KPI Arasındaki Fark Nedir?</h2>
+      <p>OKR değişim ve gelişim odağı taşır. Belirli bir dönemde ulaşılması istenen nitel hedef ile bu hedefin gerçekleşmesini kanıtlayan sayısal sonuçlardan oluşur. KPI ise devam eden işlerin performansını izleyen göstergedir. Örneğin müşteri memnuniyet puanı bir KPI olabilirken müşteri deneyimini sektör standardının üzerine çıkarmak bir OKR hedefidir.</p>
+      <p>KPI'lar şirketin gösterge paneli, OKR'lar ise yönünü belirleyen navigasyon sistemi gibi düşünülebilir. Her KPI'yı OKR hâline getirmek gereksiz hedef kalabalığı yaratır. Aynı şekilde yalnızca OKR kullanıp operasyonel sağlık göstergelerini izlememek, büyüme sırasında önemli risklerin gözden kaçmasına neden olabilir.</p>
+
+      <h2>Etkili Bir OKR Nasıl Yazılır?</h2>
+      <p>İyi bir amaç cümlesi açık, ilham verici ve zaman sınırı olan bir yön tanımlar. Anahtar sonuçlar ise faaliyeti değil sonucu ölçmelidir. “Daha fazla müşteri görüşmesi yapmak” bir aktivitedir; “nitelikli satış fırsatı sayısını yüzde 30 artırmak” ise ölçülebilir bir sonuçtur.</p>
+      <ul>
+        <li><strong>Stratejiyle uyum:</strong> Her hedef şirketin dönemsel önceliklerinden en az birine doğrudan katkı sağlamalıdır.</li>
+        <li><strong>Ölçülebilirlik:</strong> Anahtar sonuçların başlangıç değeri, hedef değeri ve veri kaynağı belli olmalıdır.</li>
+        <li><strong>Odak:</strong> Bir ekip için aynı dönemde üç ila beş öncelikli hedef yeterlidir.</li>
+        <li><strong>Sahiplik:</strong> Her sonucun sorumlusu ve katkı sağlayacak ekipler açıkça belirlenmelidir.</li>
+        <li><strong>Zorluk dengesi:</strong> Hedefler ekibi geliştirecek kadar iddialı, güveni zedelemeyecek kadar gerçekçi olmalıdır.</li>
+      </ul>
+
+      <h2>Doğru KPI'lar Nasıl Seçilir?</h2>
+      <p>KPI seçerken ölçülebilen her veriyi rapora eklemek yerine karar vermeyi sağlayan göstergelere odaklanılmalıdır. Gelir, kârlılık ve müşteri kaybı gibi sonuç göstergelerinin yanında gelecekteki performansı öngören öncü göstergeler de izlenmelidir. Örneğin satış geliri sonuç göstergesiyken nitelikli fırsat sayısı gelecekteki gelire ilişkin öncü bir sinyal olabilir.</p>
+      <p>Her göstergenin tanımı, hesaplama yöntemi, veri sahibi ve güncellenme sıklığı standartlaştırılmalıdır. Farklı ekiplerin aynı metriği farklı biçimde hesaplaması yönetim kararlarını zayıflatır. Güvenilir bir performans sistemi, önce veri kalitesi ve ortak ölçüm dili üzerine kurulmalıdır.</p>
+
+      <h2>Uygulama ve Takip Döngüsü</h2>
+      <p>OKR sistemi yıllık hedefleri bir kez belirleyip dönem sonunda kontrol etmekten ibaret değildir. Üç aylık dönemler, hızlı öğrenme ve öncelikleri güncelleme açısından etkili bir ritim sağlar. Ekipler haftalık veya iki haftalık kısa toplantılarda anahtar sonuçların ilerlemesini, engelleri ve alınması gereken kararları değerlendirebilir.</p>
+      <p>Dönem sonunda yalnızca hedef puanına bakmak yerine hangi varsayımların doğru çıktığı ve hangi çalışmaların sonuç üretmediği analiz edilmelidir. Ulaşılamayan bir hedef her zaman başarısızlık anlamına gelmez; önemli olan veriye dayalı öğrenmenin bir sonraki döneme aktarılmasıdır. Prim sistemini doğrudan OKR puanına bağlamak ise ekipleri güvenli ve düşük hedefler seçmeye yöneltebilir.</p>
+
+      <h2>Yaygın Hatalar Nelerdir?</h2>
+      <p>Çok fazla hedef belirlemek, görev listesini anahtar sonuç olarak yazmak ve üst yönetimin sürece katılmaması en yaygın hatalardır. Ayrıca yalnızca departman hedeflerine odaklanmak ekipler arası bağımlılıkların gözden kaçmasına neden olur. Şirket hedefleri önce tanımlanmalı, ekip hedefleri bu çerçeveden türetilmelidir.</p>
+      <p>Medusa Global, stratejik performans yönetimini yalnızca bir raporlama sistemi olarak değil; strateji, ekip ve uygulama arasındaki bağı güçlendiren bir yönetim modeli olarak ele alır. Doğru tasarlanan OKR ve KPI yapısı sayesinde şirketler kaynaklarını öncelikli alanlara yönlendirir ve büyümeyi somut verilerle yönetir.</p>
+
+      <h2>Sıkça Sorulan Sorular</h2>
+      <p><strong>OKR ve KPI aynı anda kullanılabilir mi?</strong><br>Evet. KPI'lar operasyonun sağlığını izlerken OKR'lar belirli bir dönemde yaratılmak istenen değişimi yönetir.</p>
+      <p><strong>OKR'lar ne sıklıkla güncellenmelidir?</strong><br>Genellikle üç aylık dönemlerde belirlenir ve haftalık ya da iki haftalık düzenli kontrollerle takip edilir.</p>
+      <p><strong>Her çalışanın kişisel OKR'ı olmalı mıdır?</strong><br>Her durumda gerekli değildir. Özellikle iş birliği yoğun yapılarda ekip bazlı hedefler daha sağlıklı sonuç verebilir.</p>
+      <p><strong>Bir OKR'ın yüzde 100 gerçekleşmemesi başarısızlık mıdır?</strong><br>Hayır. İddialı hedeflerde kısmi gerçekleşme değerli sonuçlar üretebilir; önemli olan öğrenme ve iş etkisidir.</p>
+    `
+  },
+  {
+    id: 12,
+    title: "Yatırımcı Sunumu (Pitch Deck) Nasıl Hazırlanır?",
+    excerpt: "Yatırımcıların dikkatini çeken bir pitch deck hazırlamak için problem, çözüm, pazar, iş modeli, finansal veriler ve yatırım talebini doğru kurgulayın.",
+    slug: "yatirimci-sunumu-pitch-deck-nasil-hazirlanir",
+    date: "6 Kasım 2026",
+    image: "/blog/yatirimci-sunumu-pitch-deck-hazirlama.png",
+    focusKeyword: "yatırımcı sunumu pitch deck nasıl hazırlanır",
+    content: `
+      <p>İyi bir iş fikri yatırım görüşmesini başlatabilir; ancak yatırımcının karar vermesi için fikrin ölçeklenebilir, savunulabilir ve finansal açıdan anlamlı bir iş modeline dönüştüğünü görmesi gerekir. <strong>Yatırımcı sunumu (pitch deck)</strong>, girişimin problemden çözüme, pazardan büyüme planına uzanan hikâyesini kısa ve kanıta dayalı biçimde aktaran temel dokümandır.</p>
+      <p>Başarılı bir sunum, girişim hakkında bilinen her ayrıntıyı slaytlara yerleştirmez. Yatırımcının ilk görüşmede cevap aradığı kritik soruları açık bir akışla ele alır ve daha derin inceleme için merak oluşturur. Karmaşık anlatım, doğrulanmamış iddialar ve tutarsız finansal veriler güçlü bir ürünün bile yatırım fırsatı olarak zayıf görünmesine neden olabilir.</p>
+
+      <h2>Pitch Deck'in Temel Amacı Nedir?</h2>
+      <p>Pitch deck'in amacı ilk görüşmede yatırım anlaşmasını tamamlamak değil, bir sonraki görüşmeye geçecek kadar güven ve ilgi yaratmaktır. Yatırımcı; problemin gerçek olup olmadığını, pazarın yeterince büyük olup olmadığını, ekibin çözümü hayata geçirip geçiremeyeceğini ve yatırımın nasıl büyümeye dönüşeceğini anlamak ister.</p>
+      <p>Sunum aynı zamanda kurucuların stratejik düşünme yeteneğini gösterir. Hangi metriklerin izlendiği, rekabetin nasıl değerlendirildiği ve sermayenin hangi kilometre taşları için kullanılacağı girişimin yönetim kalitesine ilişkin önemli sinyaller verir.</p>
+
+      <h2>Yatırımcı Sunumunda Hangi Bölümler Olmalıdır?</h2>
+      <p>Sunumun uzunluğu girişimin aşamasına göre değişebilse de çoğu ilk görüşme için 10 ila 15 slaytlık net bir yapı yeterlidir. Temel bölümler şunlardır:</p>
+      <ul>
+        <li><strong>Problem:</strong> Hedef müşterinin yaşadığı somut sorun ve mevcut çözümlerin neden yetersiz kaldığı.</li>
+        <li><strong>Çözüm:</strong> Ürün veya hizmetin problemi nasıl çözdüğü ve müşteriye sağladığı temel fayda.</li>
+        <li><strong>Pazar büyüklüğü:</strong> TAM, SAM ve SOM yaklaşımıyla ulaşılabilir fırsatın gerçekçi biçimde gösterilmesi.</li>
+        <li><strong>Ürün ve teknoloji:</strong> Temel kullanım akışı, ürünün mevcut aşaması ve savunulabilir yetkinlikler.</li>
+        <li><strong>İş modeli:</strong> Gelirin kimden, hangi yöntemle ve hangi fiyatlandırma modeliyle elde edildiği.</li>
+        <li><strong>Çekiş gücü:</strong> Gelir, kullanıcı, büyüme, müşteri tutundurma veya doğrulanmış pilot sonuçları.</li>
+        <li><strong>Rekabet:</strong> Doğrudan ve dolaylı alternatifler ile girişimin sürdürülebilir farklılığı.</li>
+        <li><strong>Ekip:</strong> Kurucuların ilgili deneyimi ve bu problemi çözmek için neden doğru ekip oldukları.</li>
+        <li><strong>Finansal plan ve yatırım talebi:</strong> İstenen yatırım, kullanım alanları ve ulaşılacak kilometre taşları.</li>
+      </ul>
+
+      <h2>Problem ve Pazar Hikâyesi Nasıl Kurulur?</h2>
+      <p>Problem slaytı genel ifadeler yerine belirli bir müşteri grubunun yaşadığı ölçülebilir kaybı göstermelidir. Müşteri görüşmeleri, sektör verileri ve kullanım davranışları iddiayı destekler. Çözüm anlatılırken teknik özelliklerden önce müşterinin elde ettiği sonuç vurgulanmalıdır.</p>
+      <p>Pazar büyüklüğü yalnızca büyük bir sektör raporundaki toplam rakamdan ibaret olmamalıdır. Aşağıdan yukarı hesaplama; hedef müşteri sayısı, beklenen fiyat ve erişilebilir coğrafya gibi gerçek varsayımlara dayanır. Bu yöntem yatırımcıya pazarın mantığını ve kurucuların ticari hâkimiyetini daha güçlü biçimde gösterir.</p>
+
+      <h2>Çekiş Gücü ve Finansal Veriler Nasıl Sunulur?</h2>
+      <p>Yatırımcılar fikirden çok ilerleme hızını ve öğrenme kapasitesini değerlendirir. Gelir öncesi girişimler pilot anlaşmaları, aktif kullanım, bekleme listesi veya müşteri doğrulama sonuçlarını sunabilir. Gelir üreten şirketlerde aylık tekrarlayan gelir, büyüme oranı, brüt kâr, müşteri edinme maliyeti ve müşteri yaşam boyu değeri gibi metrikler önem kazanır.</p>
+      <p>Finansal projeksiyonlar aşırı iyimser sonuçlardan ziyade açık varsayımlara dayanmalıdır. Gelir artışının hangi satış kapasitesiyle, müşteri kazanım maliyetiyle ve ekip büyüklüğüyle sağlanacağı açıklanmalıdır. Sunumdaki rakamlar finansal model, cap table ve veri odasındaki belgelerle tutarlı olmalıdır.</p>
+
+      <h2>Yatırım Talebi Nasıl İfade Edilir?</h2>
+      <p>“Büyümek için yatırım arıyoruz” ifadesi yeterli değildir. Talep edilen tutar, bu sermayenin sağlayacağı çalışma süresi ve ulaşılacak somut kilometre taşları birlikte sunulmalıdır. Ürün geliştirme, satış, pazarlama ve ekip bütçelerinin dağılımı yatırımın nasıl değer yaratacağını göstermelidir.</p>
+      <p>Yatırım turunun büyüklüğü yalnızca mevcut giderlere göre değil, şirketi bir sonraki değer artırıcı aşamaya taşıyacak plan doğrultusunda belirlenmelidir. Kurucular değerleme, hisse seyrelmesi ve sonraki tur ihtiyacını birlikte değerlendirmelidir.</p>
+
+      <h2>Sunumda Yapılan Yaygın Hatalar</h2>
+      <p>Metinle dolu slaytlar, okunması zor grafikler, rakipsiz olunduğu iddiası ve kaynağı belirsiz pazar rakamları güveni azaltır. Sunum görsel olarak sade olmalı; her slayt tek bir ana mesaj taşımalıdır. Kurucular slaytları okumak yerine verilerin arkasındaki hikâyeyi anlatmalıdır.</p>
+      <p>Medusa Global, yatırım hazırlığı sürecinde girişimin stratejisini, finansal modelini ve yatırım hikâyesini tek bir bütün olarak ele alır. Böylece pitch deck yalnızca estetik bir sunum değil, yatırımcının inceleme sürecinde güvenebileceği tutarlı bir karar dokümanına dönüşür.</p>
+
+      <h2>Sıkça Sorulan Sorular</h2>
+      <p><strong>Pitch deck kaç slayt olmalıdır?</strong><br>İlk görüşmeler için genellikle 10 ila 15 slaytlık odaklı bir sunum yeterlidir.</p>
+      <p><strong>Yatırımcıya gizlilik sözleşmesi imzalatılmalı mıdır?</strong><br>İlk görüşmelerde çoğu yatırımcı NDA imzalamaz; ticari sırrın tamamını paylaşmadan iş modelinin değerini anlatmak gerekir.</p>
+      <p><strong>Pitch deck içinde değerleme yer almalı mıdır?</strong><br>Tur stratejisine göre eklenebilir; ancak talep edilen yatırım ve sermayenin kullanım planı mutlaka açık olmalıdır.</p>
+      <p><strong>Sunum gönderilmeden önce nasıl test edilmelidir?</strong><br>Sektörü bilmeyen bir kişinin kısa sürede problemi, çözümü ve yatırım fırsatını anlayıp anlamadığı kontrol edilmelidir.</p>
+    `
   }
 ];
